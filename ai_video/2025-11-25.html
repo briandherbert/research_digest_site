@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI video – 2025-11-25</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    .date {
+      color: #475569;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="date" id="date-label">2025-11-25</p>
+    <h1 id="topic-title">AI video</h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI video";
+    const publishDate = "2025-11-25";
+    const articles = [
+  {
+    "article_url": "https://deepmind.google/en/research/publications/video-models-are-zero-shot-learners-and-reasoners/",
+    "article_title": "Video models are zero-shot learners and reasoners",
+    "article_summary": "DeepMind shows Veo 3 performing a wide range of zero-shot tasks—segmentation, edge detection, editing, physical property understanding, and tool-use simulation—without task-specific training. The work argues video models are on a trajectory to become generalist vision foundation models via emergent “chain-of-frames” style reasoning.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2510.19022",
+    "article_title": "MoAlign: Motion-Centric Representation Alignment for Video Diffusion Models",
+    "article_summary": "Introduces a motion-centric alignment that learns a disentangled motion subspace (optimized to predict optical flow) from a pretrained video encoder and aligns a text-to-video diffusion model to it. The approach improves temporal coherence and physical plausibility while maintaining prompt fidelity across benchmarks like VideoPhy and VBench.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2511.13704",
+    "article_title": "TiViBench: Benchmarking Think-in-Video Reasoning for Video Generative Models",
+    "article_summary": "Presents a hierarchical benchmark to measure reasoning in image-to-video generation across structural search, spatial patterns, symbolic logic, and action planning. The authors evaluate commercial and open-source models and propose VideoTPO, a simple test-time strategy that boosts reasoning without extra training.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.09642",
+    "article_title": "Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k",
+    "article_summary": "Details how a competitive video generation model can be trained for roughly $200k through data curation, efficient architectures, training strategies, and system optimizations. Results show parity with leading systems on VBench and human evaluations, with code and resources fully open-sourced.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.reuters.com/technology/openais-new-sora-video-generator-require-copyright-holders-opt-out-wsj-reports-2025-09-29/",
+    "article_title": "OpenAI's new Sora video generator to require copyright holders to opt out, WSJ reports",
+    "article_summary": "Reuters reports OpenAI plans an opt-out mechanism for rights holders as it readies an updated Sora video generator, alongside restrictions on generating public figures. The piece also notes a forthcoming standalone Sora 2 app with short-form video creation and identity verification features.",
+    "article_date": "",
+    "article_authors": ""
+  }
+];
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("date-label").textContent = publishDate;
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this date.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

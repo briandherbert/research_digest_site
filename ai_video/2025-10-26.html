@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI video – 2025-10-26</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    .date {
+      color: #475569;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="date" id="date-label">2025-10-26</p>
+    <h1 id="topic-title">AI video</h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI video";
+    const publishDate = "2025-10-26";
+    const articles = [
+  {
+    "article_url": "https://www.reuters.com/business/meta-unveils-new-ai-video-feed-vibes-2025-09-25/",
+    "article_title": "Meta unveils new AI video feed Vibes",
+    "article_summary": "On September 25, 2025, Meta launched Vibes, an AI-generated video feed in the Meta AI app and on meta.ai that lets users create from scratch, remix existing clips, and share to Instagram and Facebook. The rollout is part of Meta’s broader AI push under its Superintelligence Labs division to drive new revenue via the Meta AI app, image-to-video ad tools, and smart glasses.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2509.01362",
+    "article_title": "Identity-Preserving Text-to-Video Generation via Training-Free Prompt, Image, and Guidance Enhancement",
+    "article_summary": "This September 2025 arXiv paper introduces a training-free framework (TPIGE) for identity-preserving text-to-video generation that enhances prompts with facial details, refines the reference image, and applies ID-aware spatiotemporal guidance during sampling. The method improves subject consistency and visual quality, achieves state-of-the-art results on a 1,000-video benchmark, and won first place in the ACM MM 2025 IPT2V Challenge; code is available.",
+    "article_date": "",
+    "article_authors": ""
+  }
+];
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("date-label").textContent = publishDate;
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this date.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
