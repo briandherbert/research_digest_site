@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI video – 2025-11-28</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    .date {
+      color: #475569;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="date" id="date-label">2025-11-28</p>
+    <h1 id="topic-title">AI video</h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI video";
+    const publishDate = "2025-11-28";
+    const articles = [
+  {
+    "article_url": "https://arxiv.org/abs/2502.04363",
+    "article_title": "On-device Sora: Enabling Diffusion-Based Text-to-Video Generation for Mobile Devices",
+    "article_summary": "Introduces a method to run diffusion-based text-to-video generation on smartphones by combining three techniques: Linear Proportional Leap to cut denoising steps, Temporal Dimension Token Merging to reduce attention compute, and Concurrent Inference with Dynamic Loading to fit models into limited memory. Demonstrates on an iPhone 15 Pro with video quality comparable to Open-Sora on high-end GPUs, highlighting benefits for accessibility, privacy, and cost.",
+    "article_date": "2025-02-05",
+    "article_authors": "Bosung Kim, Kyuhwan Lee, Isu Jeong, Jungmin Cheon, Yeojin Lee, Seulki Lee"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2505.22980",
+    "article_title": "MOVi: Training-free Text-conditioned Multi-Object Video Generation",
+    "article_summary": "Proposes a training-free approach to generate videos with multiple distinct, interacting objects using existing diffusion models guided by an LLM as a 'director' for object trajectories. Uses noise re-initialization and attention manipulation to preserve object-specific features and motion, reporting a 42% absolute improvement in motion dynamics and object generation accuracy while maintaining fidelity.",
+    "article_date": "2025-05-29",
+    "article_authors": "Aimon Rahman, Jiang Liu, Ze Wang, Ximeng Sun, Jialian Wu, Xiaodong Yu, Yusheng Su, Vishal M. Patel, Zicheng Liu, Emad Barsoum"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2507.04705",
+    "article_title": "Identity-Preserving Text-to-Video Generation Guided by Simple yet Effective Spatial-Temporal Decoupled Representations",
+    "article_summary": "Addresses the trade-off between identity preservation and temporal smoothness in text-to-video by decoupling spatial and temporal representations. Introduces semantic prompt optimization and a stage-wise T2I-to-I2V pipeline, achieving strong identity consistency, text relevance, and motion quality, with competitive results in the 2025 ACM Multimedia Challenge.",
+    "article_date": "2025-07-07",
+    "article_authors": "Yuji Wang, Moran Li, Xiaobin Hu, Ran Yi, Jiangning Zhang, Han Feng, Weijian Cao, Yabiao Wang, Chengjie Wang, Lizhuang Ma"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2508.09632",
+    "article_title": "Preacher: Paper-to-Video Agentic System",
+    "article_summary": "Presents an agentic system that converts scientific papers into structured video abstracts via top-down decomposition and bottom-up video synthesis. Uses Progressive Chain of Thought planning to align scenes and cross-modal content, producing coherent multi-segment videos across several research domains; code release is planned.",
+    "article_date": "2025-08-13",
+    "article_authors": "Jingwei Liu, Ling Yang, Hao Luo, Fan Wang, Hongyan Li, Mengdi Wang"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2510.23007",
+    "article_title": "CoMo: Compositional Motion Customization for Text-to-Video Generation",
+    "article_summary": "Introduces a framework for composing multiple distinct motions in one generated video. Learns motion-specific modules via static–dynamic decoupled tuning, then composes them with a plug-and-play divide-and-merge strategy during denoising; also provides a new benchmark and evaluation metric, showing state-of-the-art controllable video results.",
+    "article_date": "2025-10-27",
+    "article_authors": "Youcan Xu, Zhen Wang, Jiaxin Shi, Kexin Li, Feifei Shao, Jun Xiao, Yi Yang, Jun Yu, Long Chen"
+  }
+];
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("date-label").textContent = publishDate;
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this date.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI image generation – 2025-11-28</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    .date {
+      color: #475569;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="date" id="date-label">2025-11-28</p>
+    <h1 id="topic-title">AI image generation</h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI image generation";
+    const publishDate = "2025-11-28";
+    const articles = [
+  {
+    "article_url": "https://www.ft.com/content/d958b81f-b0a5-4373-b7ff-471cb4b290d8",
+    "article_title": "Getty warns over UK operations if Shutterstock deal is blocked",
+    "article_summary": "Getty Images warns it could scale back UK operations if the CMA blocks its $3.7 billion merger with Shutterstock, arguing that AI-generated content is rapidly disrupting stock-image licensing and the deal is needed for scale. The CMA is skeptical that AI images are yet a strong substitute for stock photos, while Getty continues investing in AI tools and pursuing legal action over unauthorized AI training.",
+    "article_date": "2025-11-28",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.reuters.com/business/adobe-adds-ai-models-openai-google-its-firefly-app-2025-04-24/",
+    "article_title": "Adobe adds AI models from OpenAI, Google to its Firefly app",
+    "article_summary": "Adobe integrated third-party image and video generation models—including OpenAI’s GPT-based image tools, Google’s Imagen 3 and Veo 2, and Flux 1.1 Pro—into Firefly and expanded access across mobile. The move lets creators switch among models within Firefly while keeping Adobe’s commercial safeguards and unified credit system.",
+    "article_date": "2025-04-24",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2507.23620",
+    "article_title": "DivControl: Knowledge Diversion for Controllable Image Generation",
+    "article_summary": "DivControl factorizes ControlNet with SVD into condition-agnostic \"learngenes\" and condition-specific \"tailors,\" then uses a dynamic gate to route control signals for multi-condition text-to-image diffusion. It achieves state-of-the-art controllability with substantially lower training cost and strong zero-/few-shot generalization to unseen control conditions.",
+    "article_date": "2025-07-31",
+    "article_authors": "Yucheng Xie, Fu Feng, Ruixiao Shi, Jing Wang, Yong Rui, Xin Geng"
+  },
+  {
+    "article_url": "https://www.mdpi.com/2227-7390/13/4/651",
+    "article_title": "Digital Watermarking Technology for AI-Generated Images: A Survey",
+    "article_summary": "This peer‑reviewed survey reviews watermarking methods for AI-generated images, tracing the evolution from GANs to diffusion and comparing spatial, transform, and deep learning watermarking approaches. It discusses ownership/authentication for diffusion models and outlines challenges in robustness, traceability, and copyright.",
+    "article_date": "2025-02-16",
+    "article_authors": "Huixin Luo, Li Li, Juncheng Li"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.12172",
+    "article_title": "SEAL: Semantic Aware Image Watermarking",
+    "article_summary": "SEAL embeds semantic cues about generated content into the watermark, enabling distortion‑free insertion and key inference without large key dictionaries. Experiments show improved robustness to attacks like noise reuse and malicious object insertion compared with prior diffusion watermarking methods.",
+    "article_date": "2025-03-15",
+    "article_authors": "Kasra Arabi, R. Teal Witter, Chinmay Hegde, Niv Cohen"
+  }
+];
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("date-label").textContent = publishDate;
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this date.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
