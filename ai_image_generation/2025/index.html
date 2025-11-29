@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI image generation – 2025</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #475569;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.25rem);
+    }
+    .summary {
+      color: #475569;
+      margin-top: 0.75rem;
+      font-size: 1rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow" id="year-label"></p>
+    <h1 id="topic-title"></h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI image generation";
+    const publishYear = "2025";
+    const articles = [
+  {
+    "article_url": "https://www.ft.com/content/d958b81f-b0a5-4373-b7ff-471cb4b290d8",
+    "article_title": "Getty warns over UK operations if Shutterstock deal is blocked",
+    "article_summary": "Getty Images warns it could scale back UK operations if the CMA blocks its $3.7 billion merger with Shutterstock, arguing that AI-generated content is rapidly disrupting stock-image licensing and the deal is needed for scale. The CMA is skeptical that AI images are yet a strong substitute for stock photos, while Getty continues investing in AI tools and pursuing legal action over unauthorized AI training.",
+    "article_date": "2025-11-28",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.reuters.com/business/adobe-adds-ai-models-openai-google-its-firefly-app-2025-04-24/",
+    "article_title": "Adobe adds AI models from OpenAI, Google to its Firefly app",
+    "article_summary": "Adobe integrated third-party image and video generation models—including OpenAI’s GPT-based image tools, Google’s Imagen 3 and Veo 2, and Flux 1.1 Pro—into Firefly and expanded access across mobile. The move lets creators switch among models within Firefly while keeping Adobe’s commercial safeguards and unified credit system.",
+    "article_date": "2025-04-24",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2507.23620",
+    "article_title": "DivControl: Knowledge Diversion for Controllable Image Generation",
+    "article_summary": "DivControl factorizes ControlNet with SVD into condition-agnostic \"learngenes\" and condition-specific \"tailors,\" then uses a dynamic gate to route control signals for multi-condition text-to-image diffusion. It achieves state-of-the-art controllability with substantially lower training cost and strong zero-/few-shot generalization to unseen control conditions.",
+    "article_date": "2025-07-31",
+    "article_authors": "Yucheng Xie, Fu Feng, Ruixiao Shi, Jing Wang, Yong Rui, Xin Geng"
+  },
+  {
+    "article_url": "https://www.mdpi.com/2227-7390/13/4/651",
+    "article_title": "Digital Watermarking Technology for AI-Generated Images: A Survey",
+    "article_summary": "This peer‑reviewed survey reviews watermarking methods for AI-generated images, tracing the evolution from GANs to diffusion and comparing spatial, transform, and deep learning watermarking approaches. It discusses ownership/authentication for diffusion models and outlines challenges in robustness, traceability, and copyright.",
+    "article_date": "2025-02-16",
+    "article_authors": "Huixin Luo, Li Li, Juncheng Li"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.12172",
+    "article_title": "SEAL: Semantic Aware Image Watermarking",
+    "article_summary": "SEAL embeds semantic cues about generated content into the watermark, enabling distortion‑free insertion and key inference without large key dictionaries. Experiments show improved robustness to attacks like noise reuse and malicious object insertion compared with prior diffusion watermarking methods.",
+    "article_date": "2025-03-15",
+    "article_authors": "Kasra Arabi, R. Teal Witter, Chinmay Hegde, Niv Cohen"
+  },
+  {
+    "article_url": "https://cybernews.com/ai-news/midjourney-launches-v7-image-generator/",
+    "article_title": "Midjourney launches new image generator V7 following OpenAI’s GPT-4o release",
+    "article_summary": "Midjourney began alpha testing its V7 image model with built‑in personalization that asks users to rate ~200 images to tailor outputs, plus a new Draft Mode that generates results up to 10× faster at lower cost for rapid iteration. The update emphasizes improved coherence and quality while some advanced features roll out gradually during testing.",
+    "article_date": "2025-04-04",
+    "article_authors": "Paulius Grinkevičius"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2506.15742",
+    "article_title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space",
+    "article_summary": "This paper introduces FLUX.1 Kontext, a flow‑matching model that unifies text‑to‑image generation and image editing via simple sequence concatenation of text and image inputs. It reports stronger character/style preservation and robustness across multi‑turn edits, plus a new KontextBench with 1,026 prompt–image pairs to evaluate local/global edits, character/style references, and text editing.",
+    "article_date": "2025-06-17",
+    "article_authors": "Black Forest Labs, Stephen Batifol, Andreas Blattmann, Frederic Boesel, Saksham Consul, Cyril Diagne, Tim Dockhorn, Jack English, Zion English, Patrick Esser, Sumith Kulal, Kyle Lacey, Yam Levi, Cheng Li, Dominik Lorenz, Jonas Müller, Dustin Podell, Robin Rombach, Harry Saini, Axel Sauer, Luke Smith"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2502.21151",
+    "article_title": "A Review on Generative AI For Text-To-Image and Image-To-Image Generation and Implications To Scientific Images",
+    "article_summary": "A concise survey of VAE, GAN, and diffusion architectures for text‑to‑image and image‑to‑image generation, with comparisons of strengths/limits and a focus on scientific imaging. It outlines open challenges (bias, evaluation, data, safety) and future directions for applying image generators in scientific workflows.",
+    "article_date": "2025-02-28",
+    "article_authors": "Zineb Sordo, Eric Chagnon, Daniela Ushizima"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2502.13081",
+    "article_title": "Personalized Image Generation with Deep Generative Models: A Decade Survey",
+    "article_summary": "This survey systematizes personalization methods across GANs, diffusion, and emerging autoregressive/DiT‑based models. It proposes a unified framework spanning inversion spaces, inversion methods, and personalization schemes, compares techniques (e.g., LoRA, textual inversion), and highlights challenges in data efficiency, identity consistency, and evaluation.",
+    "article_date": "2025-02-18",
+    "article_authors": "Yuxiang Wei, Yiheng Zheng, Yabo Zhang, Ming Liu, Zhilong Ji, Lei Zhang, Wangmeng Zuo"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2505.23660",
+    "article_title": "D-AR: Diffusion via Autoregressive Models",
+    "article_summary": "Introduces a tokenizer that maps image tokens to diffusion denoising steps so image generation can be done with standard next‑token prediction. Enables streaming previews and zero‑shot layout control, achieving 2.09 FID on ImageNet with a 775M-parameter Llama backbone.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.12652",
+    "article_title": "UniVG: A Generalist Diffusion Model for Unified Image Generation and Editing",
+    "article_summary": "Presents a single diffusion model that handles text-to-image, inpainting, instruction-based edits, identity‑preserving generation, and layout guidance using unified conditioning. Multi‑task training shows tasks can coexist without major trade‑offs, sometimes outperforming task‑specific models.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.12213",
+    "article_title": "STAY Diffusion: Styled Layout Diffusion Model for Diverse Layout-to-Image Generation",
+    "article_summary": "Proposes a layout‑to‑image model with Edge‑Aware Normalization and Styled‑Mask Attention to better align style and spatial control. Delivers more accurate object placement and diverse, photorealistic results compared with prior L2I approaches.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://news.adobe.com/news/2025/10/adobe-max-2025-firefly",
+    "article_title": "Adobe Firefly Delivers Groundbreaking AI Audio, Video and Imaging Innovations and New Models in All-In-One Creative AI Studio",
+    "article_summary": "Announces Firefly Image Model 5 with native 4MP image generation, improved photorealism, and complex composition handling. Adds Prompt to Edit and forthcoming Layered Image Editing, plus integration of partner models for broader creative control.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly",
+    "article_title": "Adobe Revolutionizes AI-Assisted Creativity with Firefly, the All-In-One Home for AI Content Creation, with New Partner and Firefly Models",
+    "article_summary": "Launches Firefly Image Model 4 and 4 Ultra for higher‑quality, controllable image generation up to 2K resolution and deeper Creative Cloud integration. Highlights an IP‑friendly, production‑ready pipeline and new AI-first workflows for rapid ideation.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://techcrunch.com/2025/04/23/openai-makes-its-upgraded-image-generator-available-to-developers/",
+    "article_title": "OpenAI makes its upgraded image generator available to developers",
+    "article_summary": "OpenAI released gpt-image-1 to developers, a natively multimodal model that can create and edit images, render text reliably, and balance quality versus speed. It includes C2PA watermarking and configurable safety filters, and offers per-token pricing for image inputs and outputs.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.13070",
+    "article_title": "Rewards Are Enough for Fast Photo-Realistic Text-to-image Generation",
+    "article_summary": "The authors propose R0, a reward‑centric method that treats text‑to‑image generation as optimizing images directly for high compositional reward with light regularization. R0 trains few‑step generators that match or surpass diffusion‑distilled baselines on fidelity and controllability, suggesting rewards can dominate in complex conditioned generation.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2510.20766",
+    "article_title": "DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion",
+    "article_summary": "Introduces a training-free method that adjusts positional encodings across diffusion steps to synthesize images far beyond a model’s training resolution. Demonstrates ultra‑high‑resolution outputs (e.g., ~16MP with FLUX) without added sampling cost and with improved fidelity on multiple benchmarks.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2505.24086",
+    "article_title": "ComposeAnything: Composite Object Priors for Text-to-Image Generation",
+    "article_summary": "Uses an LLM to produce 2.5D semantic layouts and a coarse composite that replaces noise initialization in diffusion models. The object‑aware prior guides denoising to improve complex compositions and 3D arrangements, outperforming prior methods on T2I-CompBench and NSR‑1K with supporting human evaluations.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.20198",
+    "article_title": "Beyond Words: Advancing Long-Text Image Generation via Multimodal Autoregressive Models",
+    "article_summary": "Targets accurate rendering of long scene text in images by introducing a text‑focused binary tokenizer and a multimodal autoregressive generator. Reports strong controllability over typography and better long‑text fidelity than SD3.5 Large and GPT‑4o with DALL·E 3 on evaluated tasks.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.theverge.com/news/813789/microsoft-in-house-ai-image-generator-mai-image-1",
+    "article_title": "Microsoft AI's first in-house image generator MAI-Image-1 is now available",
+    "article_summary": "Microsoft launches its first proprietary image model, MAI‑Image‑1, integrating it into Bing Image Creator and Copilot features. The model emphasizes speed‑quality balance with realistic lighting and reflections, signaling a step toward reduced reliance on third‑party providers.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.reuters.com/business/adobe-brings-ai-image-generation-app-phones-adds-partners-2025-06-17/",
+    "article_title": "Adobe brings AI-image generation app to phones, adds partners",
+    "article_summary": "Adobe releases a Firefly mobile app for iOS and Android, offering basic image generation for subscribers and premium access to additional partner models. The company highlights training on legally permissible data and positions the app for social content creation with a starting price around $10/month.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2501.09194",
+    "article_title": "Grounding Text-to-Image Diffusion Models for Controlled High-Quality Image Generation",
+    "article_summary": "This paper introduces ObjectDiffusion, a method that conditions text-to-image diffusion models on semantic and spatial grounding to precisely place objects via bounding boxes. Building on ControlNet and GLIGEN, the authors fine-tune on COCO2017 and report AP50 of 46.6, AR of 44.5, and FID of 19.8, outperforming state-of-the-art models trained on open datasets. Qualitative results show reliable rendering of multiple, varied objects in specified locations. The work targets better controllability without sacrificing visual quality.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.05149",
+    "article_title": "Development and Enhancement of Text-to-Image Diffusion Models",
+    "article_summary": "This study explores improving text-to-image diffusion models by addressing sample diversity and training instability. Using classifier-free guidance and exponential moving average techniques, the author reports gains in image quality, diversity, and stability on top of a Hugging Face baseline. The paper provides an implementation-focused overview of diffusion principles and a comparative evaluation of the proposed enhancements. It positions these techniques as simple, effective upgrades for modern T2I systems.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.11905",
+    "article_title": "Upcycling Text-to-Image Diffusion Models for Multi-Task Capabilities",
+    "article_summary": "The authors propose Multi-Task Upcycling (MTU) to extend a pre-trained T2I diffusion model to many image-to-image tasks without heavy retraining. By replacing FFN layers with lightweight experts and adding dynamic routing, MTU achieves performance comparable to single-task fine-tunes on editing, super-resolution, and inpainting. Crucially, it keeps latency and GFLOPs similar to single-task models, improving suitability for on-device use. The approach aims to curb parameter bloat while broadening functionality.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2505.22792",
+    "article_title": "Rhetorical Text-to-Image Generation via Two-layer Diffusion Policy Optimization",
+    "article_summary": "This paper tackles generating images from rhetorical or metaphorical prompts, where literal word-object alignments mislead current models. The proposed Rhet2Pix uses a two-layer MDP diffusion scheme: an outer layer decomposes prompts into elaborated sub-sentences to guide actions, while an inner layer optimizes rewards across the denoising trajectory. Experiments show improved handling of rhetorical meaning and better qualitative and quantitative metrics versus GPT-4o, Grok-3, and academic baselines. The authors release code and data to support future work.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.09242",
+    "article_title": "NAMI: Efficient Image Generation via Progressive Rectified Flow Transformers",
+    "article_summary": "Proposes a progressive rectified-flow Transformer that splits generation into multi-resolution stages—using fewer layers at low resolution and more at high—accelerating convergence and cutting inference time by about 40% for 1024px images while maintaining quality. Also introduces the NAMI‑1K human‑preference benchmark.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.theverge.com/openai/635118/chatgpt-sora-ai-image-generation-chatgpt",
+    "article_title": "OpenAI rolls out image generation powered by GPT-4o to ChatGPT",
+    "article_summary": "Describes OpenAI’s 2025 launch of “Images in ChatGPT,” adding GPT‑4o‑powered, autoregressive image generation directly in ChatGPT for Free, Plus, Pro, and Team users. Highlights better attribute binding and text rendering, longer generation time than diffusion, built‑in safeguards and C2PA provenance, and user ownership within policy limits.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  }
+];
+
+    document.getElementById("topic-title").textContent = "Following " + topicName;
+    document.getElementById("year-label").textContent = publishYear;
+
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this year.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

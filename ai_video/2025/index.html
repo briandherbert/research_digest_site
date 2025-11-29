@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI video – 2025</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #475569;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.25rem);
+    }
+    .summary {
+      color: #475569;
+      margin-top: 0.75rem;
+      font-size: 1rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow" id="year-label"></p>
+    <h1 id="topic-title"></h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI video";
+    const publishYear = "2025";
+    const articles = [
+  {
+    "article_url": "https://arxiv.org/abs/2502.04363",
+    "article_title": "On-device Sora: Enabling Diffusion-Based Text-to-Video Generation for Mobile Devices",
+    "article_summary": "Introduces a method to run diffusion-based text-to-video generation on smartphones by combining three techniques: Linear Proportional Leap to cut denoising steps, Temporal Dimension Token Merging to reduce attention compute, and Concurrent Inference with Dynamic Loading to fit models into limited memory. Demonstrates on an iPhone 15 Pro with video quality comparable to Open-Sora on high-end GPUs, highlighting benefits for accessibility, privacy, and cost.",
+    "article_date": "2025-02-05",
+    "article_authors": "Bosung Kim, Kyuhwan Lee, Isu Jeong, Jungmin Cheon, Yeojin Lee, Seulki Lee"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2505.22980",
+    "article_title": "MOVi: Training-free Text-conditioned Multi-Object Video Generation",
+    "article_summary": "Proposes a training-free approach to generate videos with multiple distinct, interacting objects using existing diffusion models guided by an LLM as a 'director' for object trajectories. Uses noise re-initialization and attention manipulation to preserve object-specific features and motion, reporting a 42% absolute improvement in motion dynamics and object generation accuracy while maintaining fidelity.",
+    "article_date": "2025-05-29",
+    "article_authors": "Aimon Rahman, Jiang Liu, Ze Wang, Ximeng Sun, Jialian Wu, Xiaodong Yu, Yusheng Su, Vishal M. Patel, Zicheng Liu, Emad Barsoum"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2507.04705",
+    "article_title": "Identity-Preserving Text-to-Video Generation Guided by Simple yet Effective Spatial-Temporal Decoupled Representations",
+    "article_summary": "Addresses the trade-off between identity preservation and temporal smoothness in text-to-video by decoupling spatial and temporal representations. Introduces semantic prompt optimization and a stage-wise T2I-to-I2V pipeline, achieving strong identity consistency, text relevance, and motion quality, with competitive results in the 2025 ACM Multimedia Challenge.",
+    "article_date": "2025-07-07",
+    "article_authors": "Yuji Wang, Moran Li, Xiaobin Hu, Ran Yi, Jiangning Zhang, Han Feng, Weijian Cao, Yabiao Wang, Chengjie Wang, Lizhuang Ma"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2508.09632",
+    "article_title": "Preacher: Paper-to-Video Agentic System",
+    "article_summary": "Presents an agentic system that converts scientific papers into structured video abstracts via top-down decomposition and bottom-up video synthesis. Uses Progressive Chain of Thought planning to align scenes and cross-modal content, producing coherent multi-segment videos across several research domains; code release is planned.",
+    "article_date": "2025-08-13",
+    "article_authors": "Jingwei Liu, Ling Yang, Hao Luo, Fan Wang, Hongyan Li, Mengdi Wang"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2510.23007",
+    "article_title": "CoMo: Compositional Motion Customization for Text-to-Video Generation",
+    "article_summary": "Introduces a framework for composing multiple distinct motions in one generated video. Learns motion-specific modules via static–dynamic decoupled tuning, then composes them with a plug-and-play divide-and-merge strategy during denoising; also provides a new benchmark and evaluation metric, showing state-of-the-art controllable video results.",
+    "article_date": "2025-10-27",
+    "article_authors": "Youcan Xu, Zhen Wang, Jiaxin Shi, Kexin Li, Feifei Shao, Jun Xiao, Yi Yang, Jun Yu, Long Chen"
+  },
+  {
+    "article_url": "https://openai.com/index/sora-2/",
+    "article_title": "Sora 2 is here",
+    "article_summary": "OpenAI unveils Sora 2, a next‑generation video and audio generation model that is more physically accurate, realistic, and controllable than prior systems. It adds synchronized dialogue and sound effects and is accessible through a new Sora app.",
+    "article_date": "2025-09-30",
+    "article_authors": "OpenAI"
+  },
+  {
+    "article_url": "https://developers.googleblog.com/zh-hans/veo-2-video-generation-now-generally-available/",
+    "article_title": "Bring your ideas to life: Veo 2 video generation available for developers",
+    "article_summary": "Google makes its Veo 2 video generation model available via the Gemini API and Google AI Studio. Veo 2 turns text and/or images into eight‑second video clips with improved physics and a range of cinematic styles for app integration.",
+    "article_date": "2025-04-15",
+    "article_authors": "Olivier Lacombe, Alisa Fortin, Guillaume Vernade"
+  },
+  {
+    "article_url": "https://www.eweek.com/openai/openai-adds-longer-clips-sora-2/",
+    "article_title": "Sora 2 Update: OpenAI Adds Longer Clips and Frame-by-Frame Storyboarding",
+    "article_summary": "A report on OpenAI’s Sora 2 update that expands default video length to 15 seconds (and up to 25 seconds on web for Pro users) and introduces a storyboard tool for frame‑by‑frame planning. The features aim to enable more structured, narrative AI video creation.",
+    "article_date": "2025-10-17",
+    "article_authors": "Aminu Abdullahi"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.23796",
+    "article_title": "On-device Sora: Enabling Training-Free Diffusion-based Text-to-Video Generation for Mobile Devices",
+    "article_summary": "This paper presents a training‑free pipeline for running diffusion‑based text‑to‑video on smartphones. Using Linear Proportional Leap, Temporal Dimension Token Merging, and Concurrent Inference with Dynamic Loading, the system generates high‑quality videos on an iPhone 15 Pro with quality comparable to GPU outputs.",
+    "article_date": "2025-03-31",
+    "article_authors": "Bosung Kim, Kyuhwan Lee, Isu Jeong, Jungmin Cheon, Yeojin Lee, Seulki Lee"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2509.01362",
+    "article_title": "Identity-Preserving Text-to-Video Generation via Training-Free Prompt, Image, and Guidance Enhancement",
+    "article_summary": "The authors propose a training‑free framework (TPIGE) to improve identity preservation in text‑to‑video generation. It enhances prompts and reference images and adds ID‑aware spatiotemporal guidance, yielding stronger identity fidelity and video quality and achieving top results in a 2025 challenge.",
+    "article_date": "2025-09-01",
+    "article_authors": "Jiayi Gao, Changcheng Hua, Qingchao Chen, Yuxin Peng, Yang Liu"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2509.22622",
+    "article_title": "LongLive: Real-time Interactive Long Video Generation",
+    "article_summary": "Proposes a frame-level autoregressive framework for long, interactive video generation with KV-recache, streaming long tuning, and a frame-sink attention scheme to maintain consistency during prompt switches. Achieves 20.7 FPS on a single H100 GPU, supports videos up to 240 seconds, and offers INT8-quantized inference with minimal quality loss.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2508.03694",
+    "article_title": "LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation",
+    "article_summary": "Introduces an end-to-end autoregressive method for controllable ultra-long videos using unified noise initialization, global control signal normalization, and a multimodal control framework (dense and sparse signals) with degradation-aware training. Presents LongVGenBench and reports state-of-the-art long-range consistency and controllability.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.luma-ai.com/luma-ai-in-2025-whats-new-with-dream-machine-and-ray2/",
+    "article_title": "Luma AI in 2025: What’s New with Dream Machine and Ray2",
+    "article_summary": "Company update detailing the Ray2 video model (higher realism, trained with 10× compute) for 5–9 second clips, a Modify Video tool for transforming existing footage, and a revamped UI plus iOS app. Highlights new partnerships and pricing aimed at making high-fidelity AI video creation more accessible.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics",
+    "article_title": "TikTok is letting users control how much AI content they see",
+    "article_summary": "Reports TikTok’s test of a feed control that lets users increase or decrease AI-generated videos via a new Manage topics slider. Notes improved AI-content detection, including invisible watermarks and C2PA Content Credentials, with broader rollout expected in the coming weeks.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.businessinsider.com/openai-temporarily-blocked-cameo-video-app-sora-lawsuit-2025-11",
+    "article_title": "OpenAI is temporarily blocked from using the word 'cameo' for its video app",
+    "article_summary": "Covers a court order temporarily barring OpenAI from using “cameo” for a Sora feature amid a trademark dispute with Cameo. The ruling, by Judge Eumi K. Lee, lasts until December 22 with a December 19 hearing scheduled; OpenAI disagrees with the claims and plans to contest them.",
+    "article_date": "2025-11-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://deepmind.google/en/research/publications/video-models-are-zero-shot-learners-and-reasoners/",
+    "article_title": "Video models are zero-shot learners and reasoners",
+    "article_summary": "DeepMind shows Veo 3 performing a wide range of zero-shot tasks—segmentation, edge detection, editing, physical property understanding, and tool-use simulation—without task-specific training. The work argues video models are on a trajectory to become generalist vision foundation models via emergent “chain-of-frames” style reasoning.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2510.19022",
+    "article_title": "MoAlign: Motion-Centric Representation Alignment for Video Diffusion Models",
+    "article_summary": "Introduces a motion-centric alignment that learns a disentangled motion subspace (optimized to predict optical flow) from a pretrained video encoder and aligns a text-to-video diffusion model to it. The approach improves temporal coherence and physical plausibility while maintaining prompt fidelity across benchmarks like VideoPhy and VBench.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2511.13704",
+    "article_title": "TiViBench: Benchmarking Think-in-Video Reasoning for Video Generative Models",
+    "article_summary": "Presents a hierarchical benchmark to measure reasoning in image-to-video generation across structural search, spatial patterns, symbolic logic, and action planning. The authors evaluate commercial and open-source models and propose VideoTPO, a simple test-time strategy that boosts reasoning without extra training.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.09642",
+    "article_title": "Open-Sora 2.0: Training a Commercial-Level Video Generation Model in $200k",
+    "article_summary": "Details how a competitive video generation model can be trained for roughly $200k through data curation, efficient architectures, training strategies, and system optimizations. Results show parity with leading systems on VBench and human evaluations, with code and resources fully open-sourced.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.reuters.com/technology/openais-new-sora-video-generator-require-copyright-holders-opt-out-wsj-reports-2025-09-29/",
+    "article_title": "OpenAI's new Sora video generator to require copyright holders to opt out, WSJ reports",
+    "article_summary": "Reuters reports OpenAI plans an opt-out mechanism for rights holders as it readies an updated Sora video generator, alongside restrictions on generating public figures. The piece also notes a forthcoming standalone Sora 2 app with short-form video creation and identity verification features.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.theverge.com/news/774352/google-veo-3-ai-vertical-video-1080p-support",
+    "article_title": "Google’s Veo 3 can now generate vertical AI videos",
+    "article_summary": "Google added 9:16 vertical format support and higher-resolution outputs to its Veo 3 video generator, with pricing reduced for developers and the model marked stable in the Gemini API. 1080p is available for 16:9, and vertical support targets Shorts/Reels-style content.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://techcrunch.com/2025/04/15/googles-veo-2-video-generator-comes-to-gemini/",
+    "article_title": "Google’s Veo 2 video generating model comes to Gemini",
+    "article_summary": "Veo 2 rolled out to Gemini Advanced subscribers, enabling 8-second 720p text-to-video clips watermarked with SynthID. Google also introduced Whisk Animate to turn images into Veo 2 videos and emphasized easy sharing to platforms like TikTok and YouTube.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2505.00337",
+    "article_title": "T2VPhysBench: A First-Principles Benchmark for Physical Consistency in Text-to-Video Generation",
+    "article_summary": "Proposes a benchmark to test whether text-to-video models obey 12 core physical laws. Human evaluations show all surveyed systems score below 0.60 across categories, revealing persistent physics violations and offering guidance for more physics-aware generation.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2503.11513",
+    "article_title": "HiTVideo: Hierarchical Tokenizers for Enhancing Text-to-Video Generation with Autoregressive Large Language Models",
+    "article_summary": "Introduces a 3D causal VAE with multi-layer discrete codebooks to hierarchically tokenize video. The approach compresses long clips (e.g., 8s/64 frames) by ~70% bits-per-pixel versus baselines while preserving semantic and spatiotemporal detail for better T2V generation.",
+    "article_date": "2025-11-25",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.reuters.com/business/meta-unveils-new-ai-video-feed-vibes-2025-09-25/",
+    "article_title": "Meta unveils new AI video feed Vibes",
+    "article_summary": "On September 25, 2025, Meta launched Vibes, an AI-generated video feed in the Meta AI app and on meta.ai that lets users create from scratch, remix existing clips, and share to Instagram and Facebook. The rollout is part of Meta’s broader AI push under its Superintelligence Labs division to drive new revenue via the Meta AI app, image-to-video ad tools, and smart glasses.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://techcrunch.com/2025/03/31/runway-releases-an-impressive-new-video-generating-ai-model/",
+    "article_title": "Runway releases an impressive new video-generating AI model",
+    "article_summary": "Runway debuts Gen-4, claiming improved world understanding and the ability to keep characters, styles, and locations consistent across scenes. It supports reference-based generation and aims for realistic motion, while raising unresolved questions about training data and IP.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.techradar.com/ai-platforms-assistants/youtube-shorts-now-lets-you-turn-text-into-8-second-videos-using-veo-3s-ai-magic",
+    "article_title": "YouTube Shorts now lets you turn text into 8-second videos using Veo 3's AI magic",
+    "article_summary": "Google integrates Veo 3 into YouTube Shorts, letting users generate 8‑second AI videos with sound directly from text prompts and selectable styles. Outputs are labeled and watermarked with SynthID, easing creation while prompting concerns about potential low‑quality content proliferation.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2510.04999",
+    "article_title": "Bridging Text and Video Generation: A Survey",
+    "article_summary": "A comprehensive 2025 survey tracing T2V’s evolution from GANs/VAEs to diffusion‑transformer hybrids. It catalogs datasets, training setups, and evaluation metrics, compares model performance, and outlines open challenges like long‑range coherence, alignment, and efficiency, with suggested future research directions.",
+    "article_date": "2025-10-26",
+    "article_authors": ""
+  }
+];
+
+    document.getElementById("topic-title").textContent = "Following " + topicName;
+    document.getElementById("year-label").textContent = publishYear;
+
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this year.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>
