@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astronomy – 2025</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 2rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .eyebrow {
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: #475569;
+      margin-bottom: 0.5rem;
+      font-size: 0.85rem;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2.2rem, 4vw, 3.25rem);
+    }
+    .summary {
+      color: #475569;
+      margin-top: 0.75rem;
+      font-size: 1rem;
+    }
+    #articles {
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .month-label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #0f172a;
+    }
+    .month-divider {
+      border: 0;
+      border-top: 1px solid #e2e8f0;
+      margin: 0;
+      width: 100%;
+    }
+    .month-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.5;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="eyebrow" id="year-label"></p>
+    <h1 id="topic-title"></h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "Astronomy";
+    const publishYear = "2025";
+    const articles = [
+  {
+    "article_url": "https://www.nature.com/articles/s41550-025-02741-1",
+    "article_title": "Fast Radio Bursts 2025",
+    "article_summary": "A state-of-the-field review summarizing the year’s progress on fast radio bursts, covering new detections, improved localization, leading progenitor models, and instrumentation advances, and outlining key priorities for upcoming surveys.",
+    "article_date": "2025-12-09",
+    "article_authors": "A. M. Cook, A. P. Curtin",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://www.sciencedaily.com/releases/2025/12/251206030750.htm",
+    "article_title": "SPHERE’s stunning space images reveal where new planets are forming",
+    "article_summary": "High-contrast VLT/SPHERE images of dusty rings around young stars reveal arcs, sharp edges, and clumps that trace ongoing planet formation. The structures point to collisions among planetesimals and hint at unseen giant planets shaping the disks.",
+    "article_date": "2025-12-06",
+    "article_authors": "Max Planck Institute for Astronomy, ScienceDaily Staff",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/12/science/scientists-discover-real-life-star-wars-planet-with-two-suns/",
+    "article_title": "'Star Wars' predicted it: Planet discovered that orbits two suns like Luke Skywalker's home Tatooine",
+    "article_summary": "Astronomers report a rare, directly imaged circumbinary gas giant, HD 143811 AB b, about 446 light-years away. Archival Gemini South and Keck data show it orbits both stars with an estimated multi-century period, offering insights into planet formation in binary systems.",
+    "article_date": "2025-12-12",
+    "article_authors": "New York Post Staff",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://timesofindia.indiatimes.com/city/nagpur/geminid-meteor-shower-to-be-visible-on-dec-13-14-night-sky/articleshow/125939061.cms",
+    "article_title": "Geminid meteor shower to be visible on Dec 13 & 14 night sky",
+    "article_summary": "A viewing guide to the Geminid meteor shower peaking on Dec 13–14, recommending dark-sky locations after 10 PM. It notes the shower’s origin from asteroid 3200 Phaethon and the potential to see up to ~100 meteors per hour under ideal conditions.",
+    "article_date": "2025-12-13",
+    "article_authors": "Times of India Staff",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://timesofindia.indiatimes.com/etimes/trending/winters-secret-sky-show-indians-are-in-for-a-treat-as-geminid-and-quadrantid-meteor-showers-to-light-up-the-sky-in-december/articleshow/125934459.cms",
+    "article_title": "Winter's secret sky show: Indians are in for a treat as Geminid and Quadrantid meteor showers to light up the sky in December",
+    "article_summary": "An overview of December’s Geminid and Quadrantid meteor showers with tips on when and where to watch across India. The piece highlights the Geminids’ bright, multi-colored meteors and the favorable winter viewing conditions.",
+    "article_date": "2025-12-13",
+    "article_authors": "Times of India Staff",
+    "row_date": "2025-12-13"
+  }
+];
+
+    document.getElementById("topic-title").textContent = "Following " + topicName;
+    document.getElementById("year-label").textContent = publishYear;
+
+    const container = document.getElementById("articles");
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    const now = new Date();
+    const publishYearNum = Number(publishYear);
+    const maxMonthForYear =
+      publishYearNum === now.getFullYear() ? now.getMonth() + 1 : 12;
+
+    const filteredArticles = [];
+    articles.forEach((item) => {
+      const dateValue = (item.row_date || item.article_date || "").trim();
+      if (!dateValue) {
+        return;
+      }
+      const [yearPart, monthPart] = dateValue.split("-");
+      const monthNumber = Number(monthPart);
+      if (
+        !yearPart ||
+        Number.isNaN(monthNumber) ||
+        monthNumber < 1 ||
+        monthNumber > 12
+      ) {
+        return;
+      }
+      if (yearPart !== publishYear) {
+        return;
+      }
+      if (publishYearNum === now.getFullYear() && monthNumber > maxMonthForYear) {
+        return;
+      }
+      filteredArticles.push({
+        ...item,
+        monthKey: `${yearPart}-${String(monthNumber).padStart(2, "0")}`,
+        monthLabel: `${monthNames[monthNumber - 1]} ${yearPart}`,
+      });
+    });
+
+    if (!filteredArticles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this year.";
+      container.appendChild(empty);
+    } else {
+      let lastMonthKey = null;
+      let monthGrid = null;
+      filteredArticles.forEach((item, idx) => {
+        if (item.monthKey !== lastMonthKey) {
+          if (lastMonthKey !== null) {
+            const divider = document.createElement("hr");
+            divider.className = "month-divider";
+            container.appendChild(divider);
+          }
+          const label = document.createElement("p");
+          label.className = "month-label";
+          label.textContent = item.monthLabel;
+          container.appendChild(label);
+          const grid = document.createElement("div");
+          grid.className = "month-grid";
+          container.appendChild(grid);
+          monthGrid = grid;
+          lastMonthKey = item.monthKey;
+        }
+        if (!monthGrid) {
+          return;
+        }
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        monthGrid.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

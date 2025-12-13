@@ -37,12 +37,29 @@
       font-size: 1rem;
     }
     #articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 2.5rem;
       padding-bottom: 2rem;
       max-width: 1200px;
       margin: 0 auto;
+    }
+    .month-label {
+      font-size: 1rem;
+      font-weight: 600;
+      margin: 0;
+      color: #0f172a;
+    }
+    .month-divider {
+      border: 0;
+      border-top: 1px solid #e2e8f0;
+      margin: 0;
+      width: 100%;
+    }
+    .month-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
     }
     article {
       background: #fff;
@@ -95,298 +112,436 @@
     const publishYear = "2025";
     const articles = [
   {
+    "article_url": "https://www.businessinsider.com/trump-ai-executive-order-one-rule-state-regulations-2025-12",
+    "article_title": "Trump signs executive order restricting states' ability to regulate AI",
+    "article_summary": "The White House established a federal \"One Rulebook\" for AI, preempting many state-level rules. For AI image generation, a unified framework could standardize requirements around provenance, watermarking, content safety, and liability, while legal challenges over states’ rights may create near‑term uncertainty for developers and platforms.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://www.businessinsider.com/bi-today-newsletter-disney-openai-iger-altman-pick-side-2025-12",
+    "article_title": "Disney just picked a side in the AI fight",
+    "article_summary": "Disney’s $1B partnership with OpenAI signals a push to let users create AI‑generated content on Disney+. For image generation, the move points to mainstream integration of text‑to‑image/video tools (e.g., Sora 2) in consumer streaming, raising questions about IP controls, safeguards for kids, and creator workflows using branded characters.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/12/us-news/melania-trump-teases-new-legislative-push-after-passage-of-anti-revenge-porn-law/",
+    "article_title": "Melania Trump teases new legislative push after passage of anti-revenge porn law",
+    "article_summary": "Following bipartisan passage of the Take It Down Act criminalizing non‑consensual intimate imagery—including AI‑generated deepfakes—the First Lady previewed a 2026 initiative focused on child safety. The law’s scope directly impacts AI image generation by tightening penalties and nudging platforms and model providers to strengthen detection and consent mechanisms.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://www.ft.com/content/37917e22-823a-40e2-9b8a-78779ed16efe",
+    "article_title": "Disney to invest $1bn in OpenAI",
+    "article_summary": "Disney announced a $1B investment and three-year licensing deal with OpenAI that lets Sora, OpenAI’s generative video tool, legally use 200+ Disney, Marvel, Pixar, and Star Wars characters. The pact bans training on Disney IP, grants OpenAI a year of exclusivity for certain generative uses, and will feature user‑generated content on Disney+. The move signals a broader embrace of AI-driven visual generation while navigating copyright concerns.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-12"
+  },
+  {
+    "article_url": "https://www.theguardian.com/business/2025/dec/11/disney-open-ai-sora-video-deal",
+    "article_title": "Disney to invest $1bn in OpenAI, allowing characters in Sora video tool",
+    "article_summary": "Disney’s deal with OpenAI enables prompt-based generation of short videos featuring Disney-owned characters in Sora, while excluding the use of actors’ likenesses or voices. The companies position the partnership as a way to innovate responsibly amid Hollywood’s debates over AI’s impact on jobs and IP. Disney will also use OpenAI APIs and roll out ChatGPT internally, with select user creations potentially featured on Disney+.",
+    "article_date": "2025-12-11",
+    "article_authors": "",
+    "row_date": "2025-12-12"
+  },
+  {
+    "article_url": "https://apnews.com/article/df8be1fe52e9b9c46d965577d3974d3b",
+    "article_title": "Disney invests $1B in OpenAI in deal to bring characters like Mickey Mouse to Sora AI video tool",
+    "article_summary": "A three-year licensing pact makes Disney the first major content partner for Sora, allowing users to generate short, shareable character videos from text prompts. Disney will adopt OpenAI tools internally. The announcement drew criticism from children’s advocates and coincided with Disney sending a cease-and-desist to Google over alleged AI training on Disney content—highlighting tensions around generative visual models and copyright.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-12"
+  },
+  {
+    "article_url": "https://aiwebbiz.com/blog/top-ai-news-december-2025-breakthroughs-launches-and-industry-developments/",
+    "article_title": "Top AI News December 2025: Breakthroughs & Developments",
+    "article_summary": "A roundup highlights Google DeepMind’s Nano Banana Pro, an image generation and editing model optimized for legible, multilingual text-in-image rendering and data‑to‑visuals tasks. It supports up to 14 input images and more consistent multi‑person scenes, positioning it for infographics, diagrams, and educational or business visuals—showcasing current progress in practical AI image generation.",
+    "article_date": "2025-12-06",
+    "article_authors": "",
+    "row_date": "2025-12-12"
+  },
+  {
+    "article_url": "https://apnews.com/article/6df668ae93489da7d448c66e53905bbb",
+    "article_title": "South Korea to require advertisers to label AI-generated ads",
+    "article_summary": "South Korea will mandate clear labels on AI-generated advertising starting in early 2026, citing a rise in deceptive deepfake ads. The policy adds monitoring, swift takedowns, fines, and platform accountability to curb misuse while balancing AI innovation.",
+    "article_date": "2025-12-10",
+    "article_authors": "",
+    "row_date": "2025-12-10"
+  },
+  {
+    "article_url": "https://www.theguardian.com/technology/2025/dec/04/google-ai-nano-banana-pro-racialised-white-saviour-images",
+    "article_title": "Google's AI Nano Banana Pro accused of generating racialised 'white saviour' visuals",
+    "article_summary": "Tests of Google's new image generator produced stereotyped 'white saviour' depictions in African aid scenarios and inserted NGO logos without prompts, raising bias and IP concerns. Google acknowledged issues and said it is working on safeguards.",
+    "article_date": "2025-12-04",
+    "article_authors": "",
+    "row_date": "2025-12-10"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/08/lifestyle/ai-stars-like-tilly-norwood-and-xania-monet-are-raking-in-millions-much-to-the-horror-of-critics-but-their-creators-are-hitting-back/",
+    "article_title": "AI 'stars' like Tilly Norwood and Xania Monet are raking in millions, much to the horror of critics - but their creators are hitting back",
+    "article_summary": "AI-generated influencers and performers are drawing large audiences and revenue, prompting criticism from entertainers and unions over job threats. Creators argue for transparency and ethical boundaries as virtual celebrities proliferate.",
+    "article_date": "2025-12-08",
+    "article_authors": "",
+    "row_date": "2025-12-10"
+  },
+  {
+    "article_url": "https://www.glamour.com/story/the-deepfake-porn-crisis-is-here",
+    "article_title": "The Deepfake Porn Crisis Is Here",
+    "article_summary": "Explores the rapid rise of AI-generated, non-consensual sexual images, how easy-to-use 'nudify' tools victimize women, the psychological and legal fallout, and the limits of recent U.S. policy fixes that focus on takedowns rather than criminalizing creation.",
+    "article_date": "2025-12-09",
+    "article_authors": "",
+    "row_date": "2025-12-09"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/08/lifestyle/ai-stars-like-tilly-norwood-and-xania-mamet-are-raking-in-millions-much-to-the-horror-of-critics-but-their-creators-are-hitting-back/",
+    "article_title": "AI 'stars' like Tilly Norwood and Xania Monet are raking in millions, much to the horror of critics — but their creators are hitting back",
+    "article_summary": "Profiles AI-generated celebrities gaining mainstream traction and revenue, alongside backlash from human performers and ethical debates about synthetic personas and their impact on creative industries.",
+    "article_date": "2025-12-08",
+    "article_authors": "",
+    "row_date": "2025-12-09"
+  },
+  {
+    "article_url": "https://www.businessinsider.com/will-smith-spaghetti-test-ai-video-progress-2025-12",
+    "article_title": "Then vs. now: AI videos of Will Smith eating spaghetti show just how advanced the tech has gotten",
+    "article_summary": "A comparison of 2023 and 2025 generations highlights rapid gains in generative media quality. Newer models like MiniMax, Google Veo 3.1, and OpenAI Sora 2 render more realistic faces and motion, underscoring broader advances in image/video generation while raising IP and likeness concerns.",
+    "article_date": "2025-12-02",
+    "article_authors": "",
+    "row_date": "2025-12-08"
+  },
+  {
+    "article_url": "https://www.thepromptbuddy.com/prompts/top-ai-image-generation-models-december-2025-best-tools-for-creating-images",
+    "article_title": "Top AI Image Generation Models December 2025: Best Tools for Creating Images",
+    "article_summary": "Roundup of leading December 2025 image generators, including Nano Banana Pro, FLUX.2, Seedream 4.0, Ideogram, and others. It summarizes strengths like photorealism, text rendering, and character consistency, with notes on use cases and pricing.",
+    "article_date": "2025-12-04",
+    "article_authors": "Pranav Sunil",
+    "row_date": "2025-12-08"
+  },
+  {
     "article_url": "https://www.theverge.com/news/834905/runway-ai-text-video-generator-launch",
     "article_title": "Runway says its new text-to-video AI generator has 'unprecedented' accuracy",
     "article_summary": "Runway unveiled Gen-4.5, a new text-to-video model that claims notably improved prompt adherence, physics realism, and support for a wider range of visual styles while maintaining prior speed/efficiency. The company acknowledges remaining limitations like occasional object permanence and causal errors.",
     "article_date": "2025-12-02",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-07"
   },
   {
     "article_url": "https://www.wired.com/story/huge-trove-of-nude-images-leaked-by-ai-image-generator-startups-exposed-database",
     "article_title": "Huge Trove of Nude Images Leaked by AI Image Generator Startup's Exposed Database",
     "article_summary": "Security researchers found an unsecured database linked to an AI image generation startup that exposed over a million AI-generated nude images and videos, including deepfakes and potentially illegal content. Following disclosure, the startup shut down access and apps were pulled while an investigation began, highlighting ongoing safety and abuse concerns around AI image tools.",
     "article_date": "2025-12-05",
-    "article_authors": ""
-  },
-  {
-    "article_url": "https://www.theguardian.com/technology/2025/dec/04/google-ai-nano-banana-pro-racialised-white-saviour-images",
-    "article_title": "Google's AI Nano Banana Pro accused of generating racialised 'white saviour' visuals",
-    "article_summary": "A Google AI image generation tool drew criticism after tests showed prompts about volunteering in Africa frequently produced stereotyped scenes with white volunteers and impoverished Black children, sometimes adding NGO logos unprompted. The incident renewed concerns about bias and brand misuse in AI-generated imagery; Google said it is working to strengthen safeguards.",
-    "article_date": "2025-12-05",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-07"
   },
   {
     "article_url": "https://arxiv.org/abs/2512.01302",
     "article_title": "DCText: Scheduled Attention Masking for Visual Text Generation via Divide-and-Conquer Strategy",
     "article_summary": "This paper proposes DCText, a training‑free method that splits long or multi-sentence text into regional segments and applies sequential attention masks during diffusion to accurately render text within images. Experiments show higher text accuracy and lower latency versus baselines without degrading overall image quality.",
     "article_date": "2025-12-01",
-    "article_authors": "Jaewoo Song, Jooyoung Choi, Kanghyun Baek, Sangyub Lee, Daemin Park, Sungroh Yoon"
+    "article_authors": "Jaewoo Song, Jooyoung Choi, Kanghyun Baek, Sangyub Lee, Daemin Park, Sungroh Yoon",
+    "row_date": "2025-12-07"
   },
   {
     "article_url": "https://www.axios.com/2025/12/05/ai-videos-photos-scam-virtual-fbi-victim-ransom-kidnapping",
     "article_title": "AI-generated kidnapping scams are coming, FBI warns",
     "article_summary": "The FBI warns of rising “virtual kidnapping” scams that exploit AI-generated photos and videos to impersonate loved ones and demand ransom. A cited report notes deepfake attacks accelerating, and officials advise verification steps like contacting family directly and using a shared safe word.",
     "article_date": "2025-12-05",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-06"
   },
   {
     "article_url": "https://www.techradar.com/ai-platforms-assistants/steam-requires-ai-game-disclosures-epics-ceo-says-theyre-meaningless",
     "article_title": "Steam requires AI game disclosures - Epic's CEO says they're meaningless",
     "article_summary": "Valve now asks game developers to disclose use of generative AI, including for artwork and visual assets. Epic’s Tim Sweeney argues labels are unhelpful as AI becomes ubiquitous, while supporters say transparency helps players judge quality and trust amid concerns about AI-generated visuals.",
     "article_date": "2025-12-03",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-06"
   },
   {
     "article_url": "https://arxiv.org/abs/2512.00473",
     "article_title": "RealGen: Photorealistic Text-to-Image Generation via Detector-Guided Rewards",
     "article_summary": "RealGen pairs an LLM-based prompt optimizer with a diffusion model and introduces a detector-guided reward to penalize AI artifacts and boost realism. Using GRPO and a new RealBench evaluation, the method reports improved photorealism and detail over general and specialist T2I baselines.",
     "article_date": "2025-11-29",
-    "article_authors": "Junyan Ye, Leiqi Zhu, Yuncheng Guo, Dongzhi Jiang, Zilong Huang, Yifan Zhang, Zhiyuan Yan, Haohuan Fu, Conghui He, Weijia Li"
+    "article_authors": "Junyan Ye, Leiqi Zhu, Yuncheng Guo, Dongzhi Jiang, Zilong Huang, Yifan Zhang, Zhiyuan Yan, Haohuan Fu, Conghui He, Weijia Li",
+    "row_date": "2025-12-06"
   },
   {
     "article_url": "https://www.reuters.com/business/media-telecom/google-executive-sees-ai-search-expansion-web-2025-12-04/",
     "article_title": "Google executive sees AI search as expansion for web",
     "article_summary": "At Reuters NEXT, Google’s search product lead argued that AI features—including visual and image-generation capabilities—will expand, not shrink, the web’s ecosystem by driving new types of queries and outbound clicks. He acknowledged publisher concerns about traffic while positioning AI (and image tools) as discovery aids within search.",
     "article_date": "2025-12-04",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-05"
   },
   {
     "article_url": "https://www.indiatimes.com/trending/new-ways-to-search-in-2025-from-ai-mode-to-nano-banana-pro-how-googles-india-first-upgrades-changed-searching-shopping-travel/articleshow/125764153.html",
     "article_title": "New ways to search in 2025: From AI mode to Nano banana pro, how Google's India-first upgrades changed searching, shopping & travel",
     "article_summary": "A roundup of Google’s 2025 Search upgrades highlights AI Mode, Search Live, and integration of the Nano Banana Pro image generator powered by Gemini 3. The piece describes how text-to-image generation, visual search, and virtual try-ons are being woven into shopping and travel, emphasizing faster, multimodal results.",
     "article_date": "2025-12-05",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-05"
   },
   {
     "article_url": "https://en.wikipedia.org/wiki/Nano_Banana",
     "article_title": "Nano Banana",
     "article_summary": "An encyclopedic overview of Google DeepMind’s Nano Banana (Gemini 2.5 Flash Image), a text-to-image generation and editing model introduced in 2025. The article covers its origins as a test model, public release, capabilities for photorealistic outputs, and its rapid cultural impact across social platforms.",
     "article_date": "2025-12-04",
-    "article_authors": "Wikipedia contributors"
+    "article_authors": "Wikipedia contributors",
+    "row_date": "2025-12-05"
   },
   {
     "article_url": "https://www.tomsguide.com/ai/gemini-3-solved-one-of-the-biggest-issues-for-ai-image-generators-heres-why-its-so-exciting",
     "article_title": "Gemini 3 solved one of the biggest issues for AI image generators — here’s why it’s so exciting",
     "article_summary": "Tom’s Guide reports that Google’s Gemini 3, paired with the updated Nano Banana Pro, markedly improves AI image generators’ ability to render clear, controllable text in images, enabling legible typography, translation, and layout-aware designs.",
     "article_date": "2025-11-28",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-04"
   },
   {
     "article_url": "https://www.ft.com/content/d958b81f-b0a5-4373-b7ff-471cb4b290d8",
     "article_title": "Getty warns over UK operations if Shutterstock deal is blocked",
     "article_summary": "The Financial Times covers Getty Images’ warning that it could scale back UK operations if regulators block its merger with Shutterstock, arguing that consolidation is needed to compete in a market rapidly transformed by AI-generated imagery.",
     "article_date": "2025-11-28",
-    "article_authors": ""
-  },
-  {
-    "article_url": "https://www.businessinsider.com/will-smith-spaghetti-test-ai-video-progress-2025-12",
-    "article_title": "Then vs. now: AI videos of Will Smith eating spaghetti show just how advanced the tech has gotten",
-    "article_summary": "Business Insider uses the viral ‘Will Smith eating spaghetti’ benchmark to illustrate rapid gains in generative models’ visual realism since 2023, highlighting improvements that also reflect broader advances in image generation quality and consistency.",
-    "article_date": "2025-12-02",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-04"
   },
   {
     "article_url": "https://nypost.com/2025/11/30/world-news/ai-influencers-are-now-boasting-personalities-backstories-and-even-making-ill-advised-decisions/",
     "article_title": "AI influencers are now boasting personalities, backstories and even making ill-advised decisions",
     "article_summary": "The New York Post describes the rise of photorealistic AI-generated influencers with detailed personas used by brands, underscoring how image-generation tech is reshaping marketing and raising ethical questions about authenticity.",
     "article_date": "2025-12-01",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-04"
   },
   {
     "article_url": "https://www.ft.com/content/1acae2af-c0da-4be3-9cd9-af6120d1f7aa",
     "article_title": "Black Forest Labs: one-year-old German start-up challenges AI giants",
     "article_summary": "Profile of Black Forest Labs, a Freiburg-based startup behind the Flux image-generation models, which has raised over $450M to compete with larger rivals. Co-founded by Stable Diffusion co-creator Robin Rombach, the company emphasizes efficient latent diffusion, partnerships with Meta/Adobe/Canva, and open-source traction among creators.",
     "article_date": "2025-12-02",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-04"
   },
   {
     "article_url": "https://www.techradar.com/ai-platforms-assistants/gemini/openai-and-google-quietly-limit-free-sora-nano-banana-pro-and-gemini-3-pro-use-heres-what-it-means-for-you",
     "article_title": "OpenAI and Google quietly limit free Sora, Nano Banana Pro and Gemini 3 Pro use - here's what it means for you",
     "article_summary": "OpenAI and Google reduced free quotas for their video and image generators, citing GPU costs and demand. OpenAI now caps free Sora 2 generations per day, while Google cut free access to Gemini’s image tools, signaling a broader monetization push for generative visual AI.",
     "article_date": "2025-11-29",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-12-04"
   },
   {
     "article_url": "https://www.reuters.com/business/adobe-adds-ai-models-openai-google-its-firefly-app-2025-04-24/",
     "article_title": "Adobe adds AI models from OpenAI, Google to its Firefly app",
     "article_summary": "Adobe integrated third-party image and video generation models—including OpenAI’s GPT-based image tools, Google’s Imagen 3 and Veo 2, and Flux 1.1 Pro—into Firefly and expanded access across mobile. The move lets creators switch among models within Firefly while keeping Adobe’s commercial safeguards and unified credit system.",
     "article_date": "2025-04-24",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-28"
   },
   {
     "article_url": "https://arxiv.org/abs/2507.23620",
     "article_title": "DivControl: Knowledge Diversion for Controllable Image Generation",
     "article_summary": "DivControl factorizes ControlNet with SVD into condition-agnostic \"learngenes\" and condition-specific \"tailors,\" then uses a dynamic gate to route control signals for multi-condition text-to-image diffusion. It achieves state-of-the-art controllability with substantially lower training cost and strong zero-/few-shot generalization to unseen control conditions.",
     "article_date": "2025-07-31",
-    "article_authors": "Yucheng Xie, Fu Feng, Ruixiao Shi, Jing Wang, Yong Rui, Xin Geng"
+    "article_authors": "Yucheng Xie, Fu Feng, Ruixiao Shi, Jing Wang, Yong Rui, Xin Geng",
+    "row_date": "2025-11-28"
   },
   {
     "article_url": "https://www.mdpi.com/2227-7390/13/4/651",
     "article_title": "Digital Watermarking Technology for AI-Generated Images: A Survey",
     "article_summary": "This peer‑reviewed survey reviews watermarking methods for AI-generated images, tracing the evolution from GANs to diffusion and comparing spatial, transform, and deep learning watermarking approaches. It discusses ownership/authentication for diffusion models and outlines challenges in robustness, traceability, and copyright.",
     "article_date": "2025-02-16",
-    "article_authors": "Huixin Luo, Li Li, Juncheng Li"
+    "article_authors": "Huixin Luo, Li Li, Juncheng Li",
+    "row_date": "2025-11-28"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.12172",
     "article_title": "SEAL: Semantic Aware Image Watermarking",
     "article_summary": "SEAL embeds semantic cues about generated content into the watermark, enabling distortion‑free insertion and key inference without large key dictionaries. Experiments show improved robustness to attacks like noise reuse and malicious object insertion compared with prior diffusion watermarking methods.",
     "article_date": "2025-03-15",
-    "article_authors": "Kasra Arabi, R. Teal Witter, Chinmay Hegde, Niv Cohen"
+    "article_authors": "Kasra Arabi, R. Teal Witter, Chinmay Hegde, Niv Cohen",
+    "row_date": "2025-11-28"
   },
   {
     "article_url": "https://cybernews.com/ai-news/midjourney-launches-v7-image-generator/",
     "article_title": "Midjourney launches new image generator V7 following OpenAI’s GPT-4o release",
     "article_summary": "Midjourney began alpha testing its V7 image model with built‑in personalization that asks users to rate ~200 images to tailor outputs, plus a new Draft Mode that generates results up to 10× faster at lower cost for rapid iteration. The update emphasizes improved coherence and quality while some advanced features roll out gradually during testing.",
     "article_date": "2025-04-04",
-    "article_authors": "Paulius Grinkevičius"
+    "article_authors": "Paulius Grinkevičius",
+    "row_date": "2025-11-27"
   },
   {
     "article_url": "https://arxiv.org/abs/2506.15742",
     "article_title": "FLUX.1 Kontext: Flow Matching for In-Context Image Generation and Editing in Latent Space",
     "article_summary": "This paper introduces FLUX.1 Kontext, a flow‑matching model that unifies text‑to‑image generation and image editing via simple sequence concatenation of text and image inputs. It reports stronger character/style preservation and robustness across multi‑turn edits, plus a new KontextBench with 1,026 prompt–image pairs to evaluate local/global edits, character/style references, and text editing.",
     "article_date": "2025-06-17",
-    "article_authors": "Black Forest Labs, Stephen Batifol, Andreas Blattmann, Frederic Boesel, Saksham Consul, Cyril Diagne, Tim Dockhorn, Jack English, Zion English, Patrick Esser, Sumith Kulal, Kyle Lacey, Yam Levi, Cheng Li, Dominik Lorenz, Jonas Müller, Dustin Podell, Robin Rombach, Harry Saini, Axel Sauer, Luke Smith"
+    "article_authors": "Black Forest Labs, Stephen Batifol, Andreas Blattmann, Frederic Boesel, Saksham Consul, Cyril Diagne, Tim Dockhorn, Jack English, Zion English, Patrick Esser, Sumith Kulal, Kyle Lacey, Yam Levi, Cheng Li, Dominik Lorenz, Jonas Müller, Dustin Podell, Robin Rombach, Harry Saini, Axel Sauer, Luke Smith",
+    "row_date": "2025-11-27"
   },
   {
     "article_url": "https://arxiv.org/abs/2502.21151",
     "article_title": "A Review on Generative AI For Text-To-Image and Image-To-Image Generation and Implications To Scientific Images",
     "article_summary": "A concise survey of VAE, GAN, and diffusion architectures for text‑to‑image and image‑to‑image generation, with comparisons of strengths/limits and a focus on scientific imaging. It outlines open challenges (bias, evaluation, data, safety) and future directions for applying image generators in scientific workflows.",
     "article_date": "2025-02-28",
-    "article_authors": "Zineb Sordo, Eric Chagnon, Daniela Ushizima"
+    "article_authors": "Zineb Sordo, Eric Chagnon, Daniela Ushizima",
+    "row_date": "2025-11-27"
   },
   {
     "article_url": "https://arxiv.org/abs/2502.13081",
     "article_title": "Personalized Image Generation with Deep Generative Models: A Decade Survey",
     "article_summary": "This survey systematizes personalization methods across GANs, diffusion, and emerging autoregressive/DiT‑based models. It proposes a unified framework spanning inversion spaces, inversion methods, and personalization schemes, compares techniques (e.g., LoRA, textual inversion), and highlights challenges in data efficiency, identity consistency, and evaluation.",
     "article_date": "2025-02-18",
-    "article_authors": "Yuxiang Wei, Yiheng Zheng, Yabo Zhang, Ming Liu, Zhilong Ji, Lei Zhang, Wangmeng Zuo"
+    "article_authors": "Yuxiang Wei, Yiheng Zheng, Yabo Zhang, Ming Liu, Zhilong Ji, Lei Zhang, Wangmeng Zuo",
+    "row_date": "2025-11-27"
   },
   {
     "article_url": "https://arxiv.org/abs/2505.23660",
     "article_title": "D-AR: Diffusion via Autoregressive Models",
     "article_summary": "Introduces a tokenizer that maps image tokens to diffusion denoising steps so image generation can be done with standard next‑token prediction. Enables streaming previews and zero‑shot layout control, achieving 2.09 FID on ImageNet with a 775M-parameter Llama backbone.",
     "article_date": "2025-11-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-26"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.12652",
     "article_title": "UniVG: A Generalist Diffusion Model for Unified Image Generation and Editing",
     "article_summary": "Presents a single diffusion model that handles text-to-image, inpainting, instruction-based edits, identity‑preserving generation, and layout guidance using unified conditioning. Multi‑task training shows tasks can coexist without major trade‑offs, sometimes outperforming task‑specific models.",
     "article_date": "2025-11-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-26"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.12213",
     "article_title": "STAY Diffusion: Styled Layout Diffusion Model for Diverse Layout-to-Image Generation",
     "article_summary": "Proposes a layout‑to‑image model with Edge‑Aware Normalization and Styled‑Mask Attention to better align style and spatial control. Delivers more accurate object placement and diverse, photorealistic results compared with prior L2I approaches.",
     "article_date": "2025-11-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-26"
   },
   {
     "article_url": "https://news.adobe.com/news/2025/10/adobe-max-2025-firefly",
     "article_title": "Adobe Firefly Delivers Groundbreaking AI Audio, Video and Imaging Innovations and New Models in All-In-One Creative AI Studio",
     "article_summary": "Announces Firefly Image Model 5 with native 4MP image generation, improved photorealism, and complex composition handling. Adds Prompt to Edit and forthcoming Layered Image Editing, plus integration of partner models for broader creative control.",
     "article_date": "2025-11-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-26"
   },
   {
     "article_url": "https://news.adobe.com/news/2025/04/adobe-revolutionizes-ai-assisted-creativity-firefly",
     "article_title": "Adobe Revolutionizes AI-Assisted Creativity with Firefly, the All-In-One Home for AI Content Creation, with New Partner and Firefly Models",
     "article_summary": "Launches Firefly Image Model 4 and 4 Ultra for higher‑quality, controllable image generation up to 2K resolution and deeper Creative Cloud integration. Highlights an IP‑friendly, production‑ready pipeline and new AI-first workflows for rapid ideation.",
     "article_date": "2025-11-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-26"
   },
   {
     "article_url": "https://techcrunch.com/2025/04/23/openai-makes-its-upgraded-image-generator-available-to-developers/",
     "article_title": "OpenAI makes its upgraded image generator available to developers",
     "article_summary": "OpenAI released gpt-image-1 to developers, a natively multimodal model that can create and edit images, render text reliably, and balance quality versus speed. It includes C2PA watermarking and configurable safety filters, and offers per-token pricing for image inputs and outputs.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.13070",
     "article_title": "Rewards Are Enough for Fast Photo-Realistic Text-to-image Generation",
     "article_summary": "The authors propose R0, a reward‑centric method that treats text‑to‑image generation as optimizing images directly for high compositional reward with light regularization. R0 trains few‑step generators that match or surpass diffusion‑distilled baselines on fidelity and controllability, suggesting rewards can dominate in complex conditioned generation.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://arxiv.org/abs/2510.20766",
     "article_title": "DyPE: Dynamic Position Extrapolation for Ultra High Resolution Diffusion",
     "article_summary": "Introduces a training-free method that adjusts positional encodings across diffusion steps to synthesize images far beyond a model’s training resolution. Demonstrates ultra‑high‑resolution outputs (e.g., ~16MP with FLUX) without added sampling cost and with improved fidelity on multiple benchmarks.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://arxiv.org/abs/2505.24086",
     "article_title": "ComposeAnything: Composite Object Priors for Text-to-Image Generation",
     "article_summary": "Uses an LLM to produce 2.5D semantic layouts and a coarse composite that replaces noise initialization in diffusion models. The object‑aware prior guides denoising to improve complex compositions and 3D arrangements, outperforming prior methods on T2I-CompBench and NSR‑1K with supporting human evaluations.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.20198",
     "article_title": "Beyond Words: Advancing Long-Text Image Generation via Multimodal Autoregressive Models",
     "article_summary": "Targets accurate rendering of long scene text in images by introducing a text‑focused binary tokenizer and a multimodal autoregressive generator. Reports strong controllability over typography and better long‑text fidelity than SD3.5 Large and GPT‑4o with DALL·E 3 on evaluated tasks.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://www.theverge.com/news/813789/microsoft-in-house-ai-image-generator-mai-image-1",
     "article_title": "Microsoft AI's first in-house image generator MAI-Image-1 is now available",
     "article_summary": "Microsoft launches its first proprietary image model, MAI‑Image‑1, integrating it into Bing Image Creator and Copilot features. The model emphasizes speed‑quality balance with realistic lighting and reflections, signaling a step toward reduced reliance on third‑party providers.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://www.reuters.com/business/adobe-brings-ai-image-generation-app-phones-adds-partners-2025-06-17/",
     "article_title": "Adobe brings AI-image generation app to phones, adds partners",
     "article_summary": "Adobe releases a Firefly mobile app for iOS and Android, offering basic image generation for subscribers and premium access to additional partner models. The company highlights training on legally permissible data and positions the app for social content creation with a starting price around $10/month.",
     "article_date": "2025-11-25",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-11-25"
   },
   {
     "article_url": "https://arxiv.org/abs/2501.09194",
     "article_title": "Grounding Text-to-Image Diffusion Models for Controlled High-Quality Image Generation",
     "article_summary": "This paper introduces ObjectDiffusion, a method that conditions text-to-image diffusion models on semantic and spatial grounding to precisely place objects via bounding boxes. Building on ControlNet and GLIGEN, the authors fine-tune on COCO2017 and report AP50 of 46.6, AR of 44.5, and FID of 19.8, outperforming state-of-the-art models trained on open datasets. Qualitative results show reliable rendering of multiple, varied objects in specified locations. The work targets better controllability without sacrificing visual quality.",
     "article_date": "2025-10-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-10-26"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.05149",
     "article_title": "Development and Enhancement of Text-to-Image Diffusion Models",
     "article_summary": "This study explores improving text-to-image diffusion models by addressing sample diversity and training instability. Using classifier-free guidance and exponential moving average techniques, the author reports gains in image quality, diversity, and stability on top of a Hugging Face baseline. The paper provides an implementation-focused overview of diffusion principles and a comparative evaluation of the proposed enhancements. It positions these techniques as simple, effective upgrades for modern T2I systems.",
     "article_date": "2025-10-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-10-26"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.11905",
     "article_title": "Upcycling Text-to-Image Diffusion Models for Multi-Task Capabilities",
     "article_summary": "The authors propose Multi-Task Upcycling (MTU) to extend a pre-trained T2I diffusion model to many image-to-image tasks without heavy retraining. By replacing FFN layers with lightweight experts and adding dynamic routing, MTU achieves performance comparable to single-task fine-tunes on editing, super-resolution, and inpainting. Crucially, it keeps latency and GFLOPs similar to single-task models, improving suitability for on-device use. The approach aims to curb parameter bloat while broadening functionality.",
     "article_date": "2025-10-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-10-26"
   },
   {
     "article_url": "https://arxiv.org/abs/2505.22792",
     "article_title": "Rhetorical Text-to-Image Generation via Two-layer Diffusion Policy Optimization",
     "article_summary": "This paper tackles generating images from rhetorical or metaphorical prompts, where literal word-object alignments mislead current models. The proposed Rhet2Pix uses a two-layer MDP diffusion scheme: an outer layer decomposes prompts into elaborated sub-sentences to guide actions, while an inner layer optimizes rewards across the denoising trajectory. Experiments show improved handling of rhetorical meaning and better qualitative and quantitative metrics versus GPT-4o, Grok-3, and academic baselines. The authors release code and data to support future work.",
     "article_date": "2025-10-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-10-26"
   },
   {
     "article_url": "https://arxiv.org/abs/2503.09242",
     "article_title": "NAMI: Efficient Image Generation via Progressive Rectified Flow Transformers",
     "article_summary": "Proposes a progressive rectified-flow Transformer that splits generation into multi-resolution stages—using fewer layers at low resolution and more at high—accelerating convergence and cutting inference time by about 40% for 1024px images while maintaining quality. Also introduces the NAMI‑1K human‑preference benchmark.",
     "article_date": "2025-10-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-10-26"
   },
   {
     "article_url": "https://www.theverge.com/openai/635118/chatgpt-sora-ai-image-generation-chatgpt",
     "article_title": "OpenAI rolls out image generation powered by GPT-4o to ChatGPT",
     "article_summary": "Describes OpenAI’s 2025 launch of “Images in ChatGPT,” adding GPT‑4o‑powered, autoregressive image generation directly in ChatGPT for Free, Plus, Pro, and Team users. Highlights better attribute binding and text rendering, longer generation time than diffusion, built‑in safeguards and C2PA provenance, and user ownership within policy limits.",
     "article_date": "2025-10-26",
-    "article_authors": ""
+    "article_authors": "",
+    "row_date": "2025-10-26"
   }
 ];
 
@@ -394,14 +549,82 @@
     document.getElementById("year-label").textContent = publishYear;
 
     const container = document.getElementById("articles");
+    const monthNames = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    const now = new Date();
+    const publishYearNum = Number(publishYear);
+    const maxMonthForYear =
+      publishYearNum === now.getFullYear() ? now.getMonth() + 1 : 12;
 
-    if (!articles.length) {
+    const filteredArticles = [];
+    articles.forEach((item) => {
+      const dateValue = (item.row_date || item.article_date || "").trim();
+      if (!dateValue) {
+        return;
+      }
+      const [yearPart, monthPart] = dateValue.split("-");
+      const monthNumber = Number(monthPart);
+      if (
+        !yearPart ||
+        Number.isNaN(monthNumber) ||
+        monthNumber < 1 ||
+        monthNumber > 12
+      ) {
+        return;
+      }
+      if (yearPart !== publishYear) {
+        return;
+      }
+      if (publishYearNum === now.getFullYear() && monthNumber > maxMonthForYear) {
+        return;
+      }
+      filteredArticles.push({
+        ...item,
+        monthKey: `${yearPart}-${String(monthNumber).padStart(2, "0")}`,
+        monthLabel: `${monthNames[monthNumber - 1]} ${yearPart}`,
+      });
+    });
+
+    if (!filteredArticles.length) {
       const empty = document.createElement("p");
       empty.className = "empty-state";
       empty.textContent = "No articles were captured for this year.";
       container.appendChild(empty);
     } else {
-      articles.forEach((item, idx) => {
+      let lastMonthKey = null;
+      let monthGrid = null;
+      filteredArticles.forEach((item, idx) => {
+        if (item.monthKey !== lastMonthKey) {
+          if (lastMonthKey !== null) {
+            const divider = document.createElement("hr");
+            divider.className = "month-divider";
+            container.appendChild(divider);
+          }
+          const label = document.createElement("p");
+          label.className = "month-label";
+          label.textContent = item.monthLabel;
+          container.appendChild(label);
+          const grid = document.createElement("div");
+          grid.className = "month-grid";
+          container.appendChild(grid);
+          monthGrid = grid;
+          lastMonthKey = item.monthKey;
+        }
+        if (!monthGrid) {
+          return;
+        }
         const card = document.createElement("article");
         const heading = document.createElement("h2");
         const link = document.createElement("a");
@@ -434,7 +657,7 @@
           card.appendChild(meta);
         }
 
-        container.appendChild(card);
+        monthGrid.appendChild(card);
       });
     }
   </script>
