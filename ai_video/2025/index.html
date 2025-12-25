@@ -112,26 +112,50 @@
     const publishYear = "2025";
     const articles = [
   {
-    "article_url": "https://nypost.com/2025/12/23/us-news/ice-releases-ai-video-showing-santa-claus-rounding-up-illegal-migrants-naughty-list/",
-    "article_title": "ICE releases AI video showing Santa Claus rounding up illegal migrants: 'NAUGHTY LIST!'",
-    "article_summary": "U.S. Immigration and Customs Enforcement published a holiday-themed AI-generated video depicting Santa as an ICE agent, tied to a 'Home for the Holidays' self-deportation campaign offering $3,000 incentives and directing migrants to use a federal app. The video sparked controversy over the use of AI-generated imagery in government messaging.",
-    "article_date": "2025-12-23",
-    "article_authors": "",
-    "row_date": "2025-12-24"
-  },
-  {
     "article_url": "https://www.theverge.com/news/847680/google-gemini-verification-ai-generated-videos",
     "article_title": "Google's Gemini app can check videos to see if they were made with Google AI",
-    "article_summary": "Google added a Gemini feature that analyzes uploaded clips for its SynthID watermark to determine whether a video was created or edited with Google AI, highlighting exact moments where the mark appears. The tool currently supports videos up to about 100MB and 90 seconds, expanding earlier image checks and raising questions about cross-platform deepfake detection.",
+    "article_summary": "Google added a Gemini feature that inspects uploaded clips for its SynthID watermark to flag moments that were AI-generated with Google tools. It supports videos up to 100 MB/90 seconds and highlights timecodes rather than returning a simple yes/no, but broader, cross‑platform standards for tagging deepfakes remain unresolved.",
     "article_date": "2025-12-19",
     "article_authors": "",
-    "row_date": "2025-12-24"
+    "row_date": "2025-12-25"
   },
   {
     "article_url": "https://www.barrons.com/articles/openai-sora-use-271f34da",
     "article_title": "OpenAI's Sora Soared. Then It Flatlined.",
-    "article_summary": "Barron's reports that OpenAI’s Sora video app surged at launch but has since seen usage and app-store ranking decline. OpenAI seeks renewed engagement through a Disney licensing deal that lets users incorporate select characters, though restrictions on actor likenesses and voices remain; the piece also frames the shift against OpenAI’s substantial cost pressures.",
+    "article_summary": "Barron's reports that OpenAI’s consumer AI‑video app Sora surged at launch but has seen slower growth more recently. Despite new partnerships, usage and app‑store rankings have cooled, underscoring how difficult it is to sustain mainstream engagement for text‑to‑video tools beyond early hype.",
     "article_date": "2025-12-20",
+    "article_authors": "",
+    "row_date": "2025-12-25"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2512.16371",
+    "article_title": "Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models",
+    "article_summary": "This paper proposes a three‑stage pipeline—LLM‑based prompt rewriting for an initial scene, high‑quality anchor frame synthesis, and a video model focused on animation—to separate composition from motion. The approach improves state‑of‑the‑art results on CompBench and VBench2 and cuts sampling steps by about 70% without degrading quality.",
+    "article_date": "2025-12-18",
+    "article_authors": "Mariam Hassan, Bastien Van Delft, Wuyang Li, Alexandre Alahi",
+    "row_date": "2025-12-25"
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2512.20619",
+    "article_title": "SemanticGen: Video Generation in Semantic Space",
+    "article_summary": "SemanticGen introduces a two‑stage framework that first generates a compact, high‑level semantic layout for a video via diffusion, then conditions a second stage to produce detailed VAE latents. The semantic‑to‑pixels strategy speeds training and improves long‑video fidelity and temporal consistency.",
+    "article_date": "2025-12-24",
+    "article_authors": "Jianhong Bai, Xiaoshi Wu, Xintao Wang, Fu Xiao, Yuanxing Zhang, Qinghe Wang, Xiaoyu Shi, Menghan Xia, Zuozhu Liu, Haoji Hu, Pengfei Wan, Kun Gai",
+    "row_date": "2025-12-25"
+  },
+  {
+    "article_url": "https://bestphoto.ai/blog/ai-image-video-roundup-december-2025",
+    "article_title": "AI Image & Video Generation Roundup: December 2025",
+    "article_summary": "A month‑end roundup highlighting Runway’s Gen‑4.5 topping text‑to‑video leaderboards with better physics, coherence, and native audio, plus Kuaishou’s Kling 2.6 update for single‑pass audio‑visual generation. It also notes remaining challenges such as causal reasoning, object permanence, and cross‑model consistency.",
+    "article_date": "2025-12-25",
+    "article_authors": "",
+    "row_date": "2025-12-25"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/23/us-news/ice-releases-ai-video-showing-santa-claus-rounding-up-illegal-migrants-naughty-list/",
+    "article_title": "ICE releases AI video showing Santa Claus rounding up illegal migrants: 'NAUGHTY LIST!'",
+    "article_summary": "U.S. Immigration and Customs Enforcement published a holiday-themed AI-generated video depicting Santa as an ICE agent, tied to a 'Home for the Holidays' self-deportation campaign offering $3,000 incentives and directing migrants to use a federal app. The video sparked controversy over the use of AI-generated imagery in government messaging.",
+    "article_date": "2025-12-23",
     "article_authors": "",
     "row_date": "2025-12-24"
   },
@@ -157,14 +181,6 @@
     "article_summary": "Disney licensed 200+ characters for OpenAI’s Sora, enabling 30‑second AI videos without official voices. The move aims to set “responsible AI” norms and explore new content avenues but raises brand‑safety and copyright risks despite moderation controls and limited expected near‑term revenue. ([kiplinger.com](https://www.kiplinger.com/business/disney-risk-ai-videos?utm_source=openai))",
     "article_date": "2025-12-20",
     "article_authors": "",
-    "row_date": "2025-12-23"
-  },
-  {
-    "article_url": "https://arxiv.org/abs/2512.16371",
-    "article_title": "Factorized Video Generation: Decoupling Scene Construction and Temporal Synthesis in Text-to-Video Diffusion Models",
-    "article_summary": "This paper proposes a three‑stage pipeline—LLM‑based prompt rewriting for the initial scene, T2I anchor‑frame generation, and focused temporal synthesis—to improve compositionality and instruction following in text‑to‑video. The approach reports SOTA on T2V CompBench and faster sampling with fewer denoising steps. ([arxiv.org](https://arxiv.org/abs/2512.16371?utm_source=openai))",
-    "article_date": "2025-12-18",
-    "article_authors": "Mariam Hassan, Bastien Van Delft, Wuyang Li, Alexandre Alahi",
     "row_date": "2025-12-23"
   },
   {
@@ -196,14 +212,6 @@
     "article_title": "Firefly Puts Creators in the Director's Seat for AI Video",
     "article_summary": "Lifewire covers Adobe’s latest Firefly updates for AI video: natural-language 'Prompt to Edit' controls, camera motion replication, upscaling via Topaz Astra, and a browser-based Firefly Video Editor public beta aimed at tighter creative control and faster workflows.",
     "article_date": "2025-12-17",
-    "article_authors": "",
-    "row_date": "2025-12-21"
-  },
-  {
-    "article_url": "https://bestphoto.ai/blog/ai-image-video-roundup-december-2025",
-    "article_title": "AI Image & Video Generation Roundup: December 2025",
-    "article_summary": "A monthly roundup highlights rapid AI video advances: Runway’s Gen-4.5 leading a popular benchmark, and Kling 2.6’s single-pass audio–video generation with synchronized dialogue and sound, outlining strengths, limitations, and positioning versus Sora and Veo.",
-    "article_date": "2025-12-19",
     "article_authors": "",
     "row_date": "2025-12-21"
   },
