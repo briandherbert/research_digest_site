@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Research Digest – Site Map</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    .subtitle {
+      color: #475569;
+      margin-top: 0.5rem;
+      font-size: 1rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.25rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .card {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.25rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+    .topic {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .years {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    .pill {
+      display: inline-block;
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      background: #e2e8f0;
+      color: #0f172a;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+    }
+    .pill:hover {
+      background: #cbd5e1;
+    }
+    .empty {
+      text-align: center;
+      color: #475569;
+      margin-top: 2rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Research Digest</h1>
+    <p class="subtitle">Topics and yearly indexes.</p>
+  </header>
+  <main id="content"></main>
+  <script>
+    const entries = [
+  {
+    "slug": "ai_image_generation",
+    "title": "AI image generation",
+    "years": [
+      {
+        "year": "2025",
+        "href": "ai_image_generation/2025/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "ai_video",
+    "title": "AI video",
+    "years": [
+      {
+        "year": "2025",
+        "href": "ai_video/2025/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "astronomy",
+    "title": "Astronomy",
+    "years": [
+      {
+        "year": "2025",
+        "href": "astronomy/2025/index.html"
+      }
+    ]
+  },
+  {
+    "slug": "botany",
+    "title": "Botany",
+    "years": [
+      {
+        "year": "2025",
+        "href": "botany/2025/index.html"
+      }
+    ]
+  }
+];
+    const container = document.getElementById("content");
+    if (!entries.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty";
+      empty.textContent = "No generated pages yet.";
+      container.appendChild(empty);
+    } else {
+      const grid = document.createElement("div");
+      grid.className = "grid";
+      entries.forEach((entry) => {
+        const card = document.createElement("div");
+        card.className = "card";
+        const title = document.createElement("h2");
+        title.className = "topic";
+        title.textContent = entry.title;
+        card.appendChild(title);
+        const list = document.createElement("ul");
+        list.className = "years";
+        entry.years.forEach((year) => {
+          const li = document.createElement("li");
+          const link = document.createElement("a");
+          link.className = "pill";
+          link.href = year.href;
+          link.textContent = year.year;
+          li.appendChild(link);
+          list.appendChild(li);
+        });
+        card.appendChild(list);
+        grid.appendChild(card);
+      });
+      container.appendChild(grid);
+    }
+  </script>
+</body>
+</html>
