@@ -4,113 +4,94 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Astronomy – 2025</title>
-  <style>
-    :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #0f172a;
-      background: #f8fafc;
-    }
-    body {
-      margin: 0;
-      padding: 0 1rem 3rem;
-    }
-    header {
-      padding: 2.5rem 0 2rem;
-      text-align: center;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    .eyebrow {
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: #475569;
-      margin-bottom: 0.5rem;
-      font-size: 0.85rem;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2.2rem, 4vw, 3.25rem);
-    }
-    .summary {
-      color: #475569;
-      margin-top: 0.75rem;
-      font-size: 1rem;
-    }
-    #articles {
-      display: flex;
-      flex-direction: column;
-      gap: 2.5rem;
-      padding-bottom: 2rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .month-label {
-      font-size: 1rem;
-      font-weight: 600;
-      margin: 0;
-      color: #0f172a;
-    }
-    .month-divider {
-      border: 0;
-      border-top: 1px solid #e2e8f0;
-      margin: 0;
-      width: 100%;
-    }
-    .month-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 1.5rem;
-    }
-    article {
-      background: #fff;
-      border-radius: 16px;
-      padding: 1.5rem;
-      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-      min-height: 220px;
-    }
-    article h2 {
-      margin: 0;
-      font-size: 1.15rem;
-    }
-    .meta {
-      margin: 0;
-      font-size: 0.95rem;
-      color: #64748b;
-    }
-    article a {
-      color: #0f172a;
-      text-decoration: none;
-    }
-    article a:hover {
-      text-decoration: underline;
-    }
-    article p {
-      margin: 0;
-      color: #334155;
-      line-height: 1.5;
-    }
-    .empty-state {
-      text-align: center;
-      font-size: 1.1rem;
-      color: #475569;
-      grid-column: 1 / -1;
-    }
-  </style>
+  <link rel="stylesheet" href="../../assets/site.css" />
+  <script defer src="../../assets/site.js"></script>
 </head>
 <body>
-  <header>
-    <p class="eyebrow" id="year-label"></p>
-    <h1 id="topic-title"></h1>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="./index.html" aria-label="Topic home">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span class="brand-topic" id="nav-topic"></span>
+        <span class="brand-sep" aria-hidden="true">•</span>
+        <span class="brand-year" id="nav-year"></span>
+      </a>
+      <div class="top-actions">
+        <button class="btn" type="button" data-action="toggle-theme" aria-pressed="false" title="Toggle theme">
+          Theme
+        </button>
+      </div>
+    </div>
   </header>
-  <main id="articles"></main>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <p class="eyebrow" id="year-label"></p>
+      <h1 class="title" id="topic-title"></h1>
+      <p class="subtitle" id="page-subtitle"></p>
+    </section>
+
+    <section class="toolbar" aria-label="Filters">
+      <div class="toolbar-left">
+        <input id="search" class="input" type="search" data-role="search" placeholder="Search titles, summaries, domains… (Ctrl/⌘K)" autocomplete="off" />
+        <span class="hint" id="result-count"></span>
+      </div>
+      <div class="toolbar-right">
+        <button class="btn" type="button" id="clear-search" title="Clear search">Clear</button>
+      </div>
+    </section>
+
+    <section class="section" id="articles" aria-live="polite"></section>
+    <div class="footer">Tip: Press <strong>Ctrl/⌘K</strong> to jump to search.</div>
+  </main>
+
+  <button class="btn back-to-top" type="button" data-action="back-to-top" title="Back to top">Top</button>
 
   <script>
     const topicName = "Astronomy";
     const publishYear = "2025";
     const articles = [
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251224.html",
+    "article_title": "Mystery: Little Red Dots in the Early Universe",
+    "article_summary": "JWST has uncovered hundreds of extremely faint, compact “little red dots” at high redshift. The APOD entry discusses leading hypotheses for their nature—dusty starbursts, accreting supermassive black holes, or exotic dark‑matter–powered clouds—and highlights sample images while noting ongoing searches for local analogs.",
+    "article_date": "2025-12-24",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-29"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251225.html",
+    "article_title": "Unicorn, Fox Fur and Christmas Tree",
+    "article_summary": "A wide-field look at NGC 2264 in Monoceros blends red hydrogen emission, blue reflection nebulae, and dark dust lanes around young stars. The write‑up explains the star‑forming complex’s distance (~2,700 light‑years), the role of S Monocerotis, and how the region’s structures trace recent stellar activity.",
+    "article_date": "2025-12-25",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-29"
+  },
+  {
+    "article_url": "https://svs.gsfc.nasa.gov/14722/",
+    "article_title": "NASA Interview Opportunity: NASA Spacecraft Days Away From Historic Close Approach to the Sun",
+    "article_summary": "Preview of Parker Solar Probe’s record perihelion on Dec. 24, when it skims ~3.8 million miles above the Sun at ~430,000 mph during solar maximum. The piece outlines science goals, the hostile coronal environment, and how the heat shield keeps instruments safe for in‑situ measurements.",
+    "article_date": "2025-12-23",
+    "article_authors": "NASA Scientific Visualization Studio (SVS) Team",
+    "row_date": "2025-12-29"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251226.html",
+    "article_title": "Astronomy Picture of the Day — 2025 December 26",
+    "article_summary": "Daily APOD entry featuring a high‑resolution astronomical image and a concise expert explanation that places the featured object or phenomenon in scientific context, with credits to the imaging team.",
+    "article_date": "2025-12-26",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-29"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251227.html",
+    "article_title": "Astronomy Picture of the Day — 2025 December 27",
+    "article_summary": "Daily APOD entry showcasing an astronomical subject with a brief, educational explanation describing the object’s nature, distance, and significance, along with image acquisition details and credits.",
+    "article_date": "2025-12-27",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-29"
+  },
   {
     "article_url": "https://www.livescience.com/space/first-ever-superkilonova-double-star-explosion-puzzles-astronomers",
     "article_title": "First-ever 'superkilonova' double star explosion puzzles astronomers",
@@ -150,22 +131,6 @@
     "article_date": "2025-12-27",
     "article_authors": "",
     "row_date": "2025-12-28"
-  },
-  {
-    "article_url": "https://apod.nasa.gov/apod/ap251224.html",
-    "article_title": "Mystery: Little Red Dots in the Early Universe",
-    "article_summary": "APOD highlights recently discovered \"little red dots\" seen by JWST in deep early‑universe images. Though extremely faint, hundreds have been identified and their true nature remains debated, with possibilities ranging from compact star‑forming systems to active galactic nuclei.",
-    "article_date": "2025-12-24",
-    "article_authors": "Robert Nemiroff, Jerry Bonnell",
-    "row_date": "2025-12-27"
-  },
-  {
-    "article_url": "https://apod.nasa.gov/apod/ap251225.html",
-    "article_title": "Unicorn, Fox Fur and Christmas Tree",
-    "article_summary": "This APOD features the NGC 2264 region in Monoceros, showing the Christmas Tree star cluster, the Cone Nebula, and the Fox Fur Nebula. The scene combines emission and reflection nebulae sculpted by young stars about 2,700 light‑years away.",
-    "article_date": "2025-12-25",
-    "article_authors": "Robert Nemiroff, Jerry Bonnell",
-    "row_date": "2025-12-27"
   },
   {
     "article_url": "https://apod.nasa.gov/apod/fap/ap251226.html",
@@ -544,122 +509,196 @@
     "row_date": "2025-12-13"
   }
 ];
-
-    document.getElementById("topic-title").textContent = "Following " + topicName;
-    document.getElementById("year-label").textContent = publishYear;
-
+    const $ = (sel) => document.querySelector(sel);
     const container = document.getElementById("articles");
+    const countEl = document.getElementById("result-count");
+    const searchInput = document.getElementById("search");
+    const clearBtn = document.getElementById("clear-search");
+
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("year-label").textContent = publishYear;
+    document.getElementById("page-subtitle").textContent = "Grouped by month. Search filters live as you type.";
+    const navTopic = document.getElementById("nav-topic");
+    const navYear = document.getElementById("nav-year");
+    if (navTopic) navTopic.textContent = topicName;
+    if (navYear) navYear.textContent = publishYear;
+
     const monthNames = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
+      "January","February","March","April","May","June",
+      "July","August","September","October","November","December",
     ];
     const now = new Date();
     const publishYearNum = Number(publishYear);
-    const maxMonthForYear =
-      publishYearNum === now.getFullYear() ? now.getMonth() + 1 : 12;
+    const maxMonthForYear = publishYearNum === now.getFullYear() ? now.getMonth() + 1 : 12;
 
-    const filteredArticles = [];
-    articles.forEach((item) => {
-      const dateValue = (item.row_date || item.article_date || "").trim();
-      if (!dateValue) {
-        return;
+    function parseDateKey(item) {
+      const raw = String((item.row_date || item.article_date || "")).trim();
+      // Expect YYYY-MM-DD
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return "";
+      return raw;
+    }
+
+    function domainFromUrl(url) {
+      try {
+        const u = new URL(url);
+        return u.hostname.replace(/^www\./, "");
+      } catch {
+        return "";
       }
-      const [yearPart, monthPart] = dateValue.split("-");
+    }
+
+    function normalize(item) {
+      const dateKey = parseDateKey(item);
+      const yearPart = dateKey.slice(0, 4);
+      const monthPart = dateKey.slice(5, 7);
       const monthNumber = Number(monthPart);
-      if (
-        !yearPart ||
-        Number.isNaN(monthNumber) ||
-        monthNumber < 1 ||
-        monthNumber > 12
-      ) {
-        return;
-      }
-      if (yearPart !== publishYear) {
-        return;
-      }
-      if (publishYearNum === now.getFullYear() && monthNumber > maxMonthForYear) {
-        return;
-      }
-      filteredArticles.push({
+      if (!yearPart || Number.isNaN(monthNumber) || monthNumber < 1 || monthNumber > 12) return null;
+      if (yearPart !== publishYear) return null;
+      if (publishYearNum === now.getFullYear() && monthNumber > maxMonthForYear) return null;
+      return {
         ...item,
-        monthKey: `${yearPart}-${String(monthNumber).padStart(2, "0")}`,
-        monthLabel: `${monthNames[monthNumber - 1]} ${yearPart}`,
-      });
-    });
+        dateKey,
+        domain: domainFromUrl(item.article_url || ""),
+        monthKey: yearPart + "-" + monthPart,
+        monthLabel: monthNames[monthNumber - 1] + " " + yearPart,
+      };
+    }
 
-    if (!filteredArticles.length) {
-      const empty = document.createElement("p");
-      empty.className = "empty-state";
-      empty.textContent = "No articles were captured for this year.";
-      container.appendChild(empty);
-    } else {
-      let lastMonthKey = null;
-      let monthGrid = null;
-      filteredArticles.forEach((item, idx) => {
-        if (item.monthKey !== lastMonthKey) {
-          if (lastMonthKey !== null) {
-            const divider = document.createElement("hr");
-            divider.className = "month-divider";
-            container.appendChild(divider);
+    const normalized = articles.map(normalize).filter(Boolean);
+    normalized.sort((a, b) => (b.dateKey || "").localeCompare(a.dateKey || ""));
+
+    const monthOrder = [];
+    const monthToItems = new Map();
+    for (const item of normalized) {
+      if (!monthToItems.has(item.monthKey)) {
+        monthToItems.set(item.monthKey, []);
+        monthOrder.push(item.monthKey);
+      }
+      monthToItems.get(item.monthKey).push(item);
+    }
+
+    function render(query) {
+      const q = (query || "").trim().toLowerCase();
+      container.innerHTML = "";
+
+      let visibleCount = 0;
+      let totalCount = 0;
+
+      for (const monthKey of monthOrder) {
+        const items = monthToItems.get(monthKey) || [];
+        totalCount += items.length;
+        const shown = q
+          ? items.filter((it) => {
+              const hay = [
+                it.article_title || "",
+                it.article_summary || "",
+                it.article_authors || "",
+                it.domain || "",
+              ].join(" ").toLowerCase();
+              return hay.includes(q);
+            })
+          : items;
+
+        if (!shown.length) continue;
+        visibleCount += shown.length;
+
+        if (container.childElementCount) {
+          const divider = document.createElement("hr");
+          divider.className = "month-divider";
+          container.appendChild(divider);
+        }
+
+        const header = document.createElement("div");
+        header.className = "month-row";
+        const label = document.createElement("p");
+        label.className = "month-label";
+        label.textContent = shown[0].monthLabel;
+        const meta = document.createElement("p");
+        meta.className = "month-count";
+        meta.textContent = String(shown.length) + " item(s)";
+        header.appendChild(label);
+        header.appendChild(meta);
+        container.appendChild(header);
+
+        const grid = document.createElement("div");
+        grid.className = "month-grid";
+        container.appendChild(grid);
+
+        shown.forEach((item, idx) => {
+          const card = document.createElement("article");
+          card.className = "card";
+          card.dataset.search = [
+            item.article_title || "",
+            item.article_summary || "",
+            item.article_authors || "",
+            item.domain || "",
+          ].join(" ").toLowerCase();
+
+          const h = document.createElement("h2");
+          h.className = "article-title";
+          const link = document.createElement("a");
+          link.className = "article-link";
+          link.href = item.article_url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = item.article_title || item.article_url || ("Article " + String(idx + 1));
+          h.appendChild(link);
+          card.appendChild(h);
+
+          if (item.article_summary) {
+            const p = document.createElement("p");
+            p.className = "article-summary";
+            p.textContent = item.article_summary;
+            card.appendChild(p);
           }
-          const label = document.createElement("p");
-          label.className = "month-label";
-          label.textContent = item.monthLabel;
-          container.appendChild(label);
-          const grid = document.createElement("div");
-          grid.className = "month-grid";
-          container.appendChild(grid);
-          monthGrid = grid;
-          lastMonthKey = item.monthKey;
-        }
-        if (!monthGrid) {
-          return;
-        }
-        const card = document.createElement("article");
-        const heading = document.createElement("h2");
-        const link = document.createElement("a");
 
-        link.href = item.article_url;
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
-
-        heading.appendChild(link);
-        card.appendChild(heading);
-
-        if (item.article_summary) {
-          const summary = document.createElement("p");
-          summary.textContent = item.article_summary;
-          card.appendChild(summary);
-        }
-
-        if (item.article_date || item.article_authors) {
-          const meta = document.createElement("p");
-          meta.className = "meta";
-          const parts = [];
+          const metaRow = document.createElement("div");
+          metaRow.className = "meta";
           if (item.article_date) {
-            parts.push(item.article_date);
+            const s = document.createElement("span");
+            s.textContent = item.article_date;
+            metaRow.appendChild(s);
+          }
+          if (item.domain) {
+            const s = document.createElement("span");
+            s.textContent = item.domain;
+            metaRow.appendChild(s);
           }
           if (item.article_authors) {
-            parts.push(item.article_authors);
+            const s = document.createElement("span");
+            s.textContent = item.article_authors;
+            metaRow.appendChild(s);
           }
-          meta.textContent = parts.join(" • ");
-          card.appendChild(meta);
-        }
+          if (metaRow.childElementCount) card.appendChild(metaRow);
 
-        monthGrid.appendChild(card);
-      });
+          grid.appendChild(card);
+        });
+      }
+
+      if (!totalCount) {
+        const empty = document.createElement("p");
+        empty.className = "empty-state";
+        empty.textContent = "No articles were captured for this year.";
+        container.appendChild(empty);
+      } else if (!visibleCount) {
+        const empty = document.createElement("p");
+        empty.className = "empty-state";
+        empty.textContent = "No matches. Try a different search.";
+        container.appendChild(empty);
+      }
+
+      countEl.textContent = totalCount
+        ? (q ? (String(visibleCount) + " / " + String(totalCount) + " shown") : (String(totalCount) + " article(s)"))
+        : "";
     }
+
+    render("");
+    searchInput.addEventListener("input", () => render(searchInput.value));
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      render("");
+      searchInput.focus();
+    });
   </script>
 </body>
 </html>

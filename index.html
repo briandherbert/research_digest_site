@@ -3,86 +3,53 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex,nofollow" />
   <title>Research Digest – Site Map</title>
-  <style>
-    :root {
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #0f172a;
-      background: #f8fafc;
-    }
-    body {
-      margin: 0;
-      padding: 0 1rem 3rem;
-    }
-    header {
-      padding: 2.5rem 0 1.5rem;
-      text-align: center;
-      max-width: 860px;
-      margin: 0 auto;
-    }
-    h1 {
-      margin: 0;
-      font-size: clamp(2rem, 3vw, 3rem);
-    }
-    .subtitle {
-      color: #475569;
-      margin-top: 0.5rem;
-      font-size: 1rem;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1.25rem;
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-    .card {
-      background: #fff;
-      border-radius: 16px;
-      padding: 1.25rem;
-      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-    .topic {
-      margin: 0;
-      font-size: 1.15rem;
-    }
-    .years {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0;
-      padding: 0;
-      list-style: none;
-    }
-    .pill {
-      display: inline-block;
-      padding: 0.4rem 0.75rem;
-      border-radius: 999px;
-      background: #e2e8f0;
-      color: #0f172a;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 0.95rem;
-    }
-    .pill:hover {
-      background: #cbd5e1;
-    }
-    .empty {
-      text-align: center;
-      color: #475569;
-      margin-top: 2rem;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/site.css" />
+  <script defer src="assets/site.js"></script>
 </head>
 <body>
-  <header>
-    <h1>Research Digest</h1>
-    <p class="subtitle">Topics and yearly indexes.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="index.html" aria-label="Site map">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span>Maintainers</span>
+      </a>
+      <div class="top-actions">
+        <button class="btn" type="button" data-action="toggle-theme" aria-pressed="false" title="Toggle theme">
+          Theme
+        </button>
+      </div>
+    </div>
   </header>
-  <main id="content"></main>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <p class="eyebrow">Maintainers</p>
+      <h1 class="title">Site map</h1>
+      <p class="subtitle">Internal index to jump between topics and years.</p>
+    </section>
+
+    <section class="toolbar" aria-label="Filters">
+      <div class="toolbar-left">
+        <input id="search" class="input" type="search" data-role="search" placeholder="Search topics… (Ctrl/⌘K)" autocomplete="off" />
+        <span class="hint" id="result-count"></span>
+      </div>
+      <div class="toolbar-right">
+        <button class="btn" type="button" id="clear-search" title="Clear search">Clear</button>
+      </div>
+    </section>
+
+    <section id="content"></section>
+    <div class="footer">
+      Tip: Press <strong>Ctrl/⌘K</strong> to jump to search.
+      <a class="sr-only" rel="nofollow" href="../../index.html">Site map (maintainers)</a>
+    </div>
+  </main>
+
+  <button class="btn back-to-top" type="button" data-action="back-to-top" title="Back to top">Top</button>
+
   <script>
     const entries = [
   {
@@ -127,24 +94,48 @@
   }
 ];
     const container = document.getElementById("content");
-    if (!entries.length) {
-      const empty = document.createElement("p");
-      empty.className = "empty";
-      empty.textContent = "No generated pages yet.";
-      container.appendChild(empty);
-    } else {
+    const searchInput = document.getElementById("search");
+    const clearBtn = document.getElementById("clear-search");
+    const countEl = document.getElementById("result-count");
+
+    function render(query) {
+      const q = (query || "").trim().toLowerCase();
+      container.innerHTML = "";
+      if (!entries.length) {
+        const empty = document.createElement("p");
+        empty.className = "empty-state";
+        empty.textContent = "No generated pages yet.";
+        container.appendChild(empty);
+        countEl.textContent = "";
+        return;
+      }
+
       const grid = document.createElement("div");
       grid.className = "grid";
+
+      let shown = 0;
       entries.forEach((entry) => {
+        const title = (entry.title || "").toString();
+        const years = Array.isArray(entry.years) ? entry.years : [];
+        const hay = (title + " " + years.map(y => y.year).join(" ")).toLowerCase();
+        if (q && !hay.includes(q)) return;
+
+        shown += 1;
         const card = document.createElement("div");
         card.className = "card";
-        const title = document.createElement("h2");
-        title.className = "topic";
-        title.textContent = entry.title;
-        card.appendChild(title);
+        const h = document.createElement("h2");
+        h.className = "topic-title";
+        h.textContent = title;
+        card.appendChild(h);
+
+        const meta = document.createElement("p");
+        meta.className = "topic-meta";
+        meta.textContent = years.length ? (String(years.length) + " year(s)") : "No years";
+        card.appendChild(meta);
+
         const list = document.createElement("ul");
-        list.className = "years";
-        entry.years.forEach((year) => {
+        list.className = "pill-row";
+        years.forEach((year) => {
           const li = document.createElement("li");
           const link = document.createElement("a");
           link.className = "pill";
@@ -156,8 +147,27 @@
         card.appendChild(list);
         grid.appendChild(card);
       });
+
       container.appendChild(grid);
+      countEl.textContent = q
+        ? (String(shown) + " / " + String(entries.length) + " shown")
+        : (String(entries.length) + " topic(s)");
+
+      if (q && shown === 0) {
+        const empty = document.createElement("p");
+        empty.className = "empty-state";
+        empty.textContent = "No matches. Try a different search.";
+        container.appendChild(empty);
+      }
     }
+
+    render("");
+    searchInput.addEventListener("input", () => render(searchInput.value));
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      render("");
+      searchInput.focus();
+    });
   </script>
 </body>
 </html>
