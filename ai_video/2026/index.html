@@ -53,12 +53,20 @@
     const publishYear = "2026";
     const articles = [
   {
+    "article_url": "https://arxiv.org/abs/2601.10103",
+    "article_title": "FlowAct-R1: Towards Interactive Humanoid Video Generation",
+    "article_summary": "Introduces FlowAct-R1, a real-time framework for interactive humanoid video generation built on an MMDiT backbone. It uses chunkwise diffusion forcing (and a self-forcing variant) to reduce error accumulation and maintain long-term temporal consistency, enabling streaming videos of arbitrary length. System optimizations and efficient distillation deliver ~25 fps at 480p with ~1.5 s time-to-first-frame, and provide fine-grained, full-body control across diverse character styles.",
+    "article_date": "2026-01-15",
+    "article_authors": "Lizhen Wang, Yongming Zhu, Zhipeng Ge, Youwei Zheng, Longhao Zhang, Tianshu Hu, Shiyang Qin, Mingshuang Luo, Jiaxu Zhang, Xin Chen, Yulong Wang, Zerong Zheng, Jianwen Jiang, Chao Liang, Weifeng Chen, Xing Wang, Yuan Zhang, Mingyuan Gao",
+    "row_date": "2026-01-20"
+  },
+  {
     "article_url": "https://arxiv.org/abs/2601.09881",
     "article_title": "Transition Matching Distillation for Fast Video Generation",
-    "article_summary": "Introduces Transition Matching Distillation, a framework that distills multi-step video diffusion models into efficient few-step generators by adding a lightweight conditional flow head. Demonstrates faster generation while preserving quality, outperforming prior distilled models on Wan2.1 1.3B and 14B under similar inference costs.",
+    "article_summary": "Proposes Transition Matching Distillation (TMD) to distill multi-step video diffusion models into efficient few-step generators. TMD aligns the diffusion denoising trajectory with a small number of conditional flow transitions by separating a main backbone (semantic representation extractor) from a lightweight flow head that performs multiple inner updates. Experiments distilling Wan2.1 (1.3B and 14B) show improved speed–quality trade-offs and better visual fidelity and prompt adherence versus prior distilled approaches.",
     "article_date": "2026-01-14",
     "article_authors": "Weili Nie, Julius Berner, Nanye Ma, Chao Liu, Saining Xie, Arash Vahdat",
-    "row_date": "2026-01-19"
+    "row_date": "2026-01-20"
   },
   {
     "article_url": "https://arxiv.org/abs/2601.10553",
@@ -90,14 +98,6 @@
     "article_summary": "Introduces VideoLoom, a unified Video LLM trained on LoomData‑8.7k to jointly localize in space and time. It reports state‑of‑the‑art or competitive results on tasks like referring video object segmentation and temporal grounding, and proposes LoomBench for comprehensive evaluation of spatiotemporal video understanding.",
     "article_date": "2026-01-12",
     "article_authors": "Jiapeng Shi, Junke Wang, Zuyao You, Bo He, Zuxuan Wu",
-    "row_date": "2026-01-18"
-  },
-  {
-    "article_url": "https://arxiv.org/abs/2601.10103",
-    "article_title": "FlowAct-R1: Towards Interactive Humanoid Video Generation",
-    "article_summary": "Presents a framework for real‑time, interactive humanoid video synthesis using chunkwise diffusion forcing and system‑level optimizations. Achieves streaming generation at ~25 fps (480p) with ~1.5 s time‑to‑first‑frame and offers fine‑grained, full‑body control for responsive, long‑duration interactions.",
-    "article_date": "2026-01-15",
-    "article_authors": "Lizhen Wang, Yongming Zhu, Zhipeng Ge, Youwei Zheng, Longhao Zhang, Tianshu Hu, Shiyang Qin, Mingshuang Luo, Jiaxu Zhang, Xin Chen, Yulong Wang, Zerong Zheng, Jianwen Jiang, Chao Liang, Weifeng Chen, Xing Wang, Yuan Zhang, Mingyuan Gao",
     "row_date": "2026-01-18"
   },
   {
