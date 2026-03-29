@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://briandherbert.github.io/research_digest_site/sitemap.xml
