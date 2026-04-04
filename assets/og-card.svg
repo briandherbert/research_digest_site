@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Research Digest">
+  <defs>
+    <linearGradient id="rd-og-bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#2563eb"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#rd-og-bg)"/>
+  <text x="600" y="300" text-anchor="middle" fill="#ffffff" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif" font-size="56" font-weight="800">Research Digest</text>
+  <text x="600" y="370" text-anchor="middle" fill="rgba(255,255,255,0.92)" font-family="ui-sans-serif,system-ui,-apple-system,Segoe UI,sans-serif" font-size="28" font-weight="600">Curated research articles by topic and year</text>
+</svg>
