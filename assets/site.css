@@ -173,6 +173,23 @@ a:hover { color: var(--accent-2); }
   line-height: 1.5;
 }
 
+.context-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  background: color-mix(in oklab, var(--panel) 88%, var(--border));
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  color: var(--muted);
+}
+.context-nav a { font-weight: 650; }
+.context-nav-siblings { color: var(--muted-2); }
+.context-nav-siblings a { font-weight: 600; }
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
