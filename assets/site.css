@@ -190,6 +190,17 @@ a:hover { color: var(--accent-2); }
 .context-nav-siblings { color: var(--muted-2); }
 .context-nav-siblings a { font-weight: 600; }
 
+.page-intro {
+  margin: 0 0 1rem;
+  padding: 0.75rem 1rem;
+  border-left: 3px solid var(--accent);
+  background: color-mix(in oklab, var(--panel) 90%, var(--accent));
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: var(--text);
+}
+
 .toolbar {
   display: flex;
   flex-wrap: wrap;
