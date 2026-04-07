@@ -200,6 +200,14 @@ a:hover { color: var(--accent-2); }
   line-height: 1.45;
   color: var(--text);
 }
+#latest-month { scroll-margin-top: 5.5rem; }
+
+.hub-quick-start {
+  margin: -0.35rem 0 1.15rem;
+  font-size: 0.96rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
 
 .toolbar {
   display: flex;

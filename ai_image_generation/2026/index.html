@@ -55,7 +55,8 @@
       <a href="../index.html">All years for AI image generation</a>
     </nav>
 
-    <p class="page-intro" role="note">New here? Scan the monthly sections below for headlines and quick summaries, or use search (Ctrl/⌘K). Use the topic link above to open other years on the same theme.</p>
+    <p class="page-intro" role="note">New here? <a href="#latest-month">Jump to the latest month</a> for the newest picks, then scan other months below or use search (Ctrl/⌘K). The topic link above opens other years on the same theme.</p>
+
     <section class="toolbar" aria-label="Filters">
       <div class="toolbar-left">
         <input id="search" class="input" type="search" data-role="search" placeholder="Search titles, summaries, domains… (Ctrl/⌘K)" autocomplete="off" />
@@ -578,6 +579,7 @@
 
         const header = document.createElement("div");
         header.className = "month-row";
+        if (!q && monthKey === monthOrder[0]) header.id = "latest-month";
         const label = document.createElement("p");
         label.className = "month-label";
         label.textContent = shown[0].monthLabel;
