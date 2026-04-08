@@ -68,7 +68,8 @@
     </section>
 
     <section class="section" id="articles" aria-live="polite"></section>
-    <div class="footer">Tip: Press <strong>Ctrl/⌘K</strong> to jump to search.</div>
+    <div class="footer">Tip: Press <strong>Ctrl/⌘K</strong> to jump to search. ·
+      <a href="../index.html">All years for this topic</a></div>
   </main>
 
   <button class="btn back-to-top" type="button" data-action="back-to-top" title="Back to top">Top</button>
@@ -196,6 +197,9 @@
         shown.forEach((item, idx) => {
           const card = document.createElement("article");
           card.className = "card";
+          if (!q && monthKey === monthOrder[0] && idx === 0) {
+            card.id = "newest-pick";
+          }
           card.dataset.search = [
             item.article_title || "",
             item.article_summary || "",
