@@ -187,6 +187,8 @@ a:hover { color: var(--accent-2); }
   color: var(--muted);
 }
 .context-nav a { font-weight: 650; }
+.context-nav-more { color: var(--muted-2); }
+.context-nav-more a { font-weight: 600; }
 .context-nav-siblings { color: var(--muted-2); }
 .context-nav-siblings a { font-weight: 600; }
 
