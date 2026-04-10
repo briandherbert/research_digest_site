@@ -192,6 +192,33 @@ a:hover { color: var(--accent-2); }
 .context-nav-siblings { color: var(--muted-2); }
 .context-nav-siblings a { font-weight: 600; }
 
+.breadcrumb {
+  margin: -0.15rem 0 0.85rem;
+  font-size: 0.88rem;
+  color: var(--muted-2);
+}
+.breadcrumb-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.35rem 0.45rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb-list li {
+  display: inline-flex;
+  align-items: center;
+}
+.breadcrumb-list li:not(:last-child)::after {
+  content: "/";
+  color: var(--muted-2);
+  margin-left: 0.45rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+.breadcrumb-list a { font-weight: 650; }
+
 .page-intro {
   margin: 0 0 1rem;
   padding: 0.75rem 1rem;
