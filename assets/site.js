@@ -60,9 +60,21 @@
     }
   });
 
+  function focusSearchFromHash() {
+    const raw = (location.hash || "").toLowerCase();
+    if (raw !== "#search" && raw !== "#site-search") return;
+    const input = document.querySelector('input[type="search"][data-role="search"]');
+    if (!input) return;
+    requestAnimationFrame(() => {
+      input.focus({ preventScroll: true });
+    });
+  }
+
   initTheme();
+  window.addEventListener("hashchange", focusSearchFromHash);
   window.addEventListener("DOMContentLoaded", () => {
     initThemeButton();
     initBackToTop();
+    focusSearchFromHash();
   });
 })();
