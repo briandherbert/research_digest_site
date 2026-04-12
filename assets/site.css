@@ -234,14 +234,6 @@ a:hover { color: var(--accent-2); }
 #search,
 #site-search { scroll-margin-top: 5.5rem; }
 
-.card-refine {
-  margin: 0.35rem 0 0;
-  font-size: 0.88rem;
-  line-height: 1.35;
-  color: var(--muted-2);
-}
-.card-refine a { font-weight: 650; }
-
 .hub-quick-start {
   margin: -0.35rem 0 1.15rem;
   font-size: 0.96rem;
