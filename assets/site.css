@@ -395,15 +395,6 @@ article.card a.article-link:hover { text-decoration: underline; }
   color: var(--muted-2);
   font-size: 0.92rem;
 }
-.cross-topic {
-  display: inline;
-  color: var(--muted-2);
-}
-.cross-topic-label {
-  font-weight: 650;
-  color: var(--muted);
-}
-.cross-topic a { font-weight: 600; }
 
 .back-to-top {
   position: fixed;
