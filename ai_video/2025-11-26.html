@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI video – 2025-11-26</title>
+  <style>
+    :root {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #0f172a;
+      background: #f8fafc;
+    }
+    body {
+      margin: 0;
+      padding: 0 1rem 3rem;
+    }
+    header {
+      padding: 2.5rem 0 1.5rem;
+      text-align: center;
+    }
+    h1 {
+      margin: 0;
+      font-size: clamp(2rem, 3vw, 3rem);
+    }
+    .date {
+      color: #475569;
+      font-weight: 600;
+      margin-top: 0.25rem;
+    }
+    #articles {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.5rem;
+      padding-bottom: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    article {
+      background: #fff;
+      border-radius: 16px;
+      padding: 1.5rem;
+      box-shadow: 0 15px 25px rgba(15, 23, 42, 0.08);
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      min-height: 220px;
+    }
+    article h2 {
+      margin: 0;
+      font-size: 1.15rem;
+    }
+    .meta {
+      margin: 0;
+      font-size: 0.95rem;
+      color: #64748b;
+    }
+    article a {
+      color: #0f172a;
+      text-decoration: none;
+    }
+    article a:hover {
+      text-decoration: underline;
+    }
+    article p {
+      margin: 0;
+      color: #334155;
+      line-height: 1.4;
+    }
+    .empty-state {
+      text-align: center;
+      font-size: 1.1rem;
+      color: #475569;
+      grid-column: 1 / -1;
+    }
+  </style>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q421RJGCV8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-Q421RJGCV8');
+  </script>
+</head>
+<body>
+  <header>
+    <p class="date" id="date-label">2025-11-26</p>
+    <h1 id="topic-title">AI video</h1>
+  </header>
+  <main id="articles"></main>
+
+  <script>
+    const topicName = "AI video";
+    const publishDate = "2025-11-26";
+    const articles = [
+  {
+    "article_url": "https://arxiv.org/abs/2509.22622",
+    "article_title": "LongLive: Real-time Interactive Long Video Generation",
+    "article_summary": "Proposes a frame-level autoregressive framework for long, interactive video generation with KV-recache, streaming long tuning, and a frame-sink attention scheme to maintain consistency during prompt switches. Achieves 20.7 FPS on a single H100 GPU, supports videos up to 240 seconds, and offers INT8-quantized inference with minimal quality loss.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://arxiv.org/abs/2508.03694",
+    "article_title": "LongVie: Multimodal-Guided Controllable Ultra-Long Video Generation",
+    "article_summary": "Introduces an end-to-end autoregressive method for controllable ultra-long videos using unified noise initialization, global control signal normalization, and a multimodal control framework (dense and sparse signals) with degradation-aware training. Presents LongVGenBench and reports state-of-the-art long-range consistency and controllability.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.luma-ai.com/luma-ai-in-2025-whats-new-with-dream-machine-and-ray2/",
+    "article_title": "Luma AI in 2025: What’s New with Dream Machine and Ray2",
+    "article_summary": "Company update detailing the Ray2 video model (higher realism, trained with 10× compute) for 5–9 second clips, a Modify Video tool for transforming existing footage, and a revamped UI plus iOS app. Highlights new partnerships and pricing aimed at making high-fidelity AI video creation more accessible.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.theverge.com/news/823775/tiktok-ai-generated-content-controls-manage-topics",
+    "article_title": "TikTok is letting users control how much AI content they see",
+    "article_summary": "Reports TikTok’s test of a feed control that lets users increase or decrease AI-generated videos via a new Manage topics slider. Notes improved AI-content detection, including invisible watermarks and C2PA Content Credentials, with broader rollout expected in the coming weeks.",
+    "article_date": "",
+    "article_authors": ""
+  },
+  {
+    "article_url": "https://www.businessinsider.com/openai-temporarily-blocked-cameo-video-app-sora-lawsuit-2025-11",
+    "article_title": "OpenAI is temporarily blocked from using the word 'cameo' for its video app",
+    "article_summary": "Covers a court order temporarily barring OpenAI from using “cameo” for a Sora feature amid a trademark dispute with Cameo. The ruling, by Judge Eumi K. Lee, lasts until December 22 with a December 19 hearing scheduled; OpenAI disagrees with the claims and plans to contest them.",
+    "article_date": "",
+    "article_authors": ""
+  }
+];
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("date-label").textContent = publishDate;
+    const container = document.getElementById("articles");
+
+    if (!articles.length) {
+      const empty = document.createElement("p");
+      empty.className = "empty-state";
+      empty.textContent = "No articles were captured for this date.";
+      container.appendChild(empty);
+    } else {
+      articles.forEach((item, idx) => {
+        const card = document.createElement("article");
+        const heading = document.createElement("h2");
+        const link = document.createElement("a");
+
+        link.href = item.article_url;
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+        link.textContent = item.article_title || item.article_url || `Article ${idx + 1}`;
+
+        heading.appendChild(link);
+        card.appendChild(heading);
+
+        if (item.article_summary) {
+          const summary = document.createElement("p");
+          summary.textContent = item.article_summary;
+          card.appendChild(summary);
+        }
+
+        if (item.article_date || item.article_authors) {
+          const meta = document.createElement("p");
+          meta.className = "meta";
+          const parts = [];
+          if (item.article_date) {
+            parts.push(item.article_date);
+          }
+          if (item.article_authors) {
+            parts.push(item.article_authors);
+          }
+          meta.textContent = parts.join(" • ");
+          card.appendChild(meta);
+        }
+
+        container.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

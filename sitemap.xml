@@ -13,6 +13,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://briandherbert.github.io/research_digest_site/ai_image_generation/2025/index.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://briandherbert.github.io/research_digest_site/ai_video/index.html</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -20,6 +26,24 @@
   </url>
   <url>
     <loc>https://briandherbert.github.io/research_digest_site/ai_video/2026/index.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://briandherbert.github.io/research_digest_site/ai_video/2025/index.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://briandherbert.github.io/research_digest_site/ai_video_generation_and_world_models/index.html</loc>
+    <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://briandherbert.github.io/research_digest_site/ai_video_generation_and_world_models/2026/index.html</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
@@ -49,6 +73,12 @@
     <priority>0.65</priority>
   </url>
   <url>
+    <loc>https://briandherbert.github.io/research_digest_site/astronomy/2025/index.html</loc>
+    <lastmod>2026-04-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
     <loc>https://briandherbert.github.io/research_digest_site/botany/index.html</loc>
     <lastmod>2026-04-19</lastmod>
     <changefreq>weekly</changefreq>
@@ -57,6 +87,12 @@
   <url>
     <loc>https://briandherbert.github.io/research_digest_site/botany/2026/index.html</loc>
     <lastmod>2026-04-19</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.65</priority>
+  </url>
+  <url>
+    <loc>https://briandherbert.github.io/research_digest_site/botany/2025/index.html</loc>
+    <lastmod>2026-04-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.65</priority>
   </url>

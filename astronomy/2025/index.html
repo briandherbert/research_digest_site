@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Astronomy – 2025</title>
+  <link rel="stylesheet" href="../../assets/site.css" />
+  <script defer src="../../assets/site.js"></script>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q421RJGCV8"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-Q421RJGCV8');
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="brand" href="./index.html" aria-label="Topic home">
+        <span class="brand-badge" aria-hidden="true"></span>
+        <span class="brand-topic" id="nav-topic"></span>
+        <span class="brand-sep" aria-hidden="true">•</span>
+        <span class="brand-year" id="nav-year"></span>
+      </a>
+      <div class="top-actions">
+        <button class="btn" type="button" data-action="toggle-theme" aria-pressed="false" title="Toggle theme">
+          Theme
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" class="container">
+    <section class="hero">
+      <p class="eyebrow" id="year-label"></p>
+      <h1 class="title" id="topic-title"></h1>
+      <p class="subtitle" id="page-subtitle"></p>
+    </section>
+
+    <section class="toolbar" aria-label="Filters">
+      <div class="toolbar-left">
+        <input id="search" class="input" type="search" data-role="search" placeholder="Search titles, summaries, domains… (Ctrl/⌘K)" autocomplete="off" />
+        <span class="hint" id="result-count"></span>
+      </div>
+      <div class="toolbar-right">
+        <button class="btn" type="button" id="clear-search" title="Clear search">Clear</button>
+      </div>
+    </section>
+
+    <section class="section" id="articles" aria-live="polite"></section>
+    <div class="footer"><a href="../index.html">All years for this topic</a></div>
+  </main>
+
+  <button class="btn back-to-top" type="button" data-action="back-to-top" title="Back to top">Top</button>
+
+  <script>
+    const topicName = "Astronomy";
+    const publishYear = "2025";
+    const articles = [
+  {
+    "article_url": "https://phys.org/news/2025-12-jwst-supernova-million-years-big.html",
+    "article_title": "The JWST just identified a supernova from only 730 million years after the Big Bang",
+    "article_summary": "JWST observations confirmed a supernova associated with GRB 250314A at redshift ~7.3, just 730 million years after the Big Bang. Two Astronomy & Astrophysics Letters papers detail the detection and modeling, showing Webb can directly identify individual stellar explosions in the era of reionization and constraining early massive star deaths.",
+    "article_date": "2025-12-10",
+    "article_authors": "Evan Gough, Robert Egan (editor)",
+    "row_date": "2025-12-17"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251210.html",
+    "article_title": "The Horsehead Nebula",
+    "article_summary": "A brief explainer highlights Barnard 33—the Horsehead Nebula—silhouetted against IC 434 in Orion about 1,500 light‑years away. It notes the cloud’s five‑light‑year scale, its sculpting by stellar radiation and winds, and evidence from Hubble images of ongoing star formation within the dense pillar.",
+    "article_date": "2025-12-10",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-17"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251211.html",
+    "article_title": "Galaxies in the River",
+    "article_summary": "The post explains galactic interactions using NGC 1532 and dwarf companion NGC 1531 in Eridanus (~50 million light‑years distant). It describes tidal distortions as a hallmark of hierarchical growth, where larger galaxies accrete smaller ones—a common evolutionary pathway including in the Milky Way.",
+    "article_date": "2025-12-11",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-17"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/ap251212.html",
+    "article_title": "Northern Fox Fires",
+    "article_summary": "Aurora over Finnish Lapland is used to illustrate the Finnish ‘fire fox’ myth for the northern lights. The write‑up connects cultural lore with the physical cause—charged particles guided by Earth’s magnetic field exciting atmospheric gases to produce shimmering auroral displays.",
+    "article_date": "2025-12-12",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-17"
+  },
+  {
+    "article_url": "https://apod.nasa.gov/apod/fap/ap251217.html",
+    "article_title": "W5: The Soul Nebula",
+    "article_summary": "An overview of the Soul Nebula (W5) in Cassiopeia describes multiple stellar nurseries, dark dust pillars, and wind‑blown cavities carved by young massive stars. It emphasizes how feedback from new stars sculpts surrounding gas and dust, regulating subsequent star formation.",
+    "article_date": "2025-12-17",
+    "article_authors": "Robert Nemiroff, Jerry Bonnell",
+    "row_date": "2025-12-17"
+  },
+  {
+    "article_url": "https://www.space.com/astronomy/stars/astronomers-capture-close-up-images-of-nova-explosions-on-2-dead-stars-in-unprecedented-detail",
+    "article_title": "Astronomers capture close-up images of nova explosions on 2 dead stars in unprecedented detail",
+    "article_summary": "Using the CHARA Array, Gemini North spectroscopy, and Fermi gamma-ray data, researchers obtained the most detailed close-up views yet of two nova eruptions on white dwarfs (V1674 Herculis and V1405 Cassiopeiae). The observations reveal markedly different, complex outflow geometries and timing, refining how thermonuclear runaways eject material and produce shock-powered high-energy emission.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-16"
+  },
+  {
+    "article_url": "https://www.space.com/space-exploration/satellites/satellite-constellations-could-obscure-most-space-telescope-observations-by-late-2030s-that-part-of-the-image-will-be-forever-lost",
+    "article_title": "Satellite constellations could obscure most space telescope observations by late 2030s: 'That part of the image will be forever lost'",
+    "article_summary": "New simulations led by NASA’s Alejandro Borlaff warn that rapidly growing satellite mega-constellations could contaminate the majority of space-telescope images by the late 2030s. The study projects severe trail streaking across exposures from Hubble, SPHEREx, and future missions, arguing that mitigation requires coordinated policy and engineering changes.",
+    "article_date": "2025-12-13",
+    "article_authors": "",
+    "row_date": "2025-12-16"
+  },
+  {
+    "article_url": "https://www.space.com/stargazing/meteor-showers/decembers-overlooked-meteor-shower-peaks-next-week-will-the-ursids-surprise-us",
+    "article_title": "December's overlooked meteor shower peaks next week - will the Ursids surprise us?",
+    "article_summary": "Preview of the Ursids meteor shower peaking the night of December 21–22, 2025: typically 5–10 meteors/hour with dark-sky, near–new-moon conditions this year and no strong outburst expected, though brief enhancements are possible.",
+    "article_date": "2025-12-15",
+    "article_authors": "",
+    "row_date": "2025-12-16"
+  },
+  {
+    "article_url": "https://aasnova.org/",
+    "article_title": "Intergalactic Impacts of Quasars During the Epoch of Reionization",
+    "article_summary": "A JWST study of a reionization-era quasar finds evidence that powerful radiation and feedback can suppress star formation in nearby galaxies, illuminating how early supermassive black holes influenced their environments.",
+    "article_date": "2025-12-12",
+    "article_authors": "",
+    "row_date": "2025-12-16"
+  },
+  {
+    "article_url": "https://www.nature.com/articles/s41550-025-02741-1",
+    "article_title": "Fast Radio Bursts 2025",
+    "article_summary": "A concise overview of the fast radio burst field as of 2025, highlighting recent discoveries, improved localization of repeaters and one-off events, proposed progenitor scenarios, and how new radio facilities are refining burst energetics, environments, and rates.",
+    "article_date": "2025-12-09",
+    "article_authors": "A. M. Cook, A. P. Curtin",
+    "row_date": "2025-12-14"
+  },
+  {
+    "article_url": "https://www.nature.com/articles/s41550-025-02722-4",
+    "article_title": "JWST tracks helium escape from the atmosphere of the exoplanet WASP-107 b",
+    "article_summary": "Reports JWST observations that directly trace helium outflow from the low-density exoplanet WASP-107 b, quantifying atmospheric escape and illustrating how stellar irradiation drives mass loss and shapes the evolution of close-in gas giants.",
+    "article_date": "2025-12-10",
+    "article_authors": "",
+    "row_date": "2025-12-14"
+  },
+  {
+    "article_url": "https://timesofindia.indiatimes.com/science/nasas-roman-space-telescope-to-map-the-milky-way-in-infrared/articleshow/125958656.cms",
+    "article_title": "NASA's Roman space telescope to map the Milky Way in infrared",
+    "article_summary": "Describes a forthcoming Roman Space Telescope program to create an unprecedented infrared map of the Galactic disk over a 29‑day survey spread across two years, aiming to detect up to 20 billion stars, capture microlensing events, and reveal hidden stellar structures.",
+    "article_date": "2025-12-14",
+    "article_authors": "",
+    "row_date": "2025-12-14"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/09/science/nasa-captures-new-images-of-interstellar-comet-3i-atlas-journey/",
+    "article_title": "NASA captures new images of interstellar comet 3I/ATLAS journey",
+    "article_summary": "Covers Hubble Space Telescope imaging of interstellar comet 3I/ATLAS, confirming its hyperbolic path and origin outside the Solar System, noting its safe, distant closest approach and the ongoing multi-mission effort to characterize its properties before it departs.",
+    "article_date": "2025-12-09",
+    "article_authors": "",
+    "row_date": "2025-12-14"
+  },
+  {
+    "article_url": "https://www.ctinsider.com/news/article/geminid-meteor-shower-peak-ct-december-2025-21240512.php",
+    "article_title": "Geminid meteor shower to peak Saturday night, but snow in CT forecast will hamper viewing",
+    "article_summary": "Explains the December 13–14 Geminid meteor-shower peak, expected rates under dark skies, best viewing practices, and how local weather may limit visibility—placing the event in the broader context of annual meteor activity of interest to skywatchers.",
+    "article_date": "2025-12-14",
+    "article_authors": "",
+    "row_date": "2025-12-14"
+  },
+  {
+    "article_url": "https://www.sciencedaily.com/releases/2025/12/251206030750.htm",
+    "article_title": "SPHERE’s stunning space images reveal where new planets are forming",
+    "article_summary": "High-contrast VLT/SPHERE images of dusty rings around young stars reveal arcs, sharp edges, and clumps that trace ongoing planet formation. The structures point to collisions among planetesimals and hint at unseen giant planets shaping the disks.",
+    "article_date": "2025-12-06",
+    "article_authors": "Max Planck Institute for Astronomy, ScienceDaily Staff",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://nypost.com/2025/12/12/science/scientists-discover-real-life-star-wars-planet-with-two-suns/",
+    "article_title": "'Star Wars' predicted it: Planet discovered that orbits two suns like Luke Skywalker's home Tatooine",
+    "article_summary": "Astronomers report a rare, directly imaged circumbinary gas giant, HD 143811 AB b, about 446 light-years away. Archival Gemini South and Keck data show it orbits both stars with an estimated multi-century period, offering insights into planet formation in binary systems.",
+    "article_date": "2025-12-12",
+    "article_authors": "New York Post Staff",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://timesofindia.indiatimes.com/city/nagpur/geminid-meteor-shower-to-be-visible-on-dec-13-14-night-sky/articleshow/125939061.cms",
+    "article_title": "Geminid meteor shower to be visible on Dec 13 & 14 night sky",
+    "article_summary": "A viewing guide to the Geminid meteor shower peaking on Dec 13–14, recommending dark-sky locations after 10 PM. It notes the shower’s origin from asteroid 3200 Phaethon and the potential to see up to ~100 meteors per hour under ideal conditions.",
+    "article_date": "2025-12-13",
+    "article_authors": "Times of India Staff",
+    "row_date": "2025-12-13"
+  },
+  {
+    "article_url": "https://timesofindia.indiatimes.com/etimes/trending/winters-secret-sky-show-indians-are-in-for-a-treat-as-geminid-and-quadrantid-meteor-showers-to-light-up-the-sky-in-december/articleshow/125934459.cms",
+    "article_title": "Winter's secret sky show: Indians are in for a treat as Geminid and Quadrantid meteor showers to light up the sky in December",
+    "article_summary": "An overview of December’s Geminid and Quadrantid meteor showers with tips on when and where to watch across India. The piece highlights the Geminids’ bright, multi-colored meteors and the favorable winter viewing conditions.",
+    "article_date": "2025-12-13",
+    "article_authors": "Times of India Staff",
+    "row_date": "2025-12-13"
+  }
+];
+    const $ = (sel) => document.querySelector(sel);
+    const container = document.getElementById("articles");
+    const countEl = document.getElementById("result-count");
+    const searchInput = document.getElementById("search");
+    const clearBtn = document.getElementById("clear-search");
+
+    document.getElementById("topic-title").textContent = topicName;
+    document.getElementById("year-label").textContent = publishYear;
+    document.getElementById("page-subtitle").textContent = "Grouped by month. Search filters live as you type.";
+    const navTopic = document.getElementById("nav-topic");
+    const navYear = document.getElementById("nav-year");
+    if (navTopic) navTopic.textContent = topicName;
+    if (navYear) navYear.textContent = publishYear;
+
+    const monthNames = [
+      "January","February","March","April","May","June",
+      "July","August","September","October","November","December",
+    ];
+    const now = new Date();
+    const publishYearNum = Number(publishYear);
+    const maxMonthForYear = publishYearNum === now.getFullYear() ? now.getMonth() + 1 : 12;
+
+    function parseDateKey(item) {
+      const raw = String((item.row_date || item.article_date || "")).trim();
+      // Expect YYYY-MM-DD
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(raw)) return "";
+      return raw;
+    }
+
+    function domainFromUrl(url) {
+      try {
+        const u = new URL(url);
+        return u.hostname.replace(/^www\./, "");
+      } catch {
+        return "";
+      }
+    }
+
+    function normalize(item) {
+      const dateKey = parseDateKey(item);
+      const yearPart = dateKey.slice(0, 4);
+      const monthPart = dateKey.slice(5, 7);
+      const monthNumber = Number(monthPart);
+      if (!yearPart || Number.isNaN(monthNumber) || monthNumber < 1 || monthNumber > 12) return null;
+      if (yearPart !== publishYear) return null;
+      if (publishYearNum === now.getFullYear() && monthNumber > maxMonthForYear) return null;
+      return {
+        ...item,
+        dateKey,
+        domain: domainFromUrl(item.article_url || ""),
+        monthKey: yearPart + "-" + monthPart,
+        monthLabel: monthNames[monthNumber - 1] + " " + yearPart,
+      };
+    }
+
+    const normalized = articles.map(normalize).filter(Boolean);
+    normalized.sort((a, b) => (b.dateKey || "").localeCompare(a.dateKey || ""));
+
+    const monthOrder = [];
+    const monthToItems = new Map();
+    for (const item of normalized) {
+      if (!monthToItems.has(item.monthKey)) {
+        monthToItems.set(item.monthKey, []);
+        monthOrder.push(item.monthKey);
+      }
+      monthToItems.get(item.monthKey).push(item);
+    }
+
+    function render(query) {
+      const q = (query || "").trim().toLowerCase();
+      container.innerHTML = "";
+
+      let visibleCount = 0;
+      let totalCount = 0;
+
+      for (const monthKey of monthOrder) {
+        const items = monthToItems.get(monthKey) || [];
+        totalCount += items.length;
+        const shown = q
+          ? items.filter((it) => {
+              const hay = [
+                it.article_title || "",
+                it.article_summary || "",
+                it.article_authors || "",
+                it.domain || "",
+              ].join(" ").toLowerCase();
+              return hay.includes(q);
+            })
+          : items;
+
+        if (!shown.length) continue;
+        visibleCount += shown.length;
+
+        if (container.childElementCount) {
+          const divider = document.createElement("hr");
+          divider.className = "month-divider";
+          container.appendChild(divider);
+        }
+
+        const header = document.createElement("div");
+        header.className = "month-row";
+        const label = document.createElement("p");
+        label.className = "month-label";
+        label.textContent = shown[0].monthLabel;
+        const meta = document.createElement("p");
+        meta.className = "month-count";
+        meta.textContent = String(shown.length) + " item(s)";
+        header.appendChild(label);
+        header.appendChild(meta);
+        container.appendChild(header);
+
+        const grid = document.createElement("div");
+        grid.className = "month-grid";
+        container.appendChild(grid);
+
+        shown.forEach((item, idx) => {
+          const card = document.createElement("article");
+          card.className = "card";
+          card.dataset.search = [
+            item.article_title || "",
+            item.article_summary || "",
+            item.article_authors || "",
+            item.domain || "",
+          ].join(" ").toLowerCase();
+
+          const h = document.createElement("h2");
+          h.className = "article-title";
+          const link = document.createElement("a");
+          link.className = "article-link";
+          link.href = item.article_url;
+          link.target = "_blank";
+          link.rel = "noopener noreferrer";
+          link.textContent = item.article_title || item.article_url || ("Article " + String(idx + 1));
+          h.appendChild(link);
+          card.appendChild(h);
+
+          if (item.article_summary) {
+            const p = document.createElement("p");
+            p.className = "article-summary";
+            p.textContent = item.article_summary;
+            card.appendChild(p);
+          }
+
+          const metaRow = document.createElement("div");
+          metaRow.className = "meta";
+          if (item.article_date) {
+            const s = document.createElement("span");
+            s.textContent = item.article_date;
+            metaRow.appendChild(s);
+          }
+          if (item.domain) {
+            const s = document.createElement("span");
+            s.textContent = item.domain;
+            metaRow.appendChild(s);
+          }
+          if (item.article_authors) {
+            const s = document.createElement("span");
+            s.textContent = item.article_authors;
+            metaRow.appendChild(s);
+          }
+          if (metaRow.childElementCount) card.appendChild(metaRow);
+
+          grid.appendChild(card);
+        });
+      }
+
+      if (!totalCount) {
+        const empty = document.createElement("p");
+        empty.className = "empty-state";
+        empty.textContent = "No articles were captured for this year.";
+        container.appendChild(empty);
+      } else if (!visibleCount) {
+        const empty = document.createElement("p");
+        empty.className = "empty-state";
+        empty.textContent = "No matches. Try a different search.";
+        container.appendChild(empty);
+      }
+
+      countEl.textContent = totalCount
+        ? (q ? (String(visibleCount) + " / " + String(totalCount) + " shown") : (String(totalCount) + " article(s)"))
+        : "";
+    }
+
+    render("");
+    searchInput.addEventListener("input", () => render(searchInput.value));
+    clearBtn.addEventListener("click", () => {
+      searchInput.value = "";
+      render("");
+      searchInput.focus();
+    });
+  </script>
+</body>
+</html>
