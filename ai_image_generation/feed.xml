@@ -1,0 +1,359 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>AI image generation — Latest links · Research Digest</title>
+  <link>https://briandherbert.github.io/research_digest_site/ai_image_generation/index.html</link>
+  <description>Latest curated links for AI image generation. Current feed window follows 2026 updates.</description>
+  <lastBuildDate>Sat, 02 May 2026 16:09:32 +0000</lastBuildDate>
+  <item>
+    <title>[2026] Everything in Its Place: Benchmarking Spatial Intelligence of Text-to-Image Models</title>
+    <link>https://arxiv.org/abs/2601.20354</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.20354</guid>
+    <pubDate>Wed, 28 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces SpatialGenEval, a benchmark of 1,230 information-dense prompts across 25 scenes to test spatial perception, reasoning, and interactions in T2I models. Evaluating 21 models shows higher-order spatial reasoning remains a key bottleneck. The authors also release SpatialT2I and show fine-tuning boosts spatial-relation fidelity on SDXL, Uniworld-V1, and OmniGen2.</description>
+  </item>
+  <item>
+    <title>[2026] LINA: Linear Autoregressive Image Generative Models with Continuous Tokens</title>
+    <link>https://arxiv.org/abs/2601.22630</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.22630</guid>
+    <pubDate>Fri, 30 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents LINA, a compute-efficient T2I autoregressive model built entirely on linear attention. Through scaling analyses, the paper finds division-based normalization and locality via depthwise convolution are crucial; introduces a KV gate for memory control. LINA generates 1024×1024 images, achieves competitive FID/GenEval scores, and cuts per-module FLOPs ~61% versus softmax attention.</description>
+  </item>
+  <item>
+    <title>[2026] RefAny3D: 3D Asset-Referenced Diffusion Models for Image Generation</title>
+    <link>https://arxiv.org/abs/2601.22094</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.22094</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces a diffusion framework that conditions on multi-view RGB and point-map representations of a 3D asset to generate 2D images that stay consistent with the referenced 3D object, using a dual-branch, spatially aligned architecture to jointly model color and canonical-space coordinates.</description>
+  </item>
+  <item>
+    <title>[2026] One-step Latent-free Image Generation with Pixel Mean Flows</title>
+    <link>https://arxiv.org/abs/2601.22158</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.22158</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes pixel MeanFlow (pMF), a method enabling one-step, latent-free image generation by decoupling the network output space from the loss space and mapping between an image manifold and a mean velocity field; achieves strong one-step FID on ImageNet at 256×256 and 512×512.</description>
+  </item>
+  <item>
+    <title>[2026] Creative Image Generation with Diffusion Model</title>
+    <link>https://arxiv.org/abs/2601.22125</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.22125</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Defines creativity as low-probability regions in CLIP space and steers diffusion sampling toward these regions while using pullback mechanisms to maintain visual fidelity, yielding novel, imaginative images without sacrificing quality.</description>
+  </item>
+  <item>
+    <title>[2026] Google adds AI image generation to Chrome browser, side panel option for virtual assistant</title>
+    <link>https://apnews.com/article/d4d9a95fd997f7feefd712a333ce5169</link>
+    <guid isPermaLink="true">https://apnews.com/article/d4d9a95fd997f7feefd712a333ce5169</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Reports Google’s rollout of built-in AI image generation and editing tools in Chrome for U.S. desktop users, plus a side-panel assistant; premium tiers add autonomous browsing capabilities powered by Gemini 3 as part of a broader personalization push.</description>
+  </item>
+  <item>
+    <title>[2026] SimGraph: A Unified Framework for Scene Graph-Based Image Generation and Editing</title>
+    <link>https://arxiv.org/abs/2601.21498</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.21498</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces SimGraph, which unifies scene graph-controlled image generation and diffusion-based editing. By modeling object relationships and layouts explicitly, the method provides structured control and achieves higher spatial and semantic coherence, outperforming prior approaches on multiple benchmarks.</description>
+  </item>
+  <item>
+    <title>[2026] Understanding Diffusion Models via Ratio-Based Function Approximation with SignReLU Networks</title>
+    <link>https://arxiv.org/abs/2601.21242</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.21242</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents a theoretical framework for approximating ratio-type functionals relevant to conditional diffusion models using SignReLU networks. The authors derive Lp approximation bounds and decompose excess KL risk into approximation and estimation errors, yielding finite-sample generalization guarantees for DDPM training.</description>
+  </item>
+  <item>
+    <title>[2026] I built marshmallow castles in Google’s new AI-world generator</title>
+    <link>https://techcrunch.com/2026/01/29/i-built-marshmallow-castles-in-googles-new-ai-world-generator-project-genie/</link>
+    <guid isPermaLink="true">https://techcrunch.com/2026/01/29/i-built-marshmallow-castles-in-googles-new-ai-world-generator-project-genie/</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Google DeepMind opened access to Project Genie, an experimental tool that generates interactive game worlds from text or image prompts. The prototype blends a world model (Genie 3) with an image-generation model and Gemini, and is being released to gather feedback from U.S.-based Google AI Ultra subscribers.</description>
+  </item>
+  <item>
+    <title>[2026] Eliminating Hallucination in Diffusion-Augmented Interactive Text-to-Image Retrieval</title>
+    <link>https://arxiv.org/abs/2601.20391</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.20391</guid>
+    <pubDate>Wed, 28 Jan 2026 12:00:00 +0000</pubDate>
+    <description>The authors show that diffusion-generated query images can inject hallucinated cues that hurt text-to-image retrieval. They propose Diffusion-aware Multi-view Contrastive Learning, which aligns textual and generated views while suppressing spurious signals, yielding consistent gains (up to 7.37% Hits@10) across benchmarks.</description>
+  </item>
+  <item>
+    <title>[2026] TEXTS-Diff: TEXTS-Aware Diffusion Model for Real-World Text Image Super-Resolution</title>
+    <link>https://arxiv.org/abs/2601.17340</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.17340</guid>
+    <pubDate>Sat, 24 Jan 2026 12:00:00 +0000</pubDate>
+    <description>This paper introduces Real-Texts, a diverse dataset of real-world images containing natural text, and proposes TEXTS-Diff, a diffusion-based method that improves both background quality and text legibility. The approach mitigates common distortions and hallucinations in text regions and reports state-of-the-art performance across multiple benchmarks.</description>
+  </item>
+  <item>
+    <title>[2026] SoS: Analysis of Surface over Semantics in Multilingual Text-To-Image Generation</title>
+    <link>https://arxiv.org/abs/2601.16803</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.16803</guid>
+    <pubDate>Tue, 27 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Analyzes how T2I systems prioritize language surface forms over meaning across 14 languages and 171 cultural identities, revealing stereotypical outputs and providing a framework and dataset to quantify this bias.</description>
+  </item>
+  <item>
+    <title>[2026] arXiv:2601.16645</title>
+    <link>https://arxiv.org/abs/2601.16645</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.16645</guid>
+    <pubDate>Mon, 26 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes a training-free Structure Preservation Loss integrated into diffusion-based image editing to maintain pixel-level edge and structure consistency, with added de-encoding correction, precise masking, and color fidelity terms.</description>
+  </item>
+  <item>
+    <title>[2026] SCHIGAND: Synthetic Face Generation Pipeline</title>
+    <link>https://arxiv.org/abs/2601.16627</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.16627</guid>
+    <pubDate>Mon, 26 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents a controllable synthetic face generation pipeline combining StyleCLIP, HyperStyle, InterfaceGAN, and diffusion models to create realistic, identity-preserving datasets for biometric testing, evaluated against real-world baselines.</description>
+  </item>
+  <item>
+    <title>[2026] iFSQ: Improving FSQ for Image Generation with 1 Line of Code</title>
+    <link>https://arxiv.org/abs/2601.17124</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.17124</guid>
+    <pubDate>Fri, 23 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces iFSQ, a simple activation replacement for Finite Scalar Quantization that fixes activation collapse, enabling better discrete–continuous trade-offs in text-to-image pipelines. Shows that ~4 bits/dim is an effective operating point and that AR models converge faster while diffusion models reach higher quality ceilings; also presents LlamaGen-REPA.</description>
+  </item>
+  <item>
+    <title>[2026] YouTube will help creators use AI in 2026 — as long as it&#x27;s not &#x27;slop&#x27;</title>
+    <link>https://www.androidcentral.com/apps-software/youtube/youtube-will-help-creators-use-ai-in-2026-as-long-as-its-not-slop</link>
+    <guid isPermaLink="true">https://www.androidcentral.com/apps-software/youtube/youtube-will-help-creators-use-ai-in-2026-as-long-as-its-not-slop</guid>
+    <pubDate>Mon, 26 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Covers YouTube’s push to expand creator-facing AI tools while requiring labels for synthetic media and reinforcing detection of altered content, with implications for AI-generated images and deepfakes appearing across Shorts and other formats.</description>
+  </item>
+  <item>
+    <title>[2026] ChatGPT Images 1.5 leads AI image generation in 2026</title>
+    <link>https://www.newsminimalist.com/articles/chatgpt-images-15-leads-ai-image-generation-in-2026-3e9b4289</link>
+    <guid isPermaLink="true">https://www.newsminimalist.com/articles/chatgpt-images-15-leads-ai-image-generation-in-2026-3e9b4289</guid>
+    <pubDate>Tue, 20 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A comparative test of five leading AI image generators found ChatGPT Images 1.5 best handled a complex prompt, delivering accurate composition and photorealistic details where rivals like Midjourney and Nano Banana Pro struggled.</description>
+  </item>
+  <item>
+    <title>[2026] Think-Then-Generate: Reasoning-Aware Text-to-Image Diffusion with LLM Encoders</title>
+    <link>https://arxiv.org/abs/2601.10332</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.10332</guid>
+    <pubDate>Thu, 15 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces a think-then-generate paradigm that prompts an LLM-based encoder to reason and rewrite prompts before conditioning a diffusion model. Using Dual-GRPO to co-optimize the encoder and generator, the method improves factual consistency, semantic alignment, and realism on reasoning-heavy T2I tasks.</description>
+  </item>
+  <item>
+    <title>[2026] Identifying Models Behind Text-to-Image Leaderboards</title>
+    <link>https://arxiv.org/abs/2601.09647</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.09647</guid>
+    <pubDate>Wed, 14 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Shows that anonymized T2I leaderboards can be deanonymized by clustering image embeddings, revealing distinctive model signatures. Evaluating 22 models over 150K images, a centroid-based approach accurately links outputs to sources and highlights prompt-level distinguishability and security risks.</description>
+  </item>
+  <item>
+    <title>[2026] SnapGen++: Unleashing Diffusion Transformers for Efficient High-Fidelity Image Generation on Edge Devices</title>
+    <link>https://arxiv.org/abs/2601.08303</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.08303</guid>
+    <pubDate>Tue, 13 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes a compact Diffusion Transformer with adaptive global–local sparse attention plus an elastic training scheme to scale across hardware. A knowledge-guided distillation strategy enables few-step, real-time T2I generation on mobile/edge devices without sacrificing fidelity.</description>
+  </item>
+  <item>
+    <title>[2026] What to know about UK legal changes aiming to regulate AI-generated nude images</title>
+    <link>https://apnews.com/article/63406274d1c3040bf4da60460577f34c</link>
+    <guid isPermaLink="true">https://apnews.com/article/63406274d1c3040bf4da60460577f34c</guid>
+    <pubDate>Fri, 16 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Details new U.K. measures that criminalize creating or requesting non-consensual AI-generated sexual images and target “nudification” apps. The rules, spurred by abuse of AI image generators, include potential platform fines and an Ofcom probe into X’s handling of illicit content.</description>
+  </item>
+  <item>
+    <title>[2026] IGAN: A New Inception-based Model for Stable and High-Fidelity Image Synthesis Using Generative Adversarial Networks</title>
+    <link>https://arxiv.org/abs/2601.08332</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.08332</guid>
+    <pubDate>Tue, 13 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces an Inception-inspired GAN architecture with dilated convolutions plus dropout and spectral normalization to reduce mode collapse and stabilize training, reporting sizable FID/IS gains on CUB-200 and ImageNet for higher-quality image generation.</description>
+  </item>
+  <item>
+    <title>[2026] Generative Modeling of Human-Computer Interfaces with Diffusion Processes and Conditional Control</title>
+    <link>https://arxiv.org/abs/2601.06823</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.06823</guid>
+    <pubDate>Sun, 11 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents a diffusion-based framework with conditional control to generate UI images that reflect user intent and task constraints, showing improved quality and robustness across metrics like MSE, SSIM, PSNR, and MAE versus baselines.</description>
+  </item>
+  <item>
+    <title>[2026] 2026 Advanced GenAI Course Focused on Large Language Models and Diffusion Systems Launched by Interview Kickstart</title>
+    <link>https://www.globenewswire.com/news-release/2026/01/16/3220466/0/en/2026-Advanced-GenAI-Course-Focused-on-Large-Language-Models-and-Diffusion-Systems-Launched-by-Interview-Kickstart.html</link>
+    <guid isPermaLink="true">https://www.globenewswire.com/news-release/2026/01/16/3220466/0/en/2026-Advanced-GenAI-Course-Focused-on-Large-Language-Models-and-Diffusion-Systems-Launched-by-Interview-Kickstart.html</guid>
+    <pubDate>Fri, 16 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Announces a professional course featuring hands-on modules with diffusion-based image generation (e.g., DDPM, DDIM, Stable Diffusion) and a capstone project, aimed at teaching practical development and deployment of modern generative models.</description>
+  </item>
+  <item>
+    <title>[2026] Image Generation for Educators</title>
+    <link>https://www.fetc.org/2026-full-agenda/image-generation-educators</link>
+    <guid isPermaLink="true">https://www.fetc.org/2026-full-agenda/image-generation-educators</guid>
+    <pubDate>Tue, 13 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Conference session detailing practical uses of AI image generation in K–12 classrooms. Shares a free prompt library and guidance on crafting prompts to create illustrations, maps, charts, and designs for teaching materials, emphasizing terminology and best practices to maximize educational value.</description>
+  </item>
+  <item>
+    <title>[2026] Spain moves to curb AI deepfakes, tighten consent rules on images</title>
+    <link>https://www.reuters.com/business/media-telecom/spain-moves-curb-ai-deepfakes-tighten-consent-rules-images-2026-01-13/</link>
+    <guid isPermaLink="true">https://www.reuters.com/business/media-telecom/spain-moves-curb-ai-deepfakes-tighten-consent-rules-images-2026-01-13/</guid>
+    <pubDate>Tue, 13 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Spain’s cabinet approved a draft bill targeting AI-generated deepfakes and strengthening image consent rules. It sets a minimum age of 16 for image-use consent, restricts reuse of online images and AI-generated likenesses without explicit permission, and requires labeling for creative works involving public figures, aligning with broader EU efforts to criminalize non‑consensual sexual deepfakes.</description>
+  </item>
+  <item>
+    <title>[2026] Germany plans measures to combat harmful AI image manipulation</title>
+    <link>https://www.reuters.com/legal/government/germany-plans-measures-combat-harmful-ai-image-manipulation-2026-01-09/</link>
+    <guid isPermaLink="true">https://www.reuters.com/legal/government/germany-plans-measures-combat-harmful-ai-image-manipulation-2026-01-09/</guid>
+    <pubDate>Fri, 09 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Germany’s justice ministry announced upcoming legislation to counter harmful AI-driven image manipulation and deepfakes, aiming to reinforce criminal law and protect personal rights. The move follows reports of misuse of image-generation tools and calls for EU-level action, with proposals set to be unveiled soon.</description>
+  </item>
+  <item>
+    <title>[2026] Circuit Mechanisms for Spatial Relation Generation in Diffusion Transformers</title>
+    <link>https://arxiv.org/abs/2601.06338</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.06338</guid>
+    <pubDate>Fri, 09 Jan 2026 12:00:00 +0000</pubDate>
+    <description>This paper probes how Diffusion Transformers learn to generate correct object–object spatial relations from text prompts. Training DiTs from scratch under different text-encoder setups, the authors identify distinct attention circuits that transmit spatial-relation information to image tokens and show differing robustness to out‑of‑domain perturbations, offering interpretability insights for improving text‑to‑image reliability.</description>
+  </item>
+  <item>
+    <title>[2026] MoGen: A Unified Collaborative Framework for Controllable Multi-Object Image Generation</title>
+    <link>https://arxiv.org/abs/2601.05546</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.05546</guid>
+    <pubDate>Fri, 09 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes MoGen with Regional Semantic Anchor (RSA) to map phrases to image regions and Adaptive Multi-modal Guidance (AMG) to flexibly combine control signals. Achieves better object count accuracy, layout control, and image quality for text-to-image scenarios; code is provided.</description>
+  </item>
+  <item>
+    <title>[2026] Unified Text-Image Generation with Weakness-Targeted Post-Training</title>
+    <link>https://arxiv.org/abs/2601.04339</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.04339</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Explores post-training for unified models that seamlessly shift from textual reasoning to image synthesis in a single inference pass. Uses reward-weighted training on synthetic, weakness-targeted data to improve multimodal generation across multiple T2I benchmarks.</description>
+  </item>
+  <item>
+    <title>[2026] Unified Thinker: A General Reasoning Modular Core for Image Generation</title>
+    <link>https://arxiv.org/abs/2601.03127</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.03127</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces a modular &quot;Thinker&quot; that plans and reasons about prompts before guiding any image generator. Using a two-stage training pipeline (structured planning + reinforcement learning with pixel-level feedback), the method improves instruction-following and logical consistency in text-to-image and image editing tasks without retraining the underlying generator.</description>
+  </item>
+  <item>
+    <title>[2026] The End of the AI “Wild West”: Grok Restricts Image Generation Amid Global Backlash over Deepfakes</title>
+    <link>https://markets.financialcontent.com/lethbridgeherald/article/tokenring-2026-1-9-the-end-of-the-ai-wild-west-grok-restricts-image-generation-amid-global-backlash-over-deepfakes</link>
+    <guid isPermaLink="true">https://markets.financialcontent.com/lethbridgeherald/article/tokenring-2026-1-9-the-end-of-the-ai-wild-west-grok-restricts-image-generation-amid-global-backlash-over-deepfakes</guid>
+    <pubDate>Fri, 09 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Following criticism and regulatory pressure over AI-generated deepfakes, Grok moved its image generation and editing behind a paywall for verified subscribers. The shift is framed as increasing accountability while the industry debates safety practices for powerful image-generation tools.</description>
+  </item>
+  <item>
+    <title>[2026] Adobe Firefly offers unlimited AI image generation for paid subscribers until January 15, 2026</title>
+    <link>https://www.newsminimalist.com/articles/adobe-firefly-offers-unlimited-ai-image-generation-for-paid-subscribers-until-january-15-2026-85a1372f</link>
+    <guid isPermaLink="true">https://www.newsminimalist.com/articles/adobe-firefly-offers-unlimited-ai-image-generation-for-paid-subscribers-until-january-15-2026-85a1372f</guid>
+    <pubDate>Mon, 12 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Adobe temporarily removed usage caps for Firefly’s AI image generation, citing new integration with OpenAI’s GPT Image 1.5 for faster, more precise edits and consistent subjects. The promotion runs through January 15, after which normal caps will return.</description>
+  </item>
+  <item>
+    <title>[2026] Detecting AI-Generated Images via Distributional Deviations from Real Images</title>
+    <link>https://arxiv.org/abs/2601.03586</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.03586</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Analyzes why frozen CLIP-ViT encoders struggle to tell real from generated images, then proposes Masking-based Pre-trained model Fine-Tuning with Texture-Aware Masking to force attention to generative artifacts. Demonstrates strong generalization to unseen generators, reaching up to 98.2% accuracy on GenImage and 94.6% on UniversalFakeDetect.</description>
+  </item>
+  <item>
+    <title>[2026] Nvidia CEO Jensen Huang says &quot;the future is neural rendering&quot; at CES 2026, teasing DLSS advancements</title>
+    <link>https://www.tomshardware.com/pc-components/gpus/nvidia-ceo-jensen-huang-says-the-future-is-neural-rendering-at-ces-2026-teasing-dlss-advancements-rtx-5090-could-represent-the-pinnacle-of-traditional-raster</link>
+    <guid isPermaLink="true">https://www.tomshardware.com/pc-components/gpus/nvidia-ceo-jensen-huang-says-the-future-is-neural-rendering-at-ces-2026-teasing-dlss-advancements-rtx-5090-could-represent-the-pinnacle-of-traditional-raster</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>At CES 2026, Nvidia emphasized AI-driven neural rendering over traditional rasterization, previewing DLSS 4.5 and other upgrades. The remarks signal a shift toward real‑time, AI-based image generation for games—enabling more photorealistic and stylized visuals—and foreshadow broader use of generative models in graphics pipelines.</description>
+  </item>
+  <item>
+    <title>[2026] Nvidia launches Vera Rubin AI computing platform at CES 2026</title>
+    <link>https://www.theverge.com/tech/855412/nvidia-launches-vera-rubin-ai-computing-platform-at-ces-2026</link>
+    <guid isPermaLink="true">https://www.theverge.com/tech/855412/nvidia-launches-vera-rubin-ai-computing-platform-at-ces-2026</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Nvidia unveiled a rack‑scale AI platform combining new CPUs, GPUs, networking, and confidential computing. It claims up to 5× the training performance of Blackwell and lower costs for mixture‑of‑experts models, positioning the system to train and serve generative AI workloads, including large‑scale image generation.</description>
+  </item>
+  <item>
+    <title>[2026] Generative AI 2026 (GENAI) Conference Overview</title>
+    <link>https://www.imaging.org/IST/IST/Conferences/EI/EI2026/Conference/C_GENAI.aspx</link>
+    <guid isPermaLink="true">https://www.imaging.org/IST/IST/Conferences/EI/EI2026/Conference/C_GENAI.aspx</guid>
+    <pubDate>Fri, 09 Jan 2026 12:00:00 +0000</pubDate>
+    <description>IS&amp;T announced a new 2026 imaging conference centered on generative AI, covering image generation, diffusion models, forgery detection, NeRFs, and related topics. The program targets both research and applied imaging communities and includes January deadlines for proceedings submissions.</description>
+  </item>
+  <item>
+    <title>[2026] 2026 could be the year we move beyond smartphones - led by a Sam Altman and Jony Ive-designed AI device</title>
+    <link>https://www.techradar.com/ai-platforms-assistants/chatgpt/2026-could-be-the-year-we-mmove-beyond-smartphones-led-by-a-sam-altman-and-jony-ive-designed-ai-device</link>
+    <guid isPermaLink="true">https://www.techradar.com/ai-platforms-assistants/chatgpt/2026-could-be-the-year-we-mmove-beyond-smartphones-led-by-a-sam-altman-and-jony-ive-designed-ai-device</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A report on an upcoming OpenAI‑backed, Ive‑designed wearable centered on ambient, voice‑first AI that points toward richer multimodal assistance and on‑device generation experiences, potentially changing how people create and use AI‑generated images.</description>
+  </item>
+  <item>
+    <title>[2026] 2026 could be the year we move beyond smartphones - led by a Sam Altman and Jony Ive-designed AI device</title>
+    <link>https://www.techradar.com/ai-platforms-assistants/chatgpt/2026-could-be-the-year-we-move-beyond-smartphones-led-by-a-sam-altman-and-jony-ive-designed-ai-device</link>
+    <guid isPermaLink="true">https://www.techradar.com/ai-platforms-assistants/chatgpt/2026-could-be-the-year-we-move-beyond-smartphones-led-by-a-sam-altman-and-jony-ive-designed-ai-device</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Reports on OpenAI’s rumored AI hardware that emphasizes ambient, multimodal assistance; while focused on voice, it highlights broader advances that could integrate on-device image generation and editing into everyday workflows.</description>
+  </item>
+  <item>
+    <title>[2026] Luminark: Training-free, Probabilistically-Certified Watermarking for General Vision Generative Models</title>
+    <link>https://arxiv.org/abs/2601.01085</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.01085</guid>
+    <pubDate>Sat, 03 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces Luminark, a training-free watermarking scheme that encodes a binary pattern via patch-level luminance thresholds and detects it with certified false-positive control. Using a plug-and-play &quot;watermark guidance&quot; mechanism, it works across diffusion, autoregressive, and hybrid image generators, showing high detection accuracy, robustness to common transformations, and minimal impact on image quality.</description>
+  </item>
+  <item>
+    <title>[2026] Guiding Token-Sparse Diffusion Models</title>
+    <link>https://arxiv.org/abs/2601.01608</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.01608</guid>
+    <pubDate>Sun, 04 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes Sparse Guidance, which replaces conditional-dropout guidance with token-level sparsity to improve inference quality and efficiency in sparsely trained diffusion models. Demonstrates a 2.5B text-to-image model with better composition and human preference scores, achieving strong ImageNet-256 FID with up to 58% FLOP savings versus baselines.</description>
+  </item>
+  <item>
+    <title>[2026] How Adobe thinks creatives will use AI in 2026 - from Firefly to Project Graph</title>
+    <link>https://www.creativebloq.com/tech/from-firefly-to-graph-how-adobe-thinks-creatives-will-use-ai-in-2026</link>
+    <guid isPermaLink="true">https://www.creativebloq.com/tech/from-firefly-to-graph-how-adobe-thinks-creatives-will-use-ai-in-2026</guid>
+    <pubDate>Sat, 03 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Outlines Adobe’s vision for AI-assisted creative workflows in 2026, highlighting Firefly image-generation features integrated across Photoshop, Illustrator, and Lightroom, collaborative ideation via Firefly Boards, and forthcoming assistants like Project Moonlight and the node-based Project Graph. Emphasizes AI as a co-creator to speed ideation, editing, and asset generation.</description>
+  </item>
+  <item>
+    <title>[2026] The biggest — and weirdest — tech coming out of the 2026 Consumer Electronics Show, from robots to AI pets</title>
+    <link>https://www.businessinsider.com/announcements-coming-out-of-ces-nvidia-vera-rubin-autonmous-vehicle-2026-1</link>
+    <guid isPermaLink="true">https://www.businessinsider.com/announcements-coming-out-of-ces-nvidia-vera-rubin-autonmous-vehicle-2026-1</guid>
+    <pubDate>Thu, 08 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Roundup of CES 2026 highlights, including next-gen AI chips and systems from Nvidia and AMD that target heavy generative workloads. The hardware advances are poised to speed up AI image and video generation pipelines used in creative tools and production environments.</description>
+  </item>
+  <item>
+    <title>[2026] FreeText: Training-Free Text Rendering in Diffusion Transformers via Attention Localization and Spectral Glyph Injection</title>
+    <link>https://arxiv.org/abs/2601.00535</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.00535</guid>
+    <pubDate>Fri, 02 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces a plug-and-play method that improves text rendering in text-to-image diffusion transformers by localizing writing regions via attention attribution and injecting glyph priors in the frequency domain, boosting readability across benchmarks without retraining and with modest overhead.</description>
+  </item>
+  <item>
+    <title>[2026] You can&#x27;t trust your eyes to tell you what&#x27;s real anymore, says the head of Instagram</title>
+    <link>https://www.theverge.com/news/852124/adam-mosseri-ai-images-video-instagram</link>
+    <guid isPermaLink="true">https://www.theverge.com/news/852124/adam-mosseri-ai-images-video-instagram</guid>
+    <pubDate>Thu, 01 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Adam Mosseri warns that AI-generated images and video undermine default trust in visuals and outlines platform responses such as AI-content labels, cryptographic capture signing, and more context around posts to help users assess authenticity.</description>
+  </item>
+  <item>
+    <title>[2026] AI&#x27;s Maturation Point and Cute Tech: 2026 Fashion-Tech Predictions</title>
+    <link>https://www.vogue.com/article/ais-maturation-point-and-cute-tech-2026-fashion-tech-predictions</link>
+    <guid isPermaLink="true">https://www.vogue.com/article/ais-maturation-point-and-cute-tech-2026-fashion-tech-predictions</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Surveys how generative AI imagery is shaping fashion marketing—embracing surreal, glitchy aesthetics while preparing for authenticity-first strategies—and forecasts greater use of AI-enabled wearables alongside brand-led policies for IP and creative protection.</description>
+  </item>
+  <item>
+    <title>[2026] AI Slop won in 2025 - fingerprinting real content might be the answer in 2026</title>
+    <link>https://www.techradar.com/ai-platforms-assistants/ai-slop-won-in-2025-fingerprinting-real-content-might-be-the-answer-in-2026</link>
+    <guid isPermaLink="true">https://www.techradar.com/ai-platforms-assistants/ai-slop-won-in-2025-fingerprinting-real-content-might-be-the-answer-in-2026</guid>
+    <pubDate>Sat, 03 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Argues for shifting from detecting AI-generated media to fingerprinting and labeling authentic human-captured content using robust metadata like EXIF/XMP, citing industry voices and the rising challenge of distinguishing synthetic imagery at scale.</description>
+  </item>
+  <item>
+    <title>[2026] Artificial Intelligence (AI) Image Generator Global Market Report 2025</title>
+    <link>https://www.thebusinessresearchcompany.com/report/artificial-intelligence-ai-image-generator-global-market-report</link>
+    <guid isPermaLink="true">https://www.thebusinessresearchcompany.com/report/artificial-intelligence-ai-image-generator-global-market-report</guid>
+    <pubDate>Sat, 02 May 2026 16:09:32 +0000</pubDate>
+    <description>A January 2026 market study detailing the AI image generator sector’s segments (software/services, applications, end users) and forecasting growth trends through 2034, with discussion of macro factors affecting adoption and pricing.</description>
+  </item>
+  <item>
+    <title>[2026] Elon Musk&#x27;s AI chatbot generates child sexual images</title>
+    <link>https://www.ft.com/content/0747a53c-19b6-4ed9-8eea-88c327f27fe6</link>
+    <guid isPermaLink="true">https://www.ft.com/content/0747a53c-19b6-4ed9-8eea-88c327f27fe6</guid>
+    <pubDate>Sat, 03 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Financial Times reports that xAI’s Grok image tools produced sexualized images of minors on X, triggering legal complaints in France and renewed scrutiny of generative AI’s risks around CSAM and deepfakes.</description>
+  </item>
+  <item>
+    <title>[2026] Grok is undressing anyone, including minors</title>
+    <link>https://www.theverge.com/news/853191/grok-explicit-bikini-pictures-minors</link>
+    <guid isPermaLink="true">https://www.theverge.com/news/853191/grok-explicit-bikini-pictures-minors</guid>
+    <pubDate>Fri, 02 Jan 2026 12:00:00 +0000</pubDate>
+    <description>The Verge documents misuse of Grok’s new Edit Image feature to create sexualized and nonconsensual AI edits, including of minors and public figures, highlighting weak safeguards and growing deepfake harms.</description>
+  </item>
+</channel>
+</rss>

@@ -389,6 +389,14 @@ article.card a.article-link:hover { text-decoration: underline; }
   color: var(--muted);
   font-size: 1.05rem;
 }
+.empty-actions {
+  margin: -2rem 0 3rem;
+  text-align: center;
+  font-size: 0.95rem;
+}
+.empty-actions a {
+  color: var(--text);
+}
 
 .footer {
   padding: 2rem 0 3rem;

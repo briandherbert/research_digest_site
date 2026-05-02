@@ -14,7 +14,6 @@
   <link rel="canonical" href="https://briandherbert.github.io/research_digest_site/ai_video_generation/2026/index.html" />
   <link rel="alternate" hreflang="en" href="https://briandherbert.github.io/research_digest_site/ai_video_generation/2026/index.html" />
   <link rel="alternate" hreflang="x-default" href="https://briandherbert.github.io/research_digest_site/ai_video_generation/2026/index.html" />
-  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
   <meta property="og:type" content="website" />
   <meta property="og:title" content="AI video generation – 2026 · Research digest" />
   <meta property="og:site_name" content="Research Digest" />
@@ -33,18 +32,11 @@
   <meta name="twitter:image" content="https://briandherbert.github.io/research_digest_site/assets/og-card.png" />
   <meta name="twitter:image:alt" content="AI video generation — 2026: curated research links (share preview)" />
   <link rel="sitemap" type="application/xml" title="Research Digest sitemap" href="../../sitemap.xml" />
+  <link rel="alternate" type="application/rss+xml" title="RSS feed" href="feed.xml" />
   <link rel="prefetch" href="../index.html" />
   <title>AI video generation – 2026 · Research digest</title>
   <link rel="stylesheet" href="../../assets/site.css" />
   <script defer src="../../assets/site.js"></script>
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-Q421RJGCV8"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-Q421RJGCV8');
-  </script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@graph": [{"@type": "CollectionPage", "name": "AI video generation – 2026 · Research digest", "description": "Curated research links for AI video generation (2026) with short summaries, grouped by month. Titles open the original sources in a new tab. On-page search filters titles, summaries, and sources; the topic hub lists sibling years for the same theme.", "inLanguage": "en", "about": {"@type": "Thing", "name": "AI video generation"}, "publisher": {"@type": "Organization", "name": "Research Digest", "url": "https://briandherbert.github.io/research_digest_site", "logo": {"@type": "ImageObject", "url": "https://briandherbert.github.io/research_digest_site/assets/og-card.png"}}, "@id": "https://briandherbert.github.io/research_digest_site/ai_video_generation/2026/index.html", "url": "https://briandherbert.github.io/research_digest_site/ai_video_generation/2026/index.html", "isPartOf": {"@type": "CollectionPage", "@id": "https://briandherbert.github.io/research_digest_site/ai_video_generation/index.html", "name": "AI video generation – Years · Research digest", "url": "https://briandherbert.github.io/research_digest_site/ai_video_generation/index.html"}}, {"@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "AI video generation", "item": "https://briandherbert.github.io/research_digest_site/ai_video_generation/index.html"}, {"@type": "ListItem", "position": 2, "name": "2026", "item": "https://briandherbert.github.io/research_digest_site/ai_video_generation/2026/index.html"}]}]}</script>
 </head>
 <body>
@@ -92,7 +84,7 @@
     </section>
 
     <section class="section" id="articles" aria-live="polite"></section>
-    <div class="footer"><a href="../index.html">All years for this topic</a></div>
+    <div class="footer"><a href="../index.html">All years for this topic</a> · <a href="feed.xml">RSS feed</a></div>
   </main>
 
   <button class="btn back-to-top" type="button" data-action="back-to-top" title="Back to top">Top</button>
@@ -276,8 +268,15 @@
       if (!totalCount) {
         const empty = document.createElement("p");
         empty.className = "empty-state";
-        empty.textContent = "No articles were captured for this year.";
+        empty.textContent = "No articles were captured for this year yet.";
         container.appendChild(empty);
+        const actions = document.createElement("p");
+        actions.className = "empty-actions";
+        const hubLink = document.createElement("a");
+        hubLink.href = "../index.html";
+        hubLink.textContent = "Browse other years for this topic";
+        actions.appendChild(hubLink);
+        container.appendChild(actions);
       } else if (!visibleCount) {
         const empty = document.createElement("p");
         empty.className = "empty-state";

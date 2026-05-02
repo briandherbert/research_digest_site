@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+<channel>
+  <title>AI video (2026) — Research Digest</title>
+  <link>https://briandherbert.github.io/research_digest_site/ai_video/2026/index.html</link>
+  <description>Recent curated links for AI video in 2026, including short summaries and source URLs.</description>
+  <lastBuildDate>Sat, 02 May 2026 16:09:32 +0000</lastBuildDate>
+  <item>
+    <title>FSVideo: Fast Speed Video Diffusion Model in a Highly-Compressed Latent Space</title>
+    <link>https://arxiv.org/abs/2602.02092</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2602.02092</guid>
+    <pubDate>Mon, 02 Feb 2026 12:00:00 +0000</pubDate>
+    <description>Introduces a fast image-to-video diffusion framework combining a highly compressed latent video autoencoder (64×64×4 downsampling), a diffusion transformer with a new layer-memory design for efficient context reuse, and a few-step multi‑resolution upsampler. The 14B base plus 14B upsampler achieves competitive quality while running an order of magnitude faster than popular open‑source models.</description>
+  </item>
+  <item>
+    <title>FAIRT2V: Training-Free Debiasing for Text-to-Video Diffusion Models</title>
+    <link>https://arxiv.org/abs/2601.20791</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.20791</guid>
+    <pubDate>Wed, 28 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes a training‑free method to mitigate demographic (especially gender) bias in text‑to‑video models by neutralizing prompt embeddings via anchor‑based spherical geodesic transformations. Applies debiasing only in early identity‑forming denoising steps to preserve temporal coherence, and introduces a video‑level fairness evaluation protocol. Demonstrates substantial bias reduction on Open‑Sora with minimal impact on video quality.</description>
+  </item>
+  <item>
+    <title>Darren Aronofsky wages war on art with his new AI-generated American Revolution drama series, presented by Salesforce</title>
+    <link>https://www.pcgamer.com/software/ai/darren-aronofsky-might-finally-kill-art-with-his-new-ai-generated-american-revolution-drama-series-presented-by-salesforce/</link>
+    <guid isPermaLink="true">https://www.pcgamer.com/software/ai/darren-aronofsky-might-finally-kill-art-with-his-new-ai-generated-american-revolution-drama-series-presented-by-salesforce/</guid>
+    <pubDate>Sat, 31 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Covers the AI‑generated historical drama series “On This Day… 1776,” produced by Darren Aronofsky’s Primordial Soup AI studio using Google DeepMind technology and distributed on Time’s YouTube channel with Salesforce sponsorship. Early episodes have been widely criticized for uncanny, low‑quality visuals and historical inaccuracies, underscoring current limitations and controversy around AI video in creative production.</description>
+  </item>
+  <item>
+    <title>YouTube will help creators use AI in 2026 — as long as it&#x27;s not &#x27;slop&#x27;</title>
+    <link>https://www.androidcentral.com/apps-software/youtube/youtube-will-help-creators-use-ai-in-2026-as-long-as-its-not-slop</link>
+    <guid isPermaLink="true">https://www.androidcentral.com/apps-software/youtube/youtube-will-help-creators-use-ai-in-2026-as-long-as-its-not-slop</guid>
+    <pubDate>Mon, 26 Jan 2026 12:00:00 +0000</pubDate>
+    <description>YouTube outlines 2026 priorities around AI video: expanding creator tools (including Shorts, games, and music) while tightening guardrails against deepfakes and low‑quality “slop.” The company requires labels for synthetic or altered content, strengthens identification systems, and backs legislation like the NO FAKES Act. It emphasizes AI as assistive, not a replacement, and highlights creator-economy stats such as large payouts and Shorts growth.</description>
+  </item>
+  <item>
+    <title>JUST-DUB-IT: Video Dubbing via Joint Audio-Visual Diffusion</title>
+    <link>https://arxiv.org/abs/2601.22143v1</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.22143v1</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>The authors adapt a foundational audio‑visual diffusion model with a lightweight LoRA for end‑to‑end video dubbing. Conditioned on input audio‑video, the model jointly generates translated audio and synchronized facial motion, preserving speaker identity and lip‑sync. A self‑supervised data synthesis pipeline produces multilingual paired clips, enabling robust dubbing under complex motion and real‑world dynamics.</description>
+  </item>
+  <item>
+    <title>Last week in Image &amp; Video Generation</title>
+    <link>https://www.reddit.com/r/StableDiffusion/comments/1qnzfsz/last_week_in_image_video_generation/</link>
+    <guid isPermaLink="true">https://www.reddit.com/r/StableDiffusion/comments/1qnzfsz/last_week_in_image_video_generation/</guid>
+    <pubDate>Tue, 27 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A weekly roundup highlights recent open‑source AI video advances: Linum V2 (a 2B‑parameter text‑to‑video model generating 720p clips), CoDance for character animation from text+pose, and Waypoint‑1 for interactive video diffusion, among other releases and project links.</description>
+  </item>
+  <item>
+    <title>Nvidia-Backed AI Startup Synthesia Raises Funding at $4 Billion Valuation</title>
+    <link>https://www.wsj.com/business/entrepreneurship/nvidia-backed-ai-startup-synthesia-raises-funding-at-a-4-billion-valuation-7941abae</link>
+    <guid isPermaLink="true">https://www.wsj.com/business/entrepreneurship/nvidia-backed-ai-startup-synthesia-raises-funding-at-a-4-billion-valuation-7941abae</guid>
+    <pubDate>Tue, 27 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Synthesia raised $200 million in Series E funding led by GV with participation from NVentures and others, valuing the text-to-video company at $4 billion. The company plans to enhance AI avatar and training products, noted Microsoft as a client, and projected around $200 million in ARR after quadrupling large contracts.</description>
+  </item>
+  <item>
+    <title>MITO AI raised $4.5 million to launch project-management software for filmmakers. Read its pitch deck.</title>
+    <link>https://www.businessinsider.com/mito-ai-raised-5-million-round-read-its-pitch-deck-2026-1</link>
+    <guid isPermaLink="true">https://www.businessinsider.com/mito-ai-raised-5-million-round-read-its-pitch-deck-2026-1</guid>
+    <pubDate>Fri, 30 Jan 2026 12:00:00 +0000</pubDate>
+    <description>MITO AI secured $4.5 million pre-seed funding to launch an AI-powered production platform for filmmakers. The tool integrates multiple generative models for video, image, audio, and voice into a collaborative ‘infinite canvas’ for storyboarding, asset generation, and editing, with free and paid tiers and integrations like Runway and Veo.</description>
+  </item>
+  <item>
+    <title>YouTube has a big incentive to nuke AI spam — and it&#x27;s starting to take action</title>
+    <link>https://www.businessinsider.com/youtube-has-a-big-reason-to-nuke-ai-spam-2026-1</link>
+    <guid isPermaLink="true">https://www.businessinsider.com/youtube-has-a-big-reason-to-nuke-ai-spam-2026-1</guid>
+    <pubDate>Sat, 31 Jan 2026 12:00:00 +0000</pubDate>
+    <description>YouTube is stepping up enforcement against AI-generated spam channels to protect ad quality and its TV ambitions. The platform recently shut down multiple low-quality AI content channels; leadership emphasized balancing AI adoption with reducing repetitive and misleading videos as advertisers push for higher standards.</description>
+  </item>
+  <item>
+    <title>EditYourself: Audio-Driven Generation and Manipulation of Talking Head Videos with Diffusion Transformers</title>
+    <link>https://arxiv.org/abs/2601.22127</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.22127</guid>
+    <pubDate>Thu, 29 Jan 2026 12:00:00 +0000</pubDate>
+    <description>This paper introduces a DiT-based framework for editing existing talking-head videos using audio conditioning and region-aware training. It enables transcript-based addition, removal, and retiming of speech with precise lip-sync, identity preservation, and temporally coherent inpainting over long durations, targeting professional post-production workflows.</description>
+  </item>
+  <item>
+    <title>Nvidia-Backed AI Startup Synthesia Raises Funding at $4 Billion Valuation</title>
+    <link>https://www.wsj.com/business/entrepreneurship/nvidia-backed-ai-startup-synthesia-raises-funding-at-4-billion-valuation-7941abae</link>
+    <guid isPermaLink="true">https://www.wsj.com/business/entrepreneurship/nvidia-backed-ai-startup-synthesia-raises-funding-at-4-billion-valuation-7941abae</guid>
+    <pubDate>Mon, 26 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Synthesia, known for its AI text-to-video avatar platform, raised $200 million at a $4 billion valuation to expand interactive training and enterprise video tools. The round was led by GV with participation from Nvidia’s NVentures and others, as the company targets real-time, personalized corporate training videos.</description>
+  </item>
+  <item>
+    <title>VidLaDA: Bidirectional Diffusion Large Language Models for Efficient Video Understanding</title>
+    <link>https://arxiv.org/abs/2601.17868</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.17868</guid>
+    <pubDate>Sun, 25 Jan 2026 12:00:00 +0000</pubDate>
+    <description>VidLaDA replaces causal masking with bidirectional attention in a diffusion-based Video LLM to capture global spatiotemporal dependencies. A new MARS-Cache mechanism accelerates decoding with asynchronous cache refresh and chunk attention, yielding over 12× speedups while matching or surpassing leading video reasoning baselines.</description>
+  </item>
+  <item>
+    <title>Best AI Video Models 2026 | Kling, Veo, Sora | FAL.AI Guide</title>
+    <link>https://www.teamday.ai/blog/best-ai-video-models-2026</link>
+    <guid isPermaLink="true">https://www.teamday.ai/blog/best-ai-video-models-2026</guid>
+    <pubDate>Fri, 30 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A practical roundup comparing leading AI video systems such as OpenAI’s Sora 2, Google’s Veo, and Lightricks’ LTX‑2, with guidance on when to use text-to-video versus image-to-video workflows. It highlights strengths like prompt fidelity, dialogue synchronization, and on-device options, plus tips for getting better results.</description>
+  </item>
+  <item>
+    <title>LoL: Longer than Longer, Scaling Video Generation to Hour</title>
+    <link>https://arxiv.org/abs/2601.16914</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.16914</guid>
+    <pubDate>Fri, 23 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Analyzes long-form video generation failures caused by RoPE-attention interactions leading to &#x27;sink-collapse&#x27; and proposes multi-head RoPE jitter to prevent it, enabling real-time streaming generation with stability for hours-long videos.</description>
+  </item>
+  <item>
+    <title>AI to drive YouTube&#x27;s evolution in 2026, says CEO Neal Mohan</title>
+    <link>https://m.economictimes.com/news/new-updates/youtube-ceo-neal-mohan-2026-plan-ai-content-deepfakes-safety/articleshow/127010372.cms</link>
+    <guid isPermaLink="true">https://m.economictimes.com/news/new-updates/youtube-ceo-neal-mohan-2026-plan-ai-content-deepfakes-safety/articleshow/127010372.cms</guid>
+    <pubDate>Sat, 24 Jan 2026 12:00:00 +0000</pubDate>
+    <description>YouTube plans to lean on AI for video creation, discovery, and safety—combating deepfakes, improving content quality, expanding Shorts and big‑screen experiences, and rolling out new monetization tools for creators.</description>
+  </item>
+  <item>
+    <title>YouTubers will be able to make Shorts with their own AI likenesses</title>
+    <link>https://www.theverge.com/news/864610/youtube-shorts-ai-likenesses-neal-mohan-2026</link>
+    <guid isPermaLink="true">https://www.theverge.com/news/864610/youtube-shorts-ai-likenesses-neal-mohan-2026</guid>
+    <pubDate>Wed, 21 Jan 2026 12:00:00 +0000</pubDate>
+    <description>YouTube’s 2026 roadmap includes a tool that lets creators generate Shorts using AI versions of their own likenesses, plus plans for AI-assisted game creation and new music experiments, alongside efforts to curb low-quality AI ‘slop’ and enforce content labeling.</description>
+  </item>
+  <item>
+    <title>Moaw: Unleashing Motion Awareness for Video Diffusion Models</title>
+    <link>https://arxiv.org/abs/2601.12761</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.12761</guid>
+    <pubDate>Mon, 19 Jan 2026 12:00:00 +0000</pubDate>
+    <description>This paper proposes Moaw, a framework that trains a diffusion model for motion perception and transfers its motion‑aware features to a video generation model to improve motion control. By constructing a motion‑labeled dataset and injecting learned motion features into a structurally identical generator, the method enables zero‑shot motion transfer and bridges generative modeling with motion understanding for more controllable video synthesis.</description>
+  </item>
+  <item>
+    <title>Major Adobe Premiere and After Effects update streamlines advanced video editing workflows with new tools and AI</title>
+    <link>https://www.digitalcameraworld.com/photography/video-editing/major-adobe-premiere-and-after-effects-update-streamlines-advanced-video-editing-workflows-with-new-tools-and-ai</link>
+    <guid isPermaLink="true">https://www.digitalcameraworld.com/photography/video-editing/major-adobe-premiere-and-after-effects-update-streamlines-advanced-video-editing-workflows-with-new-tools-and-ai</guid>
+    <pubDate>Wed, 21 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Adobe rolled out Premiere Pro and After Effects updates that add AI-powered tools to speed post-production. Premiere Pro gets an Object Mask for fast subject isolation and enhanced shape masks with improved tracking, while After Effects 26.0 adds native 3D parametric meshes, improved lighting and shadows, and workflow boosts like direct SVG import and better Illustrator layer conversion.</description>
+  </item>
+  <item>
+    <title>WATCH DAY 1: Axios House in Davos 2026</title>
+    <link>https://www.axios.com/2026/01/07/watch-axios-house-davos-2026-events-day-1</link>
+    <guid isPermaLink="true">https://www.axios.com/2026/01/07/watch-axios-house-davos-2026-events-day-1</guid>
+    <pubDate>Tue, 20 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Day 1 sessions highlighted AI’s near‑term impact across industries, including media and content creation, with discussions on managing AI risks and deploying intelligence at the edge. The event featured leaders from OpenAI, Qualcomm, HPE and Meta and was streamed for wider viewing.</description>
+  </item>
+  <item>
+    <title>Google updates Veo tool to create more realistic AI-generated videos</title>
+    <link>https://timesofindia.indiatimes.com/technology/tech-news/google-updates-veo-tool-to-create-more-realistic-ai-generated-videos/articleshow/126510677.cms</link>
+    <guid isPermaLink="true">https://timesofindia.indiatimes.com/technology/tech-news/google-updates-veo-tool-to-create-more-realistic-ai-generated-videos/articleshow/126510677.cms</guid>
+    <pubDate>Sat, 17 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Google releases Veo 3.1 with higher realism, HD output, mobile‑optimized formats, and improved image‑to‑video features aimed at better character and scene consistency in AI‑generated videos.</description>
+  </item>
+  <item>
+    <title>FlowAct-R1: Towards Interactive Humanoid Video Generation</title>
+    <link>https://arxiv.org/abs/2601.10103</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.10103</guid>
+    <pubDate>Thu, 15 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents a real-time framework for interactive humanoid video generation using chunkwise diffusion forcing and efficient distillation, achieving ~25 fps at 480p with ~1.5s time‑to‑first‑frame and improved long‑term temporal consistency and control.</description>
+  </item>
+  <item>
+    <title>Your One-Stop Solution for AI-Generated Video Detection</title>
+    <link>https://arxiv.org/abs/2601.11035</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.11035</guid>
+    <pubDate>Fri, 16 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces AIGVDBench, a comprehensive benchmark spanning 31 generation models and 440k+ videos, with 1,500+ evaluations across 33 detectors, offering analyses and findings to advance synthetic‑video detection research.</description>
+  </item>
+  <item>
+    <title>Transition Matching Distillation for Fast Video Generation</title>
+    <link>https://arxiv.org/abs/2601.09881</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.09881</guid>
+    <pubDate>Wed, 14 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes Transition Matching Distillation (TMD) to distill multi-step video diffusion models into efficient few-step generators. TMD aligns the diffusion denoising trajectory with a small number of conditional flow transitions by separating a main backbone (semantic representation extractor) from a lightweight flow head that performs multiple inner updates. Experiments distilling Wan2.1 (1.3B and 14B) show improved speed–quality trade-offs and better visual fidelity and prompt adherence versus prior distilled approaches.</description>
+  </item>
+  <item>
+    <title>Inference-time Physics Alignment of Video Generative Models with Latent World Models</title>
+    <link>https://arxiv.org/abs/2601.10553</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.10553</guid>
+    <pubDate>Thu, 15 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes WMReward, using a latent world model (VJEPA-2) as an inference-time reward to steer denoising trajectories for more physics-plausible video generation. Improves realism across text-, image-, and multiframe-conditioned settings and achieves the top score in the ICCV 2025 PhysicsIQ Challenge.</description>
+  </item>
+  <item>
+    <title>Google brings its AI videomaker to Workspace users</title>
+    <link>https://www.theverge.com/news/863570/google-flow-ai-video-generator-workspace</link>
+    <guid isPermaLink="true">https://www.theverge.com/news/863570/google-flow-ai-video-generator-workspace</guid>
+    <pubDate>Sat, 17 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Google expanded access to Flow, its Veo 3.1–powered AI video tool, to Business, Enterprise, and Education Workspace plans. Flow generates short clips from text or images, supports vertical video, adds improved audio, scene transitions and clip extensions, and integrates Nano Banana Pro to create characters or visual elements for sequences.</description>
+  </item>
+  <item>
+    <title>Google&#x27;s Veo now turns portrait images into vertical AI videos</title>
+    <link>https://www.theverge.com/news/861257/google-veo-3-1-ai-video-ingredients-vertical-update</link>
+    <guid isPermaLink="true">https://www.theverge.com/news/861257/google-veo-3-1-ai-video-ingredients-vertical-update</guid>
+    <pubDate>Wed, 14 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Google released Veo 3.1 with better character and scene consistency, a multi‑image “Ingredients to Video” workflow, and native 9:16 vertical output. Videos generate at 720p with enhanced 1080p and optional 4K upscaling, and features are rolling into the Gemini app plus YouTube Shorts and YouTube Create.</description>
+  </item>
+  <item>
+    <title>VideoLoom: A Video Large Language Model for Joint Spatial-Temporal Understanding</title>
+    <link>https://arxiv.org/abs/2601.07290</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.07290</guid>
+    <pubDate>Mon, 12 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Introduces VideoLoom, a unified Video LLM trained on LoomData‑8.7k to jointly localize in space and time. It reports state‑of‑the‑art or competitive results on tasks like referring video object segmentation and temporal grounding, and proposes LoomBench for comprehensive evaluation of spatiotemporal video understanding.</description>
+  </item>
+  <item>
+    <title>PhyRPR: Training-Free Physics-Constrained Video Generation</title>
+    <link>https://arxiv.org/abs/2601.09255</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.09255</guid>
+    <pubDate>Wed, 14 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes a training‑free three‑stage pipeline—PhyReason, PhyPlan, PhyRefine—that decouples physical reasoning from visual synthesis. By planning dynamics first and refining appearance later, the method improves physical plausibility and motion controllability in diffusion-based video generation.</description>
+  </item>
+  <item>
+    <title>VideoAR: Autoregressive Video Generation via Next-Frame &amp; Scale Prediction</title>
+    <link>https://arxiv.org/abs/2601.05966</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.05966</guid>
+    <pubDate>Fri, 09 Jan 2026 12:00:00 +0000</pubDate>
+    <description>This paper presents VideoAR, a large-scale visual autoregressive framework that blends intra-frame modeling with causal next-frame prediction and a 3D multi-scale tokenizer. With techniques like Multi-scale Temporal RoPE and Cross-Frame Error Correction, it narrows the gap with diffusion methods, cutting inference steps by over 10x and achieving SOTA FVD on UCF-101 with competitive VBench scores.</description>
+  </item>
+  <item>
+    <title>8 AI Video Generation Trends Shaping 2026</title>
+    <link>https://www.genmedialab.com/news/ai-video-trends-2026</link>
+    <guid isPermaLink="true">https://www.genmedialab.com/news/ai-video-trends-2026</guid>
+    <pubDate>Tue, 13 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A trends overview arguing that text-to-video is becoming a production standard in 2026, with single-pass generations reaching 60–180 seconds, near-photorealistic outputs, and major cost savings. It highlights enterprise adoption and cites tools like Sora 2, Runway Gen‑4.5, and Kling O1 as drivers.</description>
+  </item>
+  <item>
+    <title>Video Generation Models in Robotics - Applications, Research Challenges, Future Directions</title>
+    <link>https://arxiv.org/abs/2601.07823</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.07823</guid>
+    <pubDate>Mon, 12 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A survey positioning modern video generation models as high-fidelity world models for robotics. It reviews uses in data generation, imitation learning, reinforcement learning dynamics/reward modeling, visual planning, and policy evaluation. The paper also catalogs key limitations—poor instruction following, physics violations, safety issues, and high data/training/inference costs—and outlines research directions to enable trustworthy deployment in safety-critical robotics.</description>
+  </item>
+  <item>
+    <title>VideoMemory: Toward Consistent Video Generation via Memory Integration</title>
+    <link>https://arxiv.org/abs/2601.03655</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.03655</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents an entity‑centric pipeline for multi‑shot, narrative video generation using a Dynamic Memory Bank to store and retrieve character, prop, and background descriptors, improving long‑range identity and scene consistency across shots; includes a new multi‑shot consistency benchmark.</description>
+  </item>
+  <item>
+    <title>PhysVideoGenerator: Towards Physically Aware Video Generation via Latent Physics Guidance</title>
+    <link>https://arxiv.org/abs/2601.03665</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.03665</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Proposes injecting a learnable physics prior into a diffusion‑based video generator. A lightweight predictor recovers high‑level physical features (from a pre‑trained V‑JEPA 2) directly from noisy latents and feeds them via cross‑attention to a DiT video model, reducing artifacts like inconsistent gravity and collisions. Demonstrates feasibility and stable multi‑task training for physics‑aware video synthesis.</description>
+  </item>
+  <item>
+    <title>LTX-2: Efficient Joint Audio-Visual Foundation Model</title>
+    <link>https://arxiv.org/abs/2601.03233</link>
+    <guid isPermaLink="true">https://arxiv.org/abs/2601.03233</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Presents an open‑source unified model that generates temporally synchronized video and audio. An asymmetric dual‑stream transformer (≈14B video, 5B audio) with bidirectional cross‑attention and modality‑aware CFG yields high‑quality audiovisual outputs and strong prompt adherence. Released with code and weights, it reports state‑of‑the‑art results among open models at lower compute cost.</description>
+  </item>
+  <item>
+    <title>World Cup players to have lifelike &#x27;AI avatars&#x27; for use in VAR offside decisions</title>
+    <link>https://www.theguardian.com/football/2026/jan/07/world-cup-players-to-have-lifelike-ai-avatars-for-use-in-var-offside-decisions</link>
+    <guid isPermaLink="true">https://www.theguardian.com/football/2026/jan/07/world-cup-players-to-have-lifelike-ai-avatars-for-use-in-var-offside-decisions</guid>
+    <pubDate>Thu, 08 Jan 2026 12:00:00 +0000</pubDate>
+    <description>FIFA will scan players to create lifelike AI avatars that enhance Video Assistant Referee offside calls, aiming for faster and clearer decisions. The 3D models will integrate into live broadcasts and stadium displays as part of a broader CES 2026 tech push with partners like Lenovo. Highlights how AI and advanced 3D video modeling are reshaping sports officiating and presentation.</description>
+  </item>
+  <item>
+    <title>Lenovo Tech World at CES 2026 - all the news and updates as it happened at the Las Vegas Sphere</title>
+    <link>https://www.techradar.com/pro/live/lenovo-tech-world-at-ces-2026-live-were-in-las-vegas-for-the-big-event-as-it-happens</link>
+    <guid isPermaLink="true">https://www.techradar.com/pro/live/lenovo-tech-world-at-ces-2026-live-were-in-las-vegas-for-the-big-event-as-it-happens</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Live coverage of Lenovo’s CES keynote featuring an end‑to‑end AI ecosystem and partnerships touching entertainment and sports. Demonstrations at the Las Vegas Sphere highlight AI‑driven, large‑format visual experiences and content creation workflows relevant to AI video. Contextualizes how new AI infrastructure and tools are feeding next‑gen video production and playback.</description>
+  </item>
+  <item>
+    <title>Nvidia launches Vera Rubin AI computing platform at CES 2026</title>
+    <link>https://www.theverge.com/tech/855412/nvidia-launches-vera-rubin-ai-computing-platform-at-ces-2026</link>
+    <guid isPermaLink="true">https://www.theverge.com/tech/855412/nvidia-launches-vera-rubin-ai-computing-platform-at-ces-2026</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Nvidia unveiled its Vera Rubin platform—spanning new CPUs, GPUs, networking, and DPUs—claiming major training and inference gains that could accelerate large-scale AI workloads, including video generation and processing.</description>
+  </item>
+  <item>
+    <title>Nvidia Touts Latest AI Processor, Rubin, At CES 2026</title>
+    <link>https://www.investors.com/news/technology/nvidia-stock-chipmaker-touts-rubin-ces-2026/</link>
+    <guid isPermaLink="true">https://www.investors.com/news/technology/nvidia-stock-chipmaker-touts-rubin-ces-2026/</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>At CES, Nvidia detailed its Rubin platform’s performance and efficiency claims—such as reduced GPU needs and inference costs—positioning it to power next-wave AI applications like text-to-video and real-time video synthesis.</description>
+  </item>
+  <item>
+    <title>RTX AI Garage at CES 2026: Open Models for Video Generation</title>
+    <link>https://www.nvidia.com/en-us/geforce/news/gfecnt/20261/rtx-ai-garage-ces-2026-open-models-video-generation/</link>
+    <guid isPermaLink="true">https://www.nvidia.com/en-us/geforce/news/gfecnt/20261/rtx-ai-garage-ces-2026-open-models-video-generation/</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Details new local AI video tools, including open weights for the LTX‑2 model capable of generating up to 20‑second 4K clips with audio, multi‑keyframe support, and controllability. ComfyUI integrations add NVFP4/NVFP8 precision for faster inference and lower VRAM, an RTX Video upscaler node for rapid 4K enhancement, and weight‑streaming to run larger graphs on mid‑range GPUs.</description>
+  </item>
+  <item>
+    <title>[Video] Samsung Outlines AI Vision at The First Look 2026 Press Conference</title>
+    <link>https://news.samsung.com/au/video-samsung-outlines-ai-vision-at-the-first-look-2026-press-conference</link>
+    <guid isPermaLink="true">https://news.samsung.com/au/video-samsung-outlines-ai-vision-at-the-first-look-2026-press-conference</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Samsung’s pre‑CES 2026 event outlines its “Your Companion to AI Living” vision, highlighting plans to embed AI across its product lineup and services. The piece includes the full video of the press conference and emphasizes AI features spanning TV &amp; audio, mobile, and home appliances.</description>
+  </item>
+  <item>
+    <title>Wearable AI Gadgets Could Be Next Big Thing</title>
+    <link>https://www.investors.com/news/technology/ces-2026-wearable-ai-gadgets-could-be-next-big-thing/</link>
+    <guid isPermaLink="true">https://www.investors.com/news/technology/ces-2026-wearable-ai-gadgets-could-be-next-big-thing/</guid>
+    <pubDate>Sat, 10 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Reports on CES 2026 wearable AI devices aimed at lifelogging and on‑device assistance. Highlights Lenovo’s Motorola Project Maxwell pendant and Plaud’s NotePin S for recording visual/audio inputs with AI transcripts and summaries, plus startups adding camera‑enabled features—signaling growing AI‑driven capture and analysis of personal video.</description>
+  </item>
+  <item>
+    <title>The biggest — and weirdest — tech coming out of the 2026 Consumer Electronics Show, from robots to AI pets</title>
+    <link>https://www.businessinsider.com/announcements-coming-out-of-ces-nvidia-vera-rubin-autonmous-vehicle-2026-1</link>
+    <guid isPermaLink="true">https://www.businessinsider.com/announcements-coming-out-of-ces-nvidia-vera-rubin-autonmous-vehicle-2026-1</guid>
+    <pubDate>Thu, 08 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A CES 2026 roundup highlighting major AI advances, including Nvidia’s new Vera Rubin AI platform for faster model training and inference that can accelerate video-related generative workloads, plus a wave of AI-augmented devices and robots that showcase real-time perception and multimedia capabilities.</description>
+  </item>
+  <item>
+    <title>Nvidia Analysts Upbeat After AI Chipmaker&#x27;s CES 2026 Report</title>
+    <link>https://www.investors.com/news/technology/nvidia-stock-analysts-upbeat-ces-2026-news/</link>
+    <guid isPermaLink="true">https://www.investors.com/news/technology/nvidia-stock-analysts-upbeat-ces-2026-news/</guid>
+    <pubDate>Wed, 07 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Coverage of Nvidia’s CES 2026 presentation highlighting its new Rubin-series AI platform aimed at accelerating large-model workloads. Analysts note Rubin’s potential to cut inference costs and speed training—capabilities that could benefit compute-heavy AI video generation, editing, and real-time synthesis pipelines.</description>
+  </item>
+  <item>
+    <title>&quot;ChatGPT moment for physical AI&quot;: Nvidia CEO launches new AI models and chips</title>
+    <link>https://www.axios.com/2026/01/05/nvidia-ces-2026-jensen-huang-speech-ai</link>
+    <guid isPermaLink="true">https://www.axios.com/2026/01/05/nvidia-ces-2026-jensen-huang-speech-ai</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>At CES 2026, Jensen Huang introduced new chips and models focused on real‑time, embodied AI, framing it as a pivotal step for systems that perceive and act in the world. The advances also support computationally demanding media tasks, including next‑gen AI video generation and long‑form synthesis.</description>
+  </item>
+  <item>
+    <title>Nvidia CEO Jensen Huang to showcase AI at CES 2026: Here&#x27;s how to watch the live stream</title>
+    <link>https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-to-showcase-ai-at-ces-2026-heres-how-to-watch-the-live-stream/articleshow/126355726.cms</link>
+    <guid isPermaLink="true">https://timesofindia.indiatimes.com/technology/tech-news/nvidia-ceo-jensen-huang-to-showcase-ai-at-ces-2026-heres-how-to-watch-the-live-stream/articleshow/126355726.cms</guid>
+    <pubDate>Tue, 06 Jan 2026 12:00:00 +0000</pubDate>
+    <description>This piece provides timing and viewing details for Nvidia’s CES 2026 keynote, where the company is expected to highlight its newest AI hardware and model updates. Such announcements typically include capabilities relevant to creators and developers working with AI video and graphics.</description>
+  </item>
+  <item>
+    <title>ByteDance may spend $14 billion in Nvidia chips in 2026 to power AI &#x27;Inference Engine&#x27;</title>
+    <link>https://timesofindia.indiatimes.com/technology/tech-news/bytedance-may-spend-14-billion-in-nvidia-chips-in-2026-to-power-ai-inference-engine/articleshow/126274203.cms</link>
+    <guid isPermaLink="true">https://timesofindia.indiatimes.com/technology/tech-news/bytedance-may-spend-14-billion-in-nvidia-chips-in-2026-to-power-ai-inference-engine/articleshow/126274203.cms</guid>
+    <pubDate>Thu, 01 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Report says TikTok owner ByteDance plans a major 2026 Nvidia GPU purchase to expand its AI capabilities, reflecting escalating compute needs behind large-scale AI, including video-related applications across its platforms.</description>
+  </item>
+  <item>
+    <title>TikTok owner ByteDance to reportedly purchase $14 billion worth of Nvidia AI GPUs in 2026</title>
+    <link>https://www.tomshardware.com/pc-components/gpus/tiktok-owner-bytedance-to-reportedly-purchase-usd14-billion-worth-of-nvidia-ai-gpus-in-2026-company-betting-on-beijings-approval-following-trump-admins-ease-on-ai-export-controls</link>
+    <guid isPermaLink="true">https://www.tomshardware.com/pc-components/gpus/tiktok-owner-bytedance-to-reportedly-purchase-usd14-billion-worth-of-nvidia-ai-gpus-in-2026-company-betting-on-beijings-approval-following-trump-admins-ease-on-ai-export-controls</guid>
+    <pubDate>Thu, 01 Jan 2026 12:00:00 +0000</pubDate>
+    <description>Coverage of ByteDance’s planned 2026 purchase of Nvidia H200 GPUs to scale AI workloads. The piece notes ongoing reliance on Nvidia hardware while developing custom chips, underscoring the compute demands of AI for video platforms and generation.</description>
+  </item>
+  <item>
+    <title>Remember DeepSeek? China Could Have a New Nvidia Threat.</title>
+    <link>https://www.barrons.com/articles/ai-stocks-china-threat-nvidia-microsoft-196a17df</link>
+    <guid isPermaLink="true">https://www.barrons.com/articles/ai-stocks-china-threat-nvidia-microsoft-196a17df</guid>
+    <pubDate>Thu, 01 Jan 2026 12:00:00 +0000</pubDate>
+    <description>A Barron&#x27;s analysis highlights a new China-developed photon-based AI chip, LightGen, that reportedly outpaces Nvidia’s top GPUs on certain media tasks, with early focus on video production and image synthesis. The piece frames the hardware as a potential shift in the AI video ecosystem’s compute landscape and notes broader market and policy crosswinds affecting U.S. and Chinese AI players.</description>
+  </item>
+</channel>
+</rss>
