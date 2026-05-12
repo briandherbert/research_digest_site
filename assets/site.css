@@ -69,17 +69,25 @@ body {
 a { color: var(--accent); text-underline-offset: 3px; }
 a:hover { color: var(--accent-2); }
 
-.skip-link {
+.skip-links {
   position: absolute;
   top: 0.75rem;
   left: 0.75rem;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  align-items: flex-start;
+}
+
+.skip-link {
+  position: static;
   padding: 0.6rem 0.8rem;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 999px;
   transform: translateY(-200%);
   transition: transform 0.15s ease;
-  z-index: 1000;
 }
 .skip-link:focus { transform: translateY(0); }
 
