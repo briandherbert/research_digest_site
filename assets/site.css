@@ -240,7 +240,8 @@ a:hover { color: var(--accent-2); }
 #latest-month,
 #newest-pick,
 #search,
-#site-search { scroll-margin-top: 5.5rem; }
+#site-search,
+#year-list { scroll-margin-top: 5.5rem; }
 
 .hub-quick-start {
   margin: -0.35rem 0 1.15rem;

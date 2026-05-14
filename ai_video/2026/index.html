@@ -72,7 +72,7 @@
     </div>
   </header>
 
-  <main id="main" class="container">
+  <main id="main" class="container" aria-labelledby="topic-title">
     <section class="hero">
       <p class="eyebrow" id="year-label"></p>
       <h1 class="title" id="topic-title"></h1>
@@ -94,7 +94,7 @@
         <span class="hint" id="result-count"></span>
       </div>
       <div class="toolbar-right">
-        <button class="btn" type="button" id="clear-search" title="Clear search">Clear</button>
+        <button class="btn" type="button" id="clear-search" title="Clear search" aria-label="Clear search and show all articles">Clear</button>
       </div>
     </section>
 
@@ -501,6 +501,10 @@
 
     document.getElementById("topic-title").textContent = topicName;
     document.getElementById("year-label").textContent = publishYear;
+    document.getElementById("articles").setAttribute(
+      "aria-label",
+      `Monthly curated articles and summaries (${publishYear})`,
+    );
     document.getElementById("page-subtitle").textContent = [
       "Hand-picked articles with short summaries, grouped by month—scroll to the newest month first.",
       "Each headline opens the original source in a new tab.",
