@@ -241,7 +241,23 @@ a:hover { color: var(--accent-2); }
 #newest-pick,
 #search,
 #site-search,
+#articles,
 #year-list { scroll-margin-top: 5.5rem; }
+
+.page-shortcuts {
+  margin: -0.2rem 0 1rem;
+  font-size: 0.92rem;
+  line-height: 1.4;
+  color: var(--muted);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.5rem;
+  align-items: center;
+}
+.page-shortcuts-label {
+  font-weight: 650;
+  color: var(--muted-2);
+}
 
 .hub-quick-start {
   margin: -0.35rem 0 1.15rem;
