@@ -267,6 +267,14 @@ a:hover { color: var(--accent-2); }
   max-width: 52rem;
 }
 
+.hub-year-prompt {
+  margin: 0.35rem 0 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
+  max-width: 48rem;
+}
+
 .hub-quick-start {
   margin: -0.35rem 0 1.15rem;
   font-size: 0.96rem;
