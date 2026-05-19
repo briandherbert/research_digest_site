@@ -60,6 +60,8 @@
     }
   });
 
+  const HASH_SCROLL_IDS = new Set(["latest-month", "newest-pick", "articles", "year-list"]);
+
   function focusSearchFromHash() {
     const raw = (location.hash || "").toLowerCase();
     if (raw !== "#search" && raw !== "#site-search") return;
@@ -70,11 +72,32 @@
     });
   }
 
+  function scrollHashSectionIntoView() {
+    const raw = (location.hash || "").replace(/^#/, "").toLowerCase();
+    if (!HASH_SCROLL_IDS.has(raw)) return;
+    const el = document.getElementById(raw);
+    if (!el) return;
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      });
+    });
+  }
+
+  function handleLocationHash() {
+    const raw = (location.hash || "").toLowerCase();
+    if (raw === "#search" || raw === "#site-search") {
+      focusSearchFromHash();
+      return;
+    }
+    scrollHashSectionIntoView();
+  }
+
   initTheme();
-  window.addEventListener("hashchange", focusSearchFromHash);
+  window.addEventListener("hashchange", handleLocationHash);
   window.addEventListener("DOMContentLoaded", () => {
     initThemeButton();
     initBackToTop();
-    focusSearchFromHash();
+    handleLocationHash();
   });
 })();

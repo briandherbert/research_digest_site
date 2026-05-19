@@ -127,7 +127,8 @@
     const clearBtn = document.getElementById("clear-search");
 
     document.getElementById("topic-title").textContent = topicName;
-    document.getElementById("year-label").textContent = publishYear;
+    document.getElementById("year-label").textContent =
+      publishYear + " · Curated monthly picks";
     document.getElementById("articles").setAttribute(
       "aria-label",
       `Monthly curated articles and summaries (${publishYear})`,
