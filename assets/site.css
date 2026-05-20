@@ -242,7 +242,8 @@ a:hover { color: var(--accent-2); }
 #search,
 #site-search,
 #articles,
-#year-list { scroll-margin-top: 5.5rem; }
+#year-list,
+#footer-links { scroll-margin-top: 5.5rem; }
 
 .page-shortcuts {
   margin: -0.2rem 0 1rem;

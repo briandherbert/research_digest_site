@@ -60,7 +60,7 @@
     }
   });
 
-  const HASH_SCROLL_IDS = new Set(["latest-month", "newest-pick", "articles", "year-list"]);
+  const HASH_SCROLL_IDS = new Set(["latest-month", "newest-pick", "articles", "year-list", "footer-links"]);
 
   function focusSearchFromHash() {
     const raw = (location.hash || "").toLowerCase();
@@ -80,6 +80,21 @@
     requestAnimationFrame(() => {
       requestAnimationFrame(() => {
         el.scrollIntoView({ behavior: "smooth", block: "start" });
+        // After smooth scroll, move focus so screen readers land on the target (skip/hash deep links).
+        window.setTimeout(() => {
+          if (!document.contains(el)) return;
+          el.setAttribute("tabindex", "-1");
+          try {
+            el.focus({ preventScroll: true });
+          } catch (_) {}
+          el.addEventListener(
+            "blur",
+            () => {
+              el.removeAttribute("tabindex");
+            },
+            { once: true },
+          );
+        }, 420);
       });
     });
   }
