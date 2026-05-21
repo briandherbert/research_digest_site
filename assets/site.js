@@ -102,6 +102,10 @@
   function handleLocationHash() {
     const raw = (location.hash || "").toLowerCase();
     if (raw === "#search" || raw === "#site-search") {
+      const toolbar = document.getElementById("site-search");
+      if (toolbar) {
+        toolbar.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
       focusSearchFromHash();
       return;
     }
